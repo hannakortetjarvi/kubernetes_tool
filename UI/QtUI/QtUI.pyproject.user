@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 11.0.3, 2023-10-16T21:14:09. -->
+<!-- Written by QtCreator 11.0.3, 2024-03-14T10:52:27. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -145,10 +145,8 @@
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">widget.py</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/Users/omistaja/git/kubernetes_tool/QtUI/widget.py</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/omistaja/git/kubernetes_tool/QtUI/widget.py</value>
-    <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\Users\omistaja\git\kubernetes_tool\QtUI\widget.py</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/omistaja/git/kubernetes_tool/QtUI</value>
    </valuemap>
    <value type="qlonglong" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>
