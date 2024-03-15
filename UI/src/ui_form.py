@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'form.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.2.4
+## Created by: Qt User Interface Compiler version 6.6.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -16,8 +16,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
-    QPushButton, QSizePolicy, QSpacerItem, QStackedWidget,
-    QTextBrowser, QTextEdit, QVBoxLayout, QWidget)
+    QLineEdit, QPushButton, QSizePolicy, QSpacerItem,
+    QStackedWidget, QTextBrowser, QTextEdit, QVBoxLayout,
+    QWidget)
 
 class Ui_Widget(object):
     def setupUi(self, Widget):
@@ -44,6 +45,15 @@ class Ui_Widget(object):
 "border-radius: 5px;\n"
 "padding-top: 15px;\n"
 "padding-bottom: 15px;")
+        self.userNameEdit = QLineEdit(self.frame)
+        self.userNameEdit.setObjectName(u"userNameEdit")
+        self.userNameEdit.setGeometry(QRect(42, 200, 271, 26))
+        self.loginWarning = QLabel(self.frame)
+        self.loginWarning.setObjectName(u"loginWarning")
+        self.loginWarning.setGeometry(QRect(40, 230, 271, 20))
+        self.label = QLabel(self.frame)
+        self.label.setObjectName(u"label")
+        self.label.setGeometry(QRect(40, 180, 111, 20))
         self.stackedWidget.addWidget(self.loginPage)
         self.loggedPage = QWidget()
         self.loggedPage.setObjectName(u"loggedPage")
@@ -60,11 +70,17 @@ class Ui_Widget(object):
         self.verticalLayout_7.setContentsMargins(0, 0, 0, 0)
         self.title = QLabel(self.verticalLayoutWidget_2)
         self.title.setObjectName(u"title")
+        self.title.setMaximumSize(QSize(16777215, 30))
+        font = QFont()
+        font.setPointSize(20)
+        font.setBold(True)
+        self.title.setFont(font)
 
         self.verticalLayout_7.addWidget(self.title)
 
         self.sub = QLabel(self.verticalLayoutWidget_2)
         self.sub.setObjectName(u"sub")
+        self.sub.setMaximumSize(QSize(16777215, 30))
 
         self.verticalLayout_7.addWidget(self.sub)
 
@@ -84,11 +100,14 @@ class Ui_Widget(object):
         self.verticalLayout_10.setContentsMargins(0, 0, 0, 0)
         self.title_4 = QLabel(self.verticalLayoutWidget_4)
         self.title_4.setObjectName(u"title_4")
+        self.title_4.setMaximumSize(QSize(16777215, 30))
+        self.title_4.setFont(font)
 
         self.verticalLayout_10.addWidget(self.title_4)
 
         self.sub_4 = QLabel(self.verticalLayoutWidget_4)
         self.sub_4.setObjectName(u"sub_4")
+        self.sub_4.setMaximumSize(QSize(16777215, 30))
 
         self.verticalLayout_10.addWidget(self.sub_4)
 
@@ -108,11 +127,14 @@ class Ui_Widget(object):
         self.verticalLayout_12.setContentsMargins(0, 0, 0, 0)
         self.title_6 = QLabel(self.verticalLayoutWidget_6)
         self.title_6.setObjectName(u"title_6")
+        self.title_6.setMaximumSize(QSize(16777215, 30))
+        self.title_6.setFont(font)
 
         self.verticalLayout_12.addWidget(self.title_6)
 
         self.sub_6 = QLabel(self.verticalLayoutWidget_6)
         self.sub_6.setObjectName(u"sub_6")
+        self.sub_6.setMaximumSize(QSize(16777215, 30))
 
         self.verticalLayout_12.addWidget(self.sub_6)
 
@@ -132,11 +154,16 @@ class Ui_Widget(object):
         self.verticalLayout_9.setContentsMargins(0, 0, 0, 0)
         self.title_3 = QLabel(self.verticalLayoutWidget_3)
         self.title_3.setObjectName(u"title_3")
+        self.title_3.setMaximumSize(QSize(16777215, 30))
+        font1 = QFont()
+        font1.setPointSize(20)
+        self.title_3.setFont(font1)
 
         self.verticalLayout_9.addWidget(self.title_3)
 
         self.sub_3 = QLabel(self.verticalLayoutWidget_3)
         self.sub_3.setObjectName(u"sub_3")
+        self.sub_3.setMaximumSize(QSize(16777215, 30))
 
         self.verticalLayout_9.addWidget(self.sub_3)
 
@@ -156,11 +183,14 @@ class Ui_Widget(object):
         self.verticalLayout_11.setContentsMargins(0, 0, 0, 0)
         self.title_5 = QLabel(self.verticalLayoutWidget_5)
         self.title_5.setObjectName(u"title_5")
+        self.title_5.setMaximumSize(QSize(16777215, 30))
+        self.title_5.setFont(font1)
 
         self.verticalLayout_11.addWidget(self.title_5)
 
         self.sub_5 = QLabel(self.verticalLayoutWidget_5)
         self.sub_5.setObjectName(u"sub_5")
+        self.sub_5.setMaximumSize(QSize(16777215, 30))
 
         self.verticalLayout_11.addWidget(self.sub_5)
 
@@ -268,7 +298,7 @@ class Ui_Widget(object):
 
         self.verticalLayout.addWidget(self.logoutButton)
 
-        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout.addItem(self.verticalSpacer)
 
@@ -281,6 +311,8 @@ class Ui_Widget(object):
 
     def retranslateUi(self, Widget):
         self.loginButton.setText(QCoreApplication.translate("Widget", u"Kirjaudu", None))
+        self.loginWarning.setText("")
+        self.label.setText(QCoreApplication.translate("Widget", u"K\u00e4ytt\u00e4j\u00e4n nimi:", None))
         self.title.setText(QCoreApplication.translate("Widget", u"TextLabel", None))
         self.sub.setText(QCoreApplication.translate("Widget", u"TextLabel", None))
         self.desc.setText(QCoreApplication.translate("Widget", u"TextLabel", None))

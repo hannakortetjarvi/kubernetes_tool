@@ -63,6 +63,42 @@ padding-bottom: 15px;</string>
        <string>Kirjaudu</string>
       </property>
      </widget>
+     <widget class="QLineEdit" name="userNameEdit">
+      <property name="geometry">
+       <rect>
+        <x>42</x>
+        <y>200</y>
+        <width>271</width>
+        <height>26</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="loginWarning">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>230</y>
+        <width>271</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>180</y>
+        <width>111</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Käyttäjän nimi:</string>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QWidget" name="loggedPage">
@@ -88,6 +124,18 @@ padding-bottom: 15px;</string>
        <layout class="QVBoxLayout" name="verticalLayout_7">
         <item>
          <widget class="QLabel" name="title">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>20</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
           <property name="text">
            <string>TextLabel</string>
           </property>
@@ -95,6 +143,12 @@ padding-bottom: 15px;</string>
         </item>
         <item>
          <widget class="QLabel" name="sub">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>30</height>
+           </size>
+          </property>
           <property name="text">
            <string>TextLabel</string>
           </property>
@@ -123,6 +177,18 @@ padding-bottom: 15px;</string>
        <layout class="QVBoxLayout" name="verticalLayout_10">
         <item>
          <widget class="QLabel" name="title_4">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>20</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
           <property name="text">
            <string>TextLabel</string>
           </property>
@@ -130,6 +196,12 @@ padding-bottom: 15px;</string>
         </item>
         <item>
          <widget class="QLabel" name="sub_4">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>30</height>
+           </size>
+          </property>
           <property name="text">
            <string>TextLabel</string>
           </property>
@@ -158,6 +230,18 @@ padding-bottom: 15px;</string>
        <layout class="QVBoxLayout" name="verticalLayout_12">
         <item>
          <widget class="QLabel" name="title_6">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>20</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
           <property name="text">
            <string>TextLabel</string>
           </property>
@@ -165,6 +249,12 @@ padding-bottom: 15px;</string>
         </item>
         <item>
          <widget class="QLabel" name="sub_6">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>30</height>
+           </size>
+          </property>
           <property name="text">
            <string>TextLabel</string>
           </property>
@@ -193,6 +283,17 @@ padding-bottom: 15px;</string>
        <layout class="QVBoxLayout" name="verticalLayout_9">
         <item>
          <widget class="QLabel" name="title_3">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>20</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>TextLabel</string>
           </property>
@@ -200,6 +301,12 @@ padding-bottom: 15px;</string>
         </item>
         <item>
          <widget class="QLabel" name="sub_3">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>30</height>
+           </size>
+          </property>
           <property name="text">
            <string>TextLabel</string>
           </property>
@@ -228,6 +335,17 @@ padding-bottom: 15px;</string>
        <layout class="QVBoxLayout" name="verticalLayout_11">
         <item>
          <widget class="QLabel" name="title_5">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>20</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>TextLabel</string>
           </property>
@@ -235,6 +353,12 @@ padding-bottom: 15px;</string>
         </item>
         <item>
          <widget class="QLabel" name="sub_5">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>30</height>
+           </size>
+          </property>
           <property name="text">
            <string>TextLabel</string>
           </property>

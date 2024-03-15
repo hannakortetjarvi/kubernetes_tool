@@ -12,15 +12,48 @@ class MyApplication(QWidget):
         
 
         self.ui.runButton.clicked.connect(self.button_clicked)
-        self.ui.loginButton.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(1))
+        self.ui.loginButton.clicked.connect(self.userLogin)
         self.ui.mainButton.clicked.connect(lambda: self.ui.menuPages.setCurrentIndex(0))
         self.ui.exercisesButton.clicked.connect(lambda: self.ui.menuPages.setCurrentIndex(1))
         self.ui.userInfoButton.clicked.connect(lambda: self.ui.menuPages.setCurrentIndex(2))
         self.ui.infoButton.clicked.connect(lambda: self.ui.menuPages.setCurrentIndex(3))
         self.ui.settingsButton.clicked.connect(lambda: self.ui.menuPages.setCurrentIndex(4))
-        self.ui.logoutButton.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
+        self.ui.logoutButton.clicked.connect(self.userLogout)
 
         self.initPages()
+
+    def userLogin(self):
+        self.username = self.ui.userNameEdit.text()
+        if self.username == "":
+            self.ui.loginWarning.setText("Syötä nimi!")
+        else:
+            page = self.ui.menuPages.findChild(QWidget, "userInfoPage")
+            for child in page.findChildren(QLabel):
+                object_name = child.objectName()
+                if "sub" in object_name:
+                    child.setText(child.text() + self.username)
+            page = self.ui.menuPages.findChild(QWidget, "mainPage")
+            for child in page.findChildren(QLabel):
+                object_name = child.objectName()
+                if "sub" in object_name:
+                    child.setText(child.text() + self.username)
+            self.ui.stackedWidget.setCurrentIndex(1)
+
+    def userLogout(self):
+        page = self.ui.menuPages.findChild(QWidget, "userInfoPage")
+        for child in page.findChildren(QLabel):
+            object_name = child.objectName()
+            if "sub" in object_name:
+                leng = len(self.username)
+                child.setText(child.text()[:-leng])
+        page = self.ui.menuPages.findChild(QWidget, "mainPage")
+        for child in page.findChildren(QLabel):
+            object_name = child.objectName()
+            if "sub" in object_name:
+                leng = len(self.username)
+                child.setText(child.text()[:-leng])
+        self.username = ""
+        self.ui.stackedWidget.setCurrentIndex(0)
 
     def button_clicked(self):
         cmd = self.ui.inputEdit.toPlainText()
@@ -42,8 +75,6 @@ class MyApplication(QWidget):
                             child.setText(page_data["subtitle"])
                         elif "desc" in object_name:
                             child.setText(page_data["description"])
-                for child in page_widget.findChildren(QLabel):
-                    print(child.text())
 
 # pyside6-uic UI/QtUI/form.ui -o UI/src/ui_form.py && python UI/src/main.py
 if __name__ == "__main__":
