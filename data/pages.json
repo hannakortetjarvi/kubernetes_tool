@@ -9,7 +9,7 @@
         {
             "index": 1,
             "title": "Tehtävät",
-            "subtitle": "Kuberneteksen perusteet",
+            "subtitle": "",
             "description": "" 
         },
         {
@@ -29,6 +29,23 @@
             "title": "Asetukset",
             "subtitle": "",
             "description": "" 
+        }
+    ],
+    "exercise_set": [
+        {
+            "Kuberneteksen perusteet": [
+                {
+                    "exercise": 1,
+                    "title": "Kubernetes klusteri",
+                    "info": "Klusterin perusteet, klusterin luonti",
+                    "subexercise:" : [
+                        "Teoria 1",
+                        "Teoria 2",
+                        "Tehtävä 1",
+                        "Tehtävä 2"
+                    ]
+                }
+            ]
         }
     ]
 }

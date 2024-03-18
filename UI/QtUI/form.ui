@@ -82,6 +82,9 @@ padding-bottom: 15px;</string>
         <height>20</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">color : red;</string>
+      </property>
       <property name="text">
        <string/>
       </property>
@@ -127,7 +130,7 @@ padding-bottom: 15px;</string>
           <property name="maximumSize">
            <size>
             <width>16777215</width>
-            <height>30</height>
+            <height>50</height>
            </size>
           </property>
           <property name="font">
@@ -137,12 +140,12 @@ padding-bottom: 15px;</string>
            </font>
           </property>
           <property name="text">
-           <string>TextLabel</string>
+           <string>Kubernetes Oppimistyökalu</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QLabel" name="sub">
+         <widget class="QLabel" name="subMain">
           <property name="maximumSize">
            <size>
             <width>16777215</width>
@@ -150,14 +153,14 @@ padding-bottom: 15px;</string>
            </size>
           </property>
           <property name="text">
-           <string>TextLabel</string>
+           <string>Hei </string>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QLabel" name="desc">
           <property name="text">
-           <string>TextLabel</string>
+           <string>Tervetuloa interaktiiviseen Kubernetes oppimistyökaluun!</string>
           </property>
          </widget>
         </item>
@@ -165,7 +168,7 @@ padding-bottom: 15px;</string>
       </widget>
      </widget>
      <widget class="QWidget" name="exercisesPage">
-      <widget class="QWidget" name="verticalLayoutWidget_4">
+      <widget class="QStackedWidget" name="stackedWidget_2">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -174,47 +177,756 @@ padding-bottom: 15px;</string>
          <height>801</height>
         </rect>
        </property>
-       <layout class="QVBoxLayout" name="verticalLayout_10">
-        <item>
-         <widget class="QLabel" name="title_4">
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>30</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>20</pointsize>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>TextLabel</string>
-          </property>
+       <widget class="QWidget" name="exercisesMain">
+        <widget class="QWidget" name="verticalLayoutWidget_4">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>1211</width>
+           <height>801</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_10">
+          <item>
+           <widget class="QLabel" name="title_4">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>20</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Tehtävät</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="sub_4">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="desc_4">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QScrollArea" name="scrollArea">
+            <property name="styleSheet">
+             <string notr="true">border: none;</string>
+            </property>
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>1209</width>
+               <height>694</height>
+              </rect>
+             </property>
+             <widget class="QWidget" name="verticalLayoutWidget_7">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>1211</width>
+                <height>691</height>
+               </rect>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_2">
+               <item>
+                <widget class="QWidget" name="widget" native="true">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>155</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>150</height>
+                  </size>
+                 </property>
+                 <widget class="QWidget" name="horizontalLayoutWidget">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>1201</width>
+                    <height>152</height>
+                   </rect>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_2">
+                   <item>
+                    <widget class="QLabel" name="exOneImage">
+                     <property name="maximumSize">
+                      <size>
+                       <width>150</width>
+                       <height>150</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="pixmap">
+                      <pixmap>../../images/ex1.png</pixmap>
+                     </property>
+                     <property name="scaledContents">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="exerciseOneButton">
+                     <property name="enabled">
+                      <bool>true</bool>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>17</pointsize>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">border: none;
+color: rgb(0, 85, 255);</string>
+                     </property>
+                     <property name="text">
+                      <string>1. Klusterit</string>
+                     </property>
+                     <property name="checkable">
+                      <bool>false</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_2">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="exerciseOne">
+        <widget class="QStackedWidget" name="exerciseOnePages">
+         <property name="geometry">
+          <rect>
+           <x>-10</x>
+           <y>0</y>
+           <width>1221</width>
+           <height>801</height>
+          </rect>
+         </property>
+         <widget class="QWidget" name="one">
+          <widget class="QWidget" name="verticalLayoutWidget_8">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>0</y>
+             <width>1211</width>
+             <height>801</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_17">
+            <item>
+             <widget class="QLabel" name="title_7">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>1. Klusterit</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="sub_6">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="exerciseOneOneButton">
+              <property name="text">
+               <string>1.1. Klusterin perusteet</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="exerciseOneTwoButton">
+              <property name="text">
+               <string>1.2. Minikube</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="exerciseOneThreeButton">
+              <property name="text">
+               <string>1.3. Klusterin rakenne</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="exerciseOneFourButton">
+              <property name="text">
+               <string>1.4. Klusterin luonti</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_7">
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
          </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="sub_4">
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>30</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>TextLabel</string>
-          </property>
+         <widget class="QWidget" name="oneOne">
+          <widget class="QWidget" name="layoutWidget_2">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>0</y>
+             <width>1211</width>
+             <height>801</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_8" stretch="0,6,1,0,3,0">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <item>
+               <widget class="QPushButton" name="prevOneOne">
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="text">
+                 <string>Palaa tehtäväsivulle</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_2">
+                <property name="text">
+                 <string>1.1</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="nextOneOne">
+                <property name="text">
+                 <string>Seuraava</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QTextBrowser" name="infoBrowser_2">
+              <property name="styleSheet">
+               <string notr="true">border: 1px solid;
+border-radius: 10px;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_12">
+              <item>
+               <widget class="QTextEdit" name="inputEdit_2">
+                <property name="baseSize">
+                 <size>
+                  <width>0</width>
+                  <height>4</height>
+                 </size>
+                </property>
+                <property name="autoFillBackground">
+                 <bool>false</bool>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border: 1px solid;
+border-radius: 10px;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="runButton_2">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border: 1px solid;
+border-radius: 5px;
+padding-top: 15px;
+padding-bottom: 15px;</string>
+                </property>
+                <property name="text">
+                 <string> Aja komento</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_14">
+              <property name="styleSheet">
+               <string notr="true">padding-left: 2px;</string>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Tuloste:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTextBrowser" name="resultBrowser_2">
+              <property name="styleSheet">
+               <string notr="true">border: 1px solid;
+border-radius: 10px;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QProgressBar" name="progressBarOne">
+              <property name="value">
+               <number>24</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
          </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="desc_4">
-          <property name="text">
-           <string>TextLabel</string>
-          </property>
+         <widget class="QWidget" name="oneTwo">
+          <widget class="QWidget" name="layoutWidget_3">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>0</y>
+             <width>1211</width>
+             <height>801</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_14" stretch="0,6,1,0,3,0">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <item>
+               <widget class="QPushButton" name="prevOneTwo">
+                <property name="text">
+                 <string>Edellinen</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_4">
+                <property name="text">
+                 <string>1.2.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="nextOneTwo">
+                <property name="text">
+                 <string>Seuraava</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QTextBrowser" name="infoBrowser_4">
+              <property name="styleSheet">
+               <string notr="true">border: 1px solid;
+border-radius: 10px;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_14">
+              <item>
+               <widget class="QTextEdit" name="inputEdit_4">
+                <property name="baseSize">
+                 <size>
+                  <width>0</width>
+                  <height>4</height>
+                 </size>
+                </property>
+                <property name="autoFillBackground">
+                 <bool>false</bool>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border: 1px solid;
+border-radius: 10px;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="runButton_4">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border: 1px solid;
+border-radius: 5px;
+padding-top: 15px;
+padding-bottom: 15px;</string>
+                </property>
+                <property name="text">
+                 <string> Aja komento</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_16">
+              <property name="styleSheet">
+               <string notr="true">padding-left: 2px;</string>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Tuloste:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTextBrowser" name="resultBrowser_4">
+              <property name="styleSheet">
+               <string notr="true">border: 1px solid;
+border-radius: 10px;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QProgressBar" name="progressBarOne_3">
+              <property name="value">
+               <number>24</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
          </widget>
-        </item>
-       </layout>
+         <widget class="QWidget" name="oneThree">
+          <widget class="QWidget" name="layoutWidget_4">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>0</y>
+             <width>1211</width>
+             <height>801</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_15" stretch="0,6,1,0,3,0">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <item>
+               <widget class="QPushButton" name="prevOneThree">
+                <property name="text">
+                 <string>Edellinen</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_5">
+                <property name="text">
+                 <string>1.3.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="nextOneThree">
+                <property name="text">
+                 <string>Seuraava</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QTextBrowser" name="infoBrowser_5">
+              <property name="styleSheet">
+               <string notr="true">border: 1px solid;
+border-radius: 10px;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_15">
+              <item>
+               <widget class="QTextEdit" name="inputEdit_5">
+                <property name="baseSize">
+                 <size>
+                  <width>0</width>
+                  <height>4</height>
+                 </size>
+                </property>
+                <property name="autoFillBackground">
+                 <bool>false</bool>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border: 1px solid;
+border-radius: 10px;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="runButton_5">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border: 1px solid;
+border-radius: 5px;
+padding-top: 15px;
+padding-bottom: 15px;</string>
+                </property>
+                <property name="text">
+                 <string> Aja komento</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_17">
+              <property name="styleSheet">
+               <string notr="true">padding-left: 2px;</string>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Tuloste:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTextBrowser" name="resultBrowser_5">
+              <property name="styleSheet">
+               <string notr="true">border: 1px solid;
+border-radius: 10px;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QProgressBar" name="progressBarOne_4">
+              <property name="value">
+               <number>24</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="oneFour">
+          <widget class="QWidget" name="layoutWidget_5">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>0</y>
+             <width>1211</width>
+             <height>801</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_16" stretch="0,6,1,0,3,0">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item>
+               <widget class="QPushButton" name="prevOneFour">
+                <property name="text">
+                 <string>Edellinen</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_6">
+                <property name="text">
+                 <string>1.4.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="nextOneFour">
+                <property name="text">
+                 <string>Lopeta</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QTextBrowser" name="infoBrowser_6">
+              <property name="styleSheet">
+               <string notr="true">border: 1px solid;
+border-radius: 10px;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_16">
+              <item>
+               <widget class="QTextEdit" name="inputEdit_6">
+                <property name="baseSize">
+                 <size>
+                  <width>0</width>
+                  <height>4</height>
+                 </size>
+                </property>
+                <property name="autoFillBackground">
+                 <bool>false</bool>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border: 1px solid;
+border-radius: 10px;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="runButton_6">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border: 1px solid;
+border-radius: 5px;
+padding-top: 15px;
+padding-bottom: 15px;</string>
+                </property>
+                <property name="text">
+                 <string> Aja komento</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_18">
+              <property name="styleSheet">
+               <string notr="true">padding-left: 2px;</string>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Tuloste:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTextBrowser" name="resultBrowser_6">
+              <property name="styleSheet">
+               <string notr="true">border: 1px solid;
+border-radius: 10px;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QProgressBar" name="progressBarOne_5">
+              <property name="value">
+               <number>24</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
       </widget>
      </widget>
      <widget class="QWidget" name="userInfoPage">
@@ -233,7 +945,7 @@ padding-bottom: 15px;</string>
           <property name="maximumSize">
            <size>
             <width>16777215</width>
-            <height>30</height>
+            <height>50</height>
            </size>
           </property>
           <property name="font">
@@ -243,12 +955,12 @@ padding-bottom: 15px;</string>
            </font>
           </property>
           <property name="text">
-           <string>TextLabel</string>
+           <string>Käyttäjän tiedot</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QLabel" name="sub_6">
+         <widget class="QLabel" name="subUserInfo">
           <property name="maximumSize">
            <size>
             <width>16777215</width>
@@ -256,14 +968,14 @@ padding-bottom: 15px;</string>
            </size>
           </property>
           <property name="text">
-           <string>TextLabel</string>
+           <string>Käyttäjän nimi: </string>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QLabel" name="desc_6">
           <property name="text">
-           <string>TextLabel</string>
+           <string/>
           </property>
          </widget>
         </item>
@@ -286,16 +998,17 @@ padding-bottom: 15px;</string>
           <property name="maximumSize">
            <size>
             <width>16777215</width>
-            <height>30</height>
+            <height>50</height>
            </size>
           </property>
           <property name="font">
            <font>
             <pointsize>20</pointsize>
+            <bold>true</bold>
            </font>
           </property>
           <property name="text">
-           <string>TextLabel</string>
+           <string>Tietoja</string>
           </property>
          </widget>
         </item>
@@ -308,14 +1021,20 @@ padding-bottom: 15px;</string>
            </size>
           </property>
           <property name="text">
-           <string>TextLabel</string>
+           <string/>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QLabel" name="desc_3">
           <property name="text">
-           <string>TextLabel</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kubernetes Oppimistyökalu &lt;/p&gt;&lt;p&gt;Versio: v0.1&lt;/p&gt;&lt;p&gt;Kehittäjä: Hanna Kortetjärvi&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="scaledContents">
+           <bool>false</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
           </property>
          </widget>
         </item>
@@ -338,16 +1057,17 @@ padding-bottom: 15px;</string>
           <property name="maximumSize">
            <size>
             <width>16777215</width>
-            <height>30</height>
+            <height>60</height>
            </size>
           </property>
           <property name="font">
            <font>
             <pointsize>20</pointsize>
+            <bold>true</bold>
            </font>
           </property>
           <property name="text">
-           <string>TextLabel</string>
+           <string>Asetukset</string>
           </property>
          </widget>
         </item>
@@ -360,104 +1080,19 @@ padding-bottom: 15px;</string>
            </size>
           </property>
           <property name="text">
-           <string>TextLabel</string>
+           <string/>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QLabel" name="desc_5">
-          <property name="text">
-           <string>TextLabel</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </widget>
-     <widget class="QWidget" name="exercisePage">
-      <widget class="QWidget" name="layoutWidget">
-       <property name="geometry">
-        <rect>
-         <x>2</x>
-         <y>4</y>
-         <width>1221</width>
-         <height>801</height>
-        </rect>
-       </property>
-       <layout class="QVBoxLayout" name="verticalLayout_6" stretch="0,6,1,0,3">
-        <item>
-         <widget class="QLabel" name="label_11">
-          <property name="styleSheet">
-           <string notr="true">padding-left: 2px;</string>
+          <property name="font">
+           <font>
+            <bold>false</bold>
+           </font>
           </property>
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;TEHTÄVÄN NIMI/NUMERO&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QTextBrowser" name="infoBrowser">
-          <property name="styleSheet">
-           <string notr="true">border: 1px solid;
-border-radius: 10px;</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_11">
-          <item>
-           <widget class="QTextEdit" name="inputEdit">
-            <property name="baseSize">
-             <size>
-              <width>0</width>
-              <height>4</height>
-             </size>
-            </property>
-            <property name="autoFillBackground">
-             <bool>false</bool>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">border: 1px solid;
-border-radius: 10px;</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="runButton">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">border: 1px solid;
-border-radius: 5px;
-padding-top: 15px;
-padding-bottom: 15px;</string>
-            </property>
-            <property name="text">
-             <string> Aja komento</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_12">
-          <property name="styleSheet">
-           <string notr="true">padding-left: 2px;</string>
-          </property>
-          <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Tuloste:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QTextBrowser" name="resultBrowser">
-          <property name="styleSheet">
-           <string notr="true">border: 1px solid;
-border-radius: 10px;</string>
+           <string/>
           </property>
          </widget>
         </item>
@@ -465,7 +1100,7 @@ border-radius: 10px;</string>
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="verticalLayoutWidget">
+    <widget class="QWidget" name="menu" native="true">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -474,63 +1109,360 @@ border-radius: 10px;</string>
        <height>791</height>
       </rect>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <item>
-       <widget class="QPushButton" name="mainButton">
-        <property name="text">
-         <string>Etusivu</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="exercisesButton">
-        <property name="text">
-         <string>Tehtävät</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="userInfoButton">
-        <property name="text">
-         <string>Käyttäjän tiedot</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="infoButton">
-        <property name="text">
-         <string>Tietoja</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="settingsButton">
-        <property name="text">
-         <string>Asetukset</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="logoutButton">
-        <property name="text">
-         <string>Kirjaudu ulos</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="verticalSpacer">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-     </layout>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(175, 203, 250);
+border-radius: 5px;</string>
+     </property>
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>291</width>
+        <height>771</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="mainButton">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-top: 1px solid black;
+border-bottom: 1px solid black;
+border-radius: 0;
+text-align: left;
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>Etusivu</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_7">
+         <item>
+          <widget class="QWidget" name="widget_2" native="true">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <widget class="QPushButton" name="exercisesButton">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>281</width>
+              <height>30</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">text-align: left;
+border-bottom: 1px solid black;
+border-radius: 0;
+color: rgb(0, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string>Tehtävät</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="exercisesShow">
+            <property name="geometry">
+             <rect>
+              <x>250</x>
+              <y>0</y>
+              <width>40</width>
+              <height>30</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>40</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+border-bottom: 1px solid black;
+border-left: 1px solid;
+border-left-color: rgb(17, 66, 127);
+border-radius: 0</string>
+            </property>
+            <property name="text">
+             <string>▲</string>
+            </property>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_8">
+         <item>
+          <widget class="QWidget" name="exerciseOneMenuLayout" native="true">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <widget class="QPushButton" name="exerciseOneMenuButton">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>281</width>
+              <height>30</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">padding-left: 20px;
+text-align: left;
+border-bottom: 1px solid black;
+border-radius: 0;
+color: rgb(0, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string>1. Klusterit</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="exerciseOneShow">
+            <property name="geometry">
+             <rect>
+              <x>250</x>
+              <y>0</y>
+              <width>40</width>
+              <height>30</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>40</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(0, 0, 0);
+border-bottom: 1px solid black;
+border-radius: 0;
+border-left: 1px solid;
+border-left-color: rgb(17, 66, 127);</string>
+            </property>
+            <property name="text">
+             <string>▲</string>
+            </property>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QPushButton" name="exerciseOneOneMenuButton">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">padding-left: 40px;
+color: rgb(0, 0, 0);
+text-align: left;
+border-bottom: 1px solid black;
+border-radius: 0;</string>
+         </property>
+         <property name="text">
+          <string>1.1. Klusterin perusteet</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="exerciseOneTwoMenuButton">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">padding-left: 40px;
+color: rgb(0, 0, 0);
+text-align: left;
+border-bottom: 1px solid black;
+border-radius: 0;</string>
+         </property>
+         <property name="text">
+          <string>1.2. Minikube</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="exerciseOneThreeMenuButton">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">padding-left: 40px;
+color: rgb(0, 0, 0);
+text-align: left;
+border-bottom: 1px solid black;
+border-radius: 0;</string>
+         </property>
+         <property name="text">
+          <string>1.3. Klusterin rakenne</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="exerciseOneFourMenuButton">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">padding-left: 40px;
+color: rgb(0, 0, 0);
+text-align: left;
+border-bottom: 1px solid black;
+border-radius: 0;</string>
+         </property>
+         <property name="text">
+          <string>1.4. Klusterin luonti</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="userInfoButton">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(0, 0, 0);
+text-align: left;
+border-bottom: 1px solid black;
+border-radius: 0;</string>
+         </property>
+         <property name="text">
+          <string>Käyttäjän tiedot</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="infoButton">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(0, 0, 0);
+text-align: left;
+border-bottom: 1px solid black;
+border-radius: 0;</string>
+         </property>
+         <property name="text">
+          <string>Tietoja</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="settingsButton">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(0, 0, 0);
+text-align: left;
+border-bottom: 1px solid black;
+border-radius: 0;</string>
+         </property>
+         <property name="text">
+          <string>Asetukset</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="logoutButton">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(0, 0, 0);
+text-align: left;
+border-bottom: 1px solid black;
+border-radius: 0;</string>
+         </property>
+         <property name="text">
+          <string>Kirjaudu ulos</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
     </widget>
    </widget>
   </widget>
