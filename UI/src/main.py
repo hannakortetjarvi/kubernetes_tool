@@ -6,6 +6,7 @@ from PySide6.QtGui import QPixmap
 from PySide6.QtCore import Qt
 from ui_form import Ui_Widget
 from utils.command_line import command_call
+from utils.database import database
 
 class MyApplication(QWidget):
     def __init__(self):
@@ -13,6 +14,9 @@ class MyApplication(QWidget):
         self.ui = Ui_Widget()
         self.ui.setupUi(self)
         self.ui.stackedWidget.setCurrentIndex(0)
+
+        self.db = database
+        self.db.create_db()
 
         self.CURRENT_DIRECTORY = os.path.dirname(os.path.realpath(__file__))
         filename = os.path.join(self.CURRENT_DIRECTORY, "../../images/ex1.png")
