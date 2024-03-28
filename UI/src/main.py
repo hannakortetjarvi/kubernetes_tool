@@ -92,8 +92,19 @@ class MyApplication(QWidget):
             self.showExerciseMenu(False)
             self.ui.exerciseOneMenuLayout.setVisible(False)
             self.CURRENT_EXERCISE = self.db.init_user(self.username)
-            print(self.CURRENT_EXERCISE)
             self.initExerciseButtons()
+            success, res = command_call("minikube version")
+            if not success:
+                self.ui.labelMinikube.setText(self.ui.labelMinikube.text() + "VERSION NOT FOUND")
+            else:
+                version = res.split("\n")[1].split(': ')[1]
+                self.ui.labelMinikube.setText(self.ui.labelMinikube.text() + version)
+            success, res = command_call("kubectl version --client=true")
+            if not success:
+                self.ui.labelKubectl.setText(self.ui.labelKubectl.text() + "VERSION NOT FOUND")
+            else:
+                version = res.split("\n")[1].split(': ')[1]
+                self.ui.labelKubectl.setText(self.ui.labelKubectl.text() + version)
 
     def initExerciseButtons(self):
         exercise = self.CURRENT_EXERCISE[0]
@@ -124,6 +135,8 @@ class MyApplication(QWidget):
                 next_button.setEnabled(True)
 
     def userLogout(self):
+        self.ui.labelMinikube.setText("Käytössä oleva Minikube versio: ")
+        self.ui.labelKubectl.setText("Käytössä oleva Kubectl Client versio: ")
         main = self.ui.menuPages.findChild(QLabel, "subMain")
         user_info = self.ui.menuPages.findChild(QLabel, "subUserInfo")
         leng = len(self.username) + 1

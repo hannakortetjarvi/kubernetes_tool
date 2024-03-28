@@ -6,7 +6,7 @@ def command_call(command):
     # Check if the command was successful
     if result.returncode == 0:
         # Print the output of the command
-        return f"Output:\n{result.stdout}"
+        return True, f"Output:\n{result.stdout}"
     else:
         # Print the error message if the command failed
-        return f"Output:\n{result.stderr}"
+        return False, f"Output:\n{result.stderr}"

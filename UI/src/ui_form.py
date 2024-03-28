@@ -90,8 +90,24 @@ class Ui_Widget(object):
 
         self.desc = QLabel(self.verticalLayoutWidget_2)
         self.desc.setObjectName(u"desc")
+        self.desc.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
 
         self.verticalLayout_7.addWidget(self.desc)
+
+        self.labelMinikube = QLabel(self.verticalLayoutWidget_2)
+        self.labelMinikube.setObjectName(u"labelMinikube")
+
+        self.verticalLayout_7.addWidget(self.labelMinikube)
+
+        self.labelKubectl = QLabel(self.verticalLayoutWidget_2)
+        self.labelKubectl.setObjectName(u"labelKubectl")
+
+        self.verticalLayout_7.addWidget(self.labelKubectl)
+
+        self.textBrowser_7 = QTextBrowser(self.verticalLayoutWidget_2)
+        self.textBrowser_7.setObjectName(u"textBrowser_7")
+
+        self.verticalLayout_7.addWidget(self.textBrowser_7)
 
         self.menuPages.addWidget(self.mainPage)
         self.exercisesPage = QWidget()
@@ -132,7 +148,7 @@ class Ui_Widget(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 100, 30))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 1209, 687))
         self.verticalLayoutWidget_7 = QWidget(self.scrollAreaWidgetContents)
         self.verticalLayoutWidget_7.setObjectName(u"verticalLayoutWidget_7")
         self.verticalLayoutWidget_7.setGeometry(QRect(0, 0, 1211, 691))
@@ -349,19 +365,37 @@ class Ui_Widget(object):
 
         self.infoBrowser_4 = QTextBrowser(self.layoutWidget_3)
         self.infoBrowser_4.setObjectName(u"infoBrowser_4")
+        self.infoBrowser_4.setMaximumSize(QSize(16777215, 150))
         self.infoBrowser_4.setStyleSheet(u"border-top: 1px solid gray;")
 
         self.verticalLayout_14.addWidget(self.infoBrowser_4)
 
-        self.horizontalLayout_14 = QHBoxLayout()
-        self.horizontalLayout_14.setObjectName(u"horizontalLayout_14")
+        self.textBrowser_4 = QTextBrowser(self.layoutWidget_3)
+        self.textBrowser_4.setObjectName(u"textBrowser_4")
+        self.textBrowser_4.setMaximumSize(QSize(16777215, 39))
+        self.textBrowser_4.setStyleSheet(u"background-color: rgb(29, 29, 29);\n"
+"")
 
-        self.verticalLayout_14.addLayout(self.horizontalLayout_14)
+        self.verticalLayout_14.addWidget(self.textBrowser_4)
 
         self.textBrowser_3 = QTextBrowser(self.layoutWidget_3)
         self.textBrowser_3.setObjectName(u"textBrowser_3")
+        self.textBrowser_3.setMaximumSize(QSize(16777215, 70))
 
         self.verticalLayout_14.addWidget(self.textBrowser_3)
+
+        self.textBrowser_5 = QTextBrowser(self.layoutWidget_3)
+        self.textBrowser_5.setObjectName(u"textBrowser_5")
+        self.textBrowser_5.setMaximumSize(QSize(16777215, 39))
+        self.textBrowser_5.setStyleSheet(u"background-color: rgb(29, 29, 29);\n"
+"")
+
+        self.verticalLayout_14.addWidget(self.textBrowser_5)
+
+        self.textBrowser_6 = QTextBrowser(self.layoutWidget_3)
+        self.textBrowser_6.setObjectName(u"textBrowser_6")
+
+        self.verticalLayout_14.addWidget(self.textBrowser_6)
 
         self.progressBarOne_3 = QProgressBar(self.layoutWidget_3)
         self.progressBarOne_3.setObjectName(u"progressBarOne_3")
@@ -370,7 +404,6 @@ class Ui_Widget(object):
         self.verticalLayout_14.addWidget(self.progressBarOne_3)
 
         self.verticalLayout_14.setStretch(1, 6)
-        self.verticalLayout_14.setStretch(2, 1)
         self.exerciseOnePages.addWidget(self.oneTwo)
         self.oneThree = QWidget()
         self.oneThree.setObjectName(u"oneThree")
@@ -805,7 +838,9 @@ class Ui_Widget(object):
         self.label.setText(QCoreApplication.translate("Widget", u"K\u00e4ytt\u00e4j\u00e4n nimi:", None))
         self.title.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:24pt; font-weight:700;\">Kubernetes Oppimisty\u00f6kalu</span></p></body></html>", None))
         self.subMain.setText(QCoreApplication.translate("Widget", u"Hei ", None))
-        self.desc.setText(QCoreApplication.translate("Widget", u"Tervetuloa interaktiiviseen Kubernetes oppimisty\u00f6kaluun!", None))
+        self.desc.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p>Tervetuloa interaktiiviseen Kubernetes oppimisty\u00f6kaluun!</p></body></html>", None))
+        self.labelMinikube.setText(QCoreApplication.translate("Widget", u"K\u00e4yt\u00f6ss\u00e4 oleva Minikube versio: ", None))
+        self.labelKubectl.setText(QCoreApplication.translate("Widget", u"K\u00e4yt\u00f6ss\u00e4 oleva Kubectl Client versio: ", None))
         self.title_4.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:24pt; font-weight:700;\">Teht\u00e4v\u00e4t</span></p></body></html>", None))
         self.sub_4.setText("")
         self.desc_4.setText("")
@@ -876,7 +911,33 @@ class Ui_Widget(object):
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt;\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">Minikuben sivuilta voi tarkkailla Minikubesta l\u00f6ytyvi\u00e4 komentoja: </span><a href=\"https://minikube.sigs.k8s.io/docs/commands/\"><span style=\" font-size:11pt; text-decoration: underline; color:#0078d4;\">https://minikube.sigs.k8s.io/docs/commands/</span></a></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt; text-decoration: underline; color:#0078d4;\"><br /></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">Klusterin voi k\u00e4"
+                        "ynnist\u00e4\u00e4 komennolla:</span></p></body></html>", None))
+        self.textBrowser_4.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Candara'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:145%;\"><span style=\" font-family:'Courier New'; font-size:11pt; color:#e6edf3;\">$ minikube start</span></p></body></html>", None))
+        self.textBrowser_3.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Candara'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">Minikuben 1.32.0 versiossa on raportoitu h\u00e4iri\u00f6it\u00e4 eri k\u00e4ytt\u00f6j\u00e4rjestelmill\u00e4. </span><span style=\" font-size:11pt; font-weight:700;\">Jos k\u00e4yt\u00f6ss\u00e4si on Minikuben versio 1.32.0</span><span style=\" font-size:11pt;\"> (tai mahdollisesti my\u00f6hempi versio), on klusterin k\u00e4ynnistyksen yhteydess\u00e4 hyv\u00e4 k\u00e4"
+                        "ytt\u00e4\u00e4 jotai muuta kun version mukana tulevaa alkuper\u00e4ist\u00e4 kuvaa. Alla on esimerkki vaihtoehtoisesta ajamisesta:</span></p></body></html>", None))
+        self.textBrowser_5.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Candara'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:145%;\"><span style=\" font-family:'Courier New'; font-size:11pt; color:#e6edf3;\">$ minikube start --base-image gcr.io/k8s-minikube/kicbase-builds:v0.0.42-1703092832-17830</span></p></body></html>", None))
         self.prevOneThree.setText(QCoreApplication.translate("Widget", u"Edellinen", None))
         self.label_5.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:14pt;\">1.3. Klusterin rakenne</span></p></body></html>", None))
         self.nextOneThree.setText(QCoreApplication.translate("Widget", u"Seuraava", None))
