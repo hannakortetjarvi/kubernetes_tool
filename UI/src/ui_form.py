@@ -132,7 +132,7 @@ class Ui_Widget(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 1209, 687))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 100, 30))
         self.verticalLayoutWidget_7 = QWidget(self.scrollAreaWidgetContents)
         self.verticalLayoutWidget_7.setObjectName(u"verticalLayoutWidget_7")
         self.verticalLayoutWidget_7.setGeometry(QRect(0, 0, 1211, 691))
@@ -714,7 +714,8 @@ class Ui_Widget(object):
 "color: rgb(0, 0, 0);\n"
 "text-align: left;\n"
 "border-bottom: 1px solid black;\n"
-"border-radius: 0;")
+"border-radius: 0;\n"
+"color: rgb(170, 170, 170);")
 
         self.verticalLayout.addWidget(self.exerciseOneTwoMenuButton)
 
@@ -725,7 +726,8 @@ class Ui_Widget(object):
 "color: rgb(0, 0, 0);\n"
 "text-align: left;\n"
 "border-bottom: 1px solid black;\n"
-"border-radius: 0;")
+"border-radius: 0;\n"
+"color: rgb(170, 170, 170);")
 
         self.verticalLayout.addWidget(self.exerciseOneThreeMenuButton)
 
@@ -736,7 +738,9 @@ class Ui_Widget(object):
 "color: rgb(0, 0, 0);\n"
 "text-align: left;\n"
 "border-bottom: 1px solid black;\n"
-"border-radius: 0;")
+"border-radius: 0;\n"
+"color: rgb(170, 170, 170);")
+        self.exerciseOneFourMenuButton.setCheckable(False)
 
         self.verticalLayout.addWidget(self.exerciseOneFourMenuButton)
 

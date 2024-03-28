@@ -1,14 +1,32 @@
 {
    "data": [
       {
-         "name": "pysondb",
-         "type": "DB",
-         "id": 184946331314171156
+         "exercise": 1,
+         "part": 1,
+         "has_answer": false,
+         "answer": "",
+         "id": 312809228073701628
       },
       {
-         "name": "pysondb-cli",
-         "type": "CLI",
-         "id": 136309201096821837
+         "exercise": 1,
+         "part": 2,
+         "has_answer": false,
+         "answer": "",
+         "id": 288973287114974206
+      },
+      {
+         "exercise": 1,
+         "part": 3,
+         "has_answer": true,
+         "answer": "ok",
+         "id": 196254305737331787
+      },
+      {
+         "exercise": 1,
+         "part": 4,
+         "has_answer": true,
+         "answer": "ok",
+         "id": 271278649599094677
       }
    ]
 }

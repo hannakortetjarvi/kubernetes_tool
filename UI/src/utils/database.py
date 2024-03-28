@@ -2,10 +2,40 @@ from pysondb import db
 import os.path
 
 class database():
-    def create_db():
+    def __init__(self):
+        super().__init__()
         dir = os.path.dirname(os.path.realpath(__file__))
-        filename = os.path.join(dir, "db.json")
-        a = db.getDb(filename)
-        #a.addMany([{"name":"pysondb","type":"DB"},{"name":"pysondb-cli","type":"CLI"}])
-        b = a.getAll()
-        print(b)
+        db_filename = os.path.join(dir, "db.json")
+        users_filename = os.path.join(dir, "user.json")
+        self.db = db.getDb(db_filename)
+        self.users = db.getDb(users_filename)
+
+    def migrations(self):
+        self.db.add({"exercise":1, "part":1, "has_answer":False, "answer":""})
+        self.db.add({"exercise":1, "part":2, "has_answer":False, "answer":""})
+        self.db.add({"exercise":1, "part":3, "has_answer":True, "answer":"ok"})
+        self.db.add({"exercise":1, "part":4, "has_answer":True, "answer":"ok"})
+
+    def getItems(self):
+        return self.db.getAll()
+    
+    def check_has_answer(self, ex, part):
+        query = {"exercise": ex, "part": part}
+        data = self.db.getByQuery(query)
+        return data[0]["has_answer"]
+    
+    def initUser(self, user):
+        query = {"username": user}
+        data = self.users.getByQuery(query)
+
+        if data == []:
+            self.users.add({"username": user, "completed":[-1,-1]})
+            return [-1,-1]
+        else:
+            found_user = data[0]
+            return found_user["completed"]
+
+    def init(self):
+        self.db.deleteAll()
+        self.users.deleteAll()
+        self.migrations()

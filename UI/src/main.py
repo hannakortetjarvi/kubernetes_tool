@@ -15,9 +15,25 @@ class MyApplication(QWidget):
         self.ui.setupUi(self)
         self.ui.stackedWidget.setCurrentIndex(0)
 
-        self.db = database
-        self.db.create_db()
+        self.exercise_buttons_menu = [[self.ui.exerciseOneOneMenuButton, self.ui.exerciseOneTwoMenuButton, self.ui.exerciseOneThreeMenuButton, self.ui.exerciseOneFourMenuButton]]
+        self.exercise_buttons = [[self.ui.exerciseOneOneButton, self.ui.exerciseOneTwoButton, self.ui.exerciseOneThreeButton, self.ui.exerciseOneFourButton]]
+        self.exercise_buttons_next = [[self.ui.nextOneOne, self.ui.nextOneTwo, self.ui.nextOneThree, self.ui.nextOneFour]]
+        self.button_stylesheet = self.ui.exerciseOneOneMenuButton.styleSheet()
 
+        for i in range(len(self.exercise_buttons_menu)):
+            for j in range(len(self.exercise_buttons_menu[i])):
+                button = self.exercise_buttons[i][j]
+                menu_button = self.exercise_buttons_menu[i][j]
+                next_button = self.exercise_buttons_next[i][j]
+                button.setEnabled(False)
+                menu_button.setEnabled(False)
+                next_button.setEnabled(False)
+
+        self.db = database()
+        if self.db.getItems() == []:
+            self.db.migrations()
+
+        self.CURRENT_EXERCISE = []
         self.CURRENT_DIRECTORY = os.path.dirname(os.path.realpath(__file__))
         filename = os.path.join(self.CURRENT_DIRECTORY, "../../images/ex1.png")
 
@@ -37,23 +53,23 @@ class MyApplication(QWidget):
         self.ui.settingsButton.clicked.connect(lambda: self.menuClicked("settingsButton"))
         self.ui.logoutButton.clicked.connect(self.userLogout)
 
-        self.ui.exerciseOneButton.clicked.connect(lambda: self.exerciseClicked(1))
-        self.ui.exerciseOneMenuButton.clicked.connect(lambda: self.exerciseClicked(1))
-        self.ui.exerciseOneOneButton.clicked.connect(lambda: self.exerciseClicked(11))
-        self.ui.exerciseOneOneMenuButton.clicked.connect(lambda: self.exerciseClicked(11))
-        self.ui.exerciseOneTwoButton.clicked.connect(lambda: self.exerciseClicked(12))
-        self.ui.exerciseOneTwoMenuButton.clicked.connect(lambda: self.exerciseClicked(12))
-        self.ui.exerciseOneThreeButton.clicked.connect(lambda: self.exerciseClicked(13))
-        self.ui.exerciseOneThreeMenuButton.clicked.connect(lambda: self.exerciseClicked(13))
-        self.ui.exerciseOneFourButton.clicked.connect(lambda: self.exerciseClicked(14))
-        self.ui.exerciseOneFourMenuButton.clicked.connect(lambda: self.exerciseClicked(14))
-        self.ui.prevOneOne.clicked.connect(lambda: self.exerciseClicked(1))
-        self.ui.nextOneOne.clicked.connect(lambda: self.exerciseClicked(12))
-        self.ui.prevOneTwo.clicked.connect(lambda: self.exerciseClicked(11))
-        self.ui.nextOneTwo.clicked.connect(lambda: self.exerciseClicked(13))
-        self.ui.prevOneThree.clicked.connect(lambda: self.exerciseClicked(12))
-        self.ui.nextOneThree.clicked.connect(lambda: self.exerciseClicked(14))
-        self.ui.prevOneFour.clicked.connect(lambda: self.exerciseClicked(13))
+        self.ui.exerciseOneButton.clicked.connect(lambda: self.exerciseClicked(1,0))
+        self.ui.exerciseOneMenuButton.clicked.connect(lambda: self.exerciseClicked(1,0))
+        self.ui.exerciseOneOneButton.clicked.connect(lambda: self.exerciseClicked(1,1))
+        self.ui.exerciseOneOneMenuButton.clicked.connect(lambda: self.exerciseClicked(1,1))
+        self.ui.exerciseOneTwoButton.clicked.connect(lambda: self.exerciseClicked(1,2))
+        self.ui.exerciseOneTwoMenuButton.clicked.connect(lambda: self.exerciseClicked(1,2))
+        self.ui.exerciseOneThreeButton.clicked.connect(lambda: self.exerciseClicked(1,3))
+        self.ui.exerciseOneThreeMenuButton.clicked.connect(lambda: self.exerciseClicked(1,3))
+        self.ui.exerciseOneFourButton.clicked.connect(lambda: self.exerciseClicked(1,4))
+        self.ui.exerciseOneFourMenuButton.clicked.connect(lambda: self.exerciseClicked(1,4))
+        self.ui.prevOneOne.clicked.connect(lambda: self.exerciseClicked(1,0))
+        self.ui.nextOneOne.clicked.connect(lambda: self.exerciseClicked(1,2))
+        self.ui.prevOneTwo.clicked.connect(lambda: self.exerciseClicked(1,1))
+        self.ui.nextOneTwo.clicked.connect(lambda: self.exerciseClicked(1,3))
+        self.ui.prevOneThree.clicked.connect(lambda: self.exerciseClicked(1,2))
+        self.ui.nextOneThree.clicked.connect(lambda: self.exerciseClicked(1,4))
+        self.ui.prevOneFour.clicked.connect(lambda: self.exerciseClicked(1,3))
         self.ui.nextOneFour.clicked.connect(lambda: self.menuClicked("exercisesButton"))
         self.ui.exercisesShow.clicked.connect(lambda: self.arrowClicked(0))
         self.ui.exerciseOneShow.clicked.connect(lambda: self.arrowClicked(1))
@@ -82,6 +98,25 @@ class MyApplication(QWidget):
             self.ui.stackedWidget_2.setCurrentIndex(0)
             self.showExerciseMenu(False)
             self.ui.exerciseOneMenuLayout.setVisible(False)
+            self.CURRENT_EXERCISE = self.db.initUser(self.username)
+            self.initExerciseButtons()
+
+    def initExerciseButtons(self):
+        exercise = self.CURRENT_EXERCISE[0]
+        part = self.CURRENT_EXERCISE[1]
+
+        for i in range(exercise + 2):
+            checked = part + 2
+            if exercise + 1 > i:
+                checked = len(self.exercise_buttons[i])
+            for j in range(checked):
+                button = self.exercise_buttons[i][j]
+                menu_button = self.exercise_buttons_menu[i][j]
+                next_button = self.exercise_buttons_next[i][j]
+                button.setEnabled(True)
+                menu_button.setStyleSheet(self.button_stylesheet)
+                menu_button.setEnabled(True)
+                next_button.setEnabled(True)
 
     def userLogout(self):
         main = self.ui.menuPages.findChild(QLabel, "subMain")
@@ -125,8 +160,27 @@ class MyApplication(QWidget):
             self.ui.exerciseOneShow.setText("▲")
             self.exercise_one_open = False
 
-    def exerciseClicked(self, num):
-        if num == 1:
+    def exerciseClicked(self, ex, part):
+        if part != 0:
+            has_answer = self.db.check_has_answer(ex, part)
+            if not has_answer and len(self.exercise_buttons[ex-1]) == part:
+                if len(self.exercise_buttons) != ex:
+                    button = self.exercise_buttons[ex][0]
+                    menu_button = self.exercise_buttons_menu[ex][0]
+                    next_button = self.exercise_buttons_next[ex][0]
+                    button.setEnabled(True)
+                    menu_button.setEnabled(True)
+                    next_button.setEnabled(True)
+            elif not has_answer and len(self.exercise_buttons[ex-1]) != part:
+                button = self.exercise_buttons[ex-1][part]
+                menu_button = self.exercise_buttons_menu[ex-1][part]
+                next_button = self.exercise_buttons_next[ex-1][part-1]
+                button.setEnabled(True)
+                menu_button.setStyleSheet(self.button_stylesheet)
+                menu_button.setEnabled(True)
+                next_button.setEnabled(True)
+
+        if ex == 1 and part == 0:
             self.ui.exerciseOneShow.setVisible(True)
             self.ui.menuPages.setCurrentIndex(1)
             self.ui.stackedWidget_2.setCurrentIndex(1)
@@ -134,22 +188,22 @@ class MyApplication(QWidget):
             self.ui.exerciseOneShow.setText("▼")
             self.showExerciseMenu(True)
             self.changeBoldedText(self.ui.exerciseOneMenuButton)
-        elif num == 11:
+        elif ex == 1 and part == 1:
             self.ui.menuPages.setCurrentIndex(1)
             self.ui.stackedWidget_2.setCurrentIndex(1)
             self.ui.exerciseOnePages.setCurrentIndex(1)
             self.changeBoldedText(self.ui.exerciseOneOneMenuButton)
-        elif num == 12:
+        elif ex == 1 and part == 2:
             self.ui.menuPages.setCurrentIndex(1)
             self.ui.stackedWidget_2.setCurrentIndex(1)
             self.ui.exerciseOnePages.setCurrentIndex(2)
             self.changeBoldedText(self.ui.exerciseOneTwoMenuButton)
-        elif num == 13:
+        elif ex == 1 and part == 3:
             self.ui.menuPages.setCurrentIndex(1)
             self.ui.stackedWidget_2.setCurrentIndex(1)
             self.ui.exerciseOnePages.setCurrentIndex(3)
             self.changeBoldedText(self.ui.exerciseOneThreeMenuButton)
-        elif num == 14:
+        elif ex == 1 and part == 4:
             self.ui.menuPages.setCurrentIndex(1)
             self.ui.stackedWidget_2.setCurrentIndex(1)
             self.ui.exerciseOnePages.setCurrentIndex(4)

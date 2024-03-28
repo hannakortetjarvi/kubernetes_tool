@@ -254,8 +254,8 @@ padding-bottom: 15px;</string>
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>1209</width>
-               <height>687</height>
+               <width>100</width>
+               <height>30</height>
               </rect>
              </property>
              <widget class="QWidget" name="verticalLayoutWidget_7">
@@ -1343,7 +1343,8 @@ border-radius: 0;</string>
 color: rgb(0, 0, 0);
 text-align: left;
 border-bottom: 1px solid black;
-border-radius: 0;</string>
+border-radius: 0;
+color: rgb(170, 170, 170);</string>
          </property>
          <property name="text">
           <string>1.2. Minikube</string>
@@ -1363,7 +1364,8 @@ border-radius: 0;</string>
 color: rgb(0, 0, 0);
 text-align: left;
 border-bottom: 1px solid black;
-border-radius: 0;</string>
+border-radius: 0;
+color: rgb(170, 170, 170);</string>
          </property>
          <property name="text">
           <string>1.3. Klusterin rakenne</string>
@@ -1383,10 +1385,14 @@ border-radius: 0;</string>
 color: rgb(0, 0, 0);
 text-align: left;
 border-bottom: 1px solid black;
-border-radius: 0;</string>
+border-radius: 0;
+color: rgb(170, 170, 170);</string>
          </property>
          <property name="text">
           <string>1.4. Klusterin luonti</string>
+         </property>
+         <property name="checkable">
+          <bool>false</bool>
          </property>
         </widget>
        </item>
