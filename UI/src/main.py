@@ -18,16 +18,8 @@ class MyApplication(QWidget):
         self.exercise_buttons_menu = [[self.ui.exerciseOneOneMenuButton, self.ui.exerciseOneTwoMenuButton, self.ui.exerciseOneThreeMenuButton, self.ui.exerciseOneFourMenuButton]]
         self.exercise_buttons = [[self.ui.exerciseOneOneButton, self.ui.exerciseOneTwoButton, self.ui.exerciseOneThreeButton, self.ui.exerciseOneFourButton]]
         self.exercise_buttons_next = [[self.ui.nextOneOne, self.ui.nextOneTwo, self.ui.nextOneThree, self.ui.nextOneFour]]
-        self.button_stylesheet = self.ui.exerciseOneOneMenuButton.styleSheet()
-
-        for i in range(len(self.exercise_buttons_menu)):
-            for j in range(len(self.exercise_buttons_menu[i])):
-                button = self.exercise_buttons[i][j]
-                menu_button = self.exercise_buttons_menu[i][j]
-                next_button = self.exercise_buttons_next[i][j]
-                button.setEnabled(False)
-                menu_button.setEnabled(False)
-                next_button.setEnabled(False)
+        self.button_stylesheet_clickable = self.ui.exerciseOneOneMenuButton.styleSheet()
+        self.button_stylesheet_not_clickable = self.ui.exerciseOneTwoMenuButton.styleSheet()
 
         self.db = database()
         if self.db.getItems() == []:
@@ -43,7 +35,8 @@ class MyApplication(QWidget):
         self.previously_clicked_style = self.ui.mainButton.styleSheet()
         self.ui.mainButton.setStyleSheet(self.previously_clicked_style + "font-weight: bold;")
 
-        #self.ui.runButton.clicked.connect(lambda: self.button_clicked)
+        self.ui.runButtonOneThree.clicked.connect(lambda: self.button_clicked(1, 3, False))
+        self.ui.runButtonOneFour.clicked.connect(lambda: self.button_clicked(1, 4, False))
 
         self.ui.loginButton.clicked.connect(self.userLogin)
         self.ui.mainButton.clicked.connect(lambda: self.menuClicked("mainButton"))
@@ -98,23 +91,35 @@ class MyApplication(QWidget):
             self.ui.stackedWidget_2.setCurrentIndex(0)
             self.showExerciseMenu(False)
             self.ui.exerciseOneMenuLayout.setVisible(False)
-            self.CURRENT_EXERCISE = self.db.initUser(self.username)
+            self.CURRENT_EXERCISE = self.db.init_user(self.username)
+            print(self.CURRENT_EXERCISE)
             self.initExerciseButtons()
 
     def initExerciseButtons(self):
         exercise = self.CURRENT_EXERCISE[0]
         part = self.CURRENT_EXERCISE[1]
 
-        for i in range(exercise + 2):
-            checked = part + 2
-            if exercise + 1 > i:
-                checked = len(self.exercise_buttons[i])
-            for j in range(checked):
+        for i in range(len(self.exercise_buttons_menu)):
+            for j in range(len(self.exercise_buttons_menu[i])):
+                button = self.exercise_buttons[i][j]
+                menu_button = self.exercise_buttons_menu[i][j]
+                next_button = self.exercise_buttons_next[i][j]
+                menu_button.setStyleSheet(self.button_stylesheet_not_clickable)
+                button.setEnabled(False)
+                menu_button.setEnabled(False)
+                next_button.setEnabled(False)
+
+        for i in range(len(self.exercise_buttons)):
+            if i > exercise:
+                break
+            for j in range(len(self.exercise_buttons_menu[i])):
+                if i+1 == exercise and j > part:
+                    break
                 button = self.exercise_buttons[i][j]
                 menu_button = self.exercise_buttons_menu[i][j]
                 next_button = self.exercise_buttons_next[i][j]
                 button.setEnabled(True)
-                menu_button.setStyleSheet(self.button_stylesheet)
+                menu_button.setStyleSheet(self.button_stylesheet_clickable)
                 menu_button.setEnabled(True)
                 next_button.setEnabled(True)
 
@@ -133,6 +138,7 @@ class MyApplication(QWidget):
         self.ui.exercisesShow.setText("▲")
         self.ui.exerciseOneShow.setText("▲")
         self.changeBoldedText(self.ui.mainButton)
+        self.CURRENT_EXERCISE = [0,0]
     
     def setupExercise(self):
         cluster = os.path.join(self.CURRENT_DIRECTORY, "../../images/cluster.png")
@@ -161,25 +167,9 @@ class MyApplication(QWidget):
             self.exercise_one_open = False
 
     def exerciseClicked(self, ex, part):
-        if part != 0:
-            has_answer = self.db.check_has_answer(ex, part)
-            if not has_answer and len(self.exercise_buttons[ex-1]) == part:
-                if len(self.exercise_buttons) != ex:
-                    button = self.exercise_buttons[ex][0]
-                    menu_button = self.exercise_buttons_menu[ex][0]
-                    next_button = self.exercise_buttons_next[ex][0]
-                    button.setEnabled(True)
-                    menu_button.setEnabled(True)
-                    next_button.setEnabled(True)
-            elif not has_answer and len(self.exercise_buttons[ex-1]) != part:
-                button = self.exercise_buttons[ex-1][part]
-                menu_button = self.exercise_buttons_menu[ex-1][part]
-                next_button = self.exercise_buttons_next[ex-1][part-1]
-                button.setEnabled(True)
-                menu_button.setStyleSheet(self.button_stylesheet)
-                menu_button.setEnabled(True)
-                next_button.setEnabled(True)
-
+        if not self.db.check_has_answer(ex, part):
+            self.set_buttons(ex, part)
+        
         if ex == 1 and part == 0:
             self.ui.exerciseOneShow.setVisible(True)
             self.ui.menuPages.setCurrentIndex(1)
@@ -257,11 +247,43 @@ class MyApplication(QWidget):
             self.showExerciseMenu(False)
             self.changeBoldedText(self.ui.settingsButton)
 
-    def button_clicked(self):
-        print("test")
-        #cmd = self.ui.inputEdit.toPlainText()
-        #rtn = command_call(cmd)
-        #self.ui.resultBrowser.setPlainText(rtn)
+    def set_buttons(self, ex, part):
+        if part != 0:
+            if len(self.exercise_buttons[ex-1]) == part:
+                if len(self.exercise_buttons) != ex:
+                    button = self.exercise_buttons[ex][0]
+                    menu_button = self.exercise_buttons_menu[ex][0]
+                    next_button = self.exercise_buttons_next[ex-1][part-1]
+                    button.setEnabled(True)
+                    menu_button.setEnabled(True)
+                    next_button.setEnabled(True)
+                else:
+                    next_button = self.exercise_buttons_next[ex-1][part-1]
+                    next_button.setEnabled(True)
+            elif len(self.exercise_buttons[ex-1]) != part:
+                button = self.exercise_buttons[ex-1][part]
+                menu_button = self.exercise_buttons_menu[ex-1][part]
+                next_button = self.exercise_buttons_next[ex-1][part-1]
+                button.setEnabled(True)
+                menu_button.setStyleSheet(self.button_stylesheet_clickable)
+                menu_button.setEnabled(True)
+                next_button.setEnabled(True)
+
+    def button_clicked(self, ex, part, is_command):
+        correct = self.db.get_answer(ex, part)
+        result = self.ui.inputEdit_5.toPlainText()
+        print(correct)
+        print(result)
+        if result != correct:
+            self.ui.resultBrowser_5.setPlainText("Väärin")
+        else:
+            self.db.update_current_exercise(ex, part, self.username)
+            self.set_buttons(ex, part)
+                #elif is_command:
+                    #rtn = command_call(result)
+                    #self.ui.resultBrowser.setPlainText(rtn)
+                #elif not is_command:
+                    #self.ui.resultBrowser.setPlainText("Oikein")
 
 
 

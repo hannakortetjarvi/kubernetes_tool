@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'form.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.6.2
+## Created by: Qt User Interface Compiler version 6.2.4
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -160,7 +160,7 @@ class Ui_Widget(object):
         self.exerciseOneButton = QPushButton(self.horizontalLayoutWidget)
         self.exerciseOneButton.setObjectName(u"exerciseOneButton")
         self.exerciseOneButton.setEnabled(True)
-        sizePolicy = QSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Fixed)
+        sizePolicy = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.exerciseOneButton.sizePolicy().hasHeightForWidth())
@@ -173,14 +173,14 @@ class Ui_Widget(object):
 
         self.horizontalLayout_2.addWidget(self.exerciseOneButton)
 
-        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_2.addItem(self.horizontalSpacer)
 
 
         self.verticalLayout_2.addWidget(self.widget)
 
-        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_2.addItem(self.verticalSpacer_2)
 
@@ -241,7 +241,7 @@ class Ui_Widget(object):
 
         self.verticalLayout_17.addWidget(self.label_7)
 
-        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_17.addItem(self.verticalSpacer_3)
 
@@ -417,15 +417,15 @@ class Ui_Widget(object):
 
         self.horizontalLayout_15.addWidget(self.inputEdit_5)
 
-        self.runButton_5 = QPushButton(self.layoutWidget_4)
-        self.runButton_5.setObjectName(u"runButton_5")
-        self.runButton_5.setMinimumSize(QSize(0, 0))
-        self.runButton_5.setStyleSheet(u"border: 1px solid;\n"
+        self.runButtonOneThree = QPushButton(self.layoutWidget_4)
+        self.runButtonOneThree.setObjectName(u"runButtonOneThree")
+        self.runButtonOneThree.setMinimumSize(QSize(0, 0))
+        self.runButtonOneThree.setStyleSheet(u"border: 1px solid;\n"
 "border-radius: 5px;\n"
 "padding-top: 15px;\n"
 "padding-bottom: 15px;")
 
-        self.horizontalLayout_15.addWidget(self.runButton_5)
+        self.horizontalLayout_15.addWidget(self.runButtonOneThree)
 
 
         self.verticalLayout_15.addLayout(self.horizontalLayout_15)
@@ -498,15 +498,15 @@ class Ui_Widget(object):
 
         self.horizontalLayout_16.addWidget(self.inputEdit_6)
 
-        self.runButton_6 = QPushButton(self.layoutWidget_5)
-        self.runButton_6.setObjectName(u"runButton_6")
-        self.runButton_6.setMinimumSize(QSize(0, 0))
-        self.runButton_6.setStyleSheet(u"border: 1px solid;\n"
+        self.runButtonOneFour = QPushButton(self.layoutWidget_5)
+        self.runButtonOneFour.setObjectName(u"runButtonOneFour")
+        self.runButtonOneFour.setMinimumSize(QSize(0, 0))
+        self.runButtonOneFour.setStyleSheet(u"border: 1px solid;\n"
 "border-radius: 5px;\n"
 "padding-top: 15px;\n"
 "padding-bottom: 15px;")
 
-        self.horizontalLayout_16.addWidget(self.runButton_6)
+        self.horizontalLayout_16.addWidget(self.runButtonOneFour)
 
 
         self.verticalLayout_16.addLayout(self.horizontalLayout_16)
@@ -784,7 +784,7 @@ class Ui_Widget(object):
 
         self.verticalLayout.addWidget(self.logoutButton)
 
-        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout.addItem(self.verticalSpacer)
 
@@ -880,12 +880,12 @@ class Ui_Widget(object):
         self.prevOneThree.setText(QCoreApplication.translate("Widget", u"Edellinen", None))
         self.label_5.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:14pt;\">1.3. Klusterin rakenne</span></p></body></html>", None))
         self.nextOneThree.setText(QCoreApplication.translate("Widget", u"Seuraava", None))
-        self.runButton_5.setText(QCoreApplication.translate("Widget", u" Aja komento", None))
+        self.runButtonOneThree.setText(QCoreApplication.translate("Widget", u" Aja komento", None))
         self.label_17.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:12pt;\">Tuloste:</span></p></body></html>", None))
         self.prevOneFour.setText(QCoreApplication.translate("Widget", u"Edellinen", None))
         self.label_6.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:14pt;\">1.4. Klusterin luonti</span></p></body></html>", None))
         self.nextOneFour.setText(QCoreApplication.translate("Widget", u"Lopeta", None))
-        self.runButton_6.setText(QCoreApplication.translate("Widget", u" Aja komento", None))
+        self.runButtonOneFour.setText(QCoreApplication.translate("Widget", u" Aja komento", None))
         self.label_18.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:12pt;\">Tuloste:</span></p></body></html>", None))
         self.title_6.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:24pt; font-weight:700;\">K\u00e4ytt\u00e4j\u00e4n tiedot</span></p></body></html>", None))
         self.subUserInfo.setText(QCoreApplication.translate("Widget", u"K\u00e4ytt\u00e4j\u00e4n nimi: ", None))

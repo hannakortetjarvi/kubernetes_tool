@@ -24,13 +24,22 @@ class database():
         data = self.db.getByQuery(query)
         return data[0]["has_answer"]
     
-    def initUser(self, user):
+    def get_answer(self, ex, part):
+        query = {"exercise": ex, "part": part}
+        data = self.db.getByQuery(query)
+        return data[0]["answer"]
+    
+    def update_current_exercise(self, ex, part, user):
+        query = {"username": user}
+        data = self.users.update(query, {"completed":[ex, part]})
+    
+    def init_user(self, user):
         query = {"username": user}
         data = self.users.getByQuery(query)
 
         if data == []:
-            self.users.add({"username": user, "completed":[-1,-1]})
-            return [-1,-1]
+            self.users.add({"username": user, "completed":[1,0]})
+            return [1, 0]
         else:
             found_user = data[0]
             return found_user["completed"]

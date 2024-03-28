@@ -789,7 +789,7 @@ border-radius: 10px;</string>
                </widget>
               </item>
               <item>
-               <widget class="QPushButton" name="runButton_5">
+               <widget class="QPushButton" name="runButtonOneThree">
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
@@ -900,7 +900,7 @@ border-radius: 10px;</string>
                </widget>
               </item>
               <item>
-               <widget class="QPushButton" name="runButton_6">
+               <widget class="QPushButton" name="runButtonOneFour">
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
