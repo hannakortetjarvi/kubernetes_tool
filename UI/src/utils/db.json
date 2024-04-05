@@ -18,14 +18,14 @@
          "exercise": 1,
          "part": 3,
          "has_answer": true,
-         "answer": "ok",
+         "answer": [10, 11, 8, 7, 1, 5, 9],
          "id": 196254305737331787
       },
       {
          "exercise": 1,
          "part": 4,
          "has_answer": true,
-         "answer": "ok",
+         "answer": ["minikube start*", "minikube stop"],
          "id": 271278649599094677
       }
    ]

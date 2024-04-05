@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'form.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.2.4
+## Created by: Qt User Interface Compiler version 6.6.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -15,10 +15,10 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
-    QLineEdit, QProgressBar, QPushButton, QScrollArea,
-    QSizePolicy, QSpacerItem, QStackedWidget, QTextBrowser,
-    QTextEdit, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QHBoxLayout,
+    QLabel, QLineEdit, QProgressBar, QPushButton,
+    QScrollArea, QSizePolicy, QSpacerItem, QStackedWidget,
+    QTextBrowser, QTextEdit, QVBoxLayout, QWidget)
 
 class Ui_Widget(object):
     def setupUi(self, Widget):
@@ -28,7 +28,7 @@ class Ui_Widget(object):
         Widget.resize(1570, 834)
         Widget.setWindowTitle(u"Kubernetes Learning Tool")
         Widget.setStyleSheet(u"background-color: rgb(240, 255, 254);\n"
-"font: 10pt \"Candara\";")
+"font: 11pt \"MS Reference Sans Serif\";")
         self.stackedWidget = QStackedWidget(Widget)
         self.stackedWidget.setObjectName(u"stackedWidget")
         self.stackedWidget.setGeometry(QRect(9, 9, 1551, 811))
@@ -55,7 +55,7 @@ class Ui_Widget(object):
         self.loginWarning.setStyleSheet(u"color : red;")
         self.label = QLabel(self.frame)
         self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(40, 180, 111, 20))
+        self.label.setGeometry(QRect(40, 180, 191, 20))
         self.stackedWidget.addWidget(self.loginPage)
         self.loggedPage = QWidget()
         self.loggedPage.setObjectName(u"loggedPage")
@@ -74,8 +74,8 @@ class Ui_Widget(object):
         self.title.setObjectName(u"title")
         self.title.setMaximumSize(QSize(16777215, 50))
         font = QFont()
-        font.setFamilies([u"Candara"])
-        font.setPointSize(10)
+        font.setFamilies([u"MS Reference Sans Serif"])
+        font.setPointSize(11)
         font.setBold(False)
         font.setItalic(False)
         self.title.setFont(font)
@@ -148,7 +148,7 @@ class Ui_Widget(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 1209, 687))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 1209, 689))
         self.verticalLayoutWidget_7 = QWidget(self.scrollAreaWidgetContents)
         self.verticalLayoutWidget_7.setObjectName(u"verticalLayoutWidget_7")
         self.verticalLayoutWidget_7.setGeometry(QRect(0, 0, 1211, 691))
@@ -176,7 +176,7 @@ class Ui_Widget(object):
         self.exerciseOneButton = QPushButton(self.horizontalLayoutWidget)
         self.exerciseOneButton.setObjectName(u"exerciseOneButton")
         self.exerciseOneButton.setEnabled(True)
-        sizePolicy = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
+        sizePolicy = QSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.exerciseOneButton.sizePolicy().hasHeightForWidth())
@@ -189,14 +189,14 @@ class Ui_Widget(object):
 
         self.horizontalLayout_2.addWidget(self.exerciseOneButton)
 
-        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout_2.addItem(self.horizontalSpacer)
 
 
         self.verticalLayout_2.addWidget(self.widget)
 
-        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_2.addItem(self.verticalSpacer_2)
 
@@ -208,56 +208,61 @@ class Ui_Widget(object):
         self.exerciseOne = QWidget()
         self.exerciseOne.setObjectName(u"exerciseOne")
         self.exerciseOne.setStyleSheet(u"")
-        self.exerciseOnePages = QStackedWidget(self.exerciseOne)
+        self.verticalLayoutWidget_8 = QWidget(self.exerciseOne)
+        self.verticalLayoutWidget_8.setObjectName(u"verticalLayoutWidget_8")
+        self.verticalLayoutWidget_8.setGeometry(QRect(0, 0, 1211, 801))
+        self.verticalLayout_3 = QVBoxLayout(self.verticalLayoutWidget_8)
+        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
+        self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.exerciseOnePages = QStackedWidget(self.verticalLayoutWidget_8)
         self.exerciseOnePages.setObjectName(u"exerciseOnePages")
-        self.exerciseOnePages.setGeometry(QRect(-10, 0, 1221, 801))
         self.one = QWidget()
         self.one.setObjectName(u"one")
-        self.verticalLayoutWidget_8 = QWidget(self.one)
-        self.verticalLayoutWidget_8.setObjectName(u"verticalLayoutWidget_8")
-        self.verticalLayoutWidget_8.setGeometry(QRect(10, 0, 1211, 801))
-        self.verticalLayout_17 = QVBoxLayout(self.verticalLayoutWidget_8)
+        self.verticalLayoutWidget_9 = QWidget(self.one)
+        self.verticalLayoutWidget_9.setObjectName(u"verticalLayoutWidget_9")
+        self.verticalLayoutWidget_9.setGeometry(QRect(10, 0, 1201, 781))
+        self.verticalLayout_17 = QVBoxLayout(self.verticalLayoutWidget_9)
         self.verticalLayout_17.setObjectName(u"verticalLayout_17")
         self.verticalLayout_17.setContentsMargins(0, 0, 0, 0)
-        self.title_7 = QLabel(self.verticalLayoutWidget_8)
+        self.title_7 = QLabel(self.verticalLayoutWidget_9)
         self.title_7.setObjectName(u"title_7")
         self.title_7.setMaximumSize(QSize(16777215, 50))
         self.title_7.setFont(font)
 
         self.verticalLayout_17.addWidget(self.title_7)
 
-        self.sub_6 = QLabel(self.verticalLayoutWidget_8)
+        self.sub_6 = QLabel(self.verticalLayoutWidget_9)
         self.sub_6.setObjectName(u"sub_6")
         self.sub_6.setMaximumSize(QSize(16777215, 30))
 
         self.verticalLayout_17.addWidget(self.sub_6)
 
-        self.exerciseOneOneButton = QPushButton(self.verticalLayoutWidget_8)
+        self.exerciseOneOneButton = QPushButton(self.verticalLayoutWidget_9)
         self.exerciseOneOneButton.setObjectName(u"exerciseOneOneButton")
 
         self.verticalLayout_17.addWidget(self.exerciseOneOneButton)
 
-        self.exerciseOneTwoButton = QPushButton(self.verticalLayoutWidget_8)
+        self.exerciseOneTwoButton = QPushButton(self.verticalLayoutWidget_9)
         self.exerciseOneTwoButton.setObjectName(u"exerciseOneTwoButton")
 
         self.verticalLayout_17.addWidget(self.exerciseOneTwoButton)
 
-        self.exerciseOneThreeButton = QPushButton(self.verticalLayoutWidget_8)
+        self.exerciseOneThreeButton = QPushButton(self.verticalLayoutWidget_9)
         self.exerciseOneThreeButton.setObjectName(u"exerciseOneThreeButton")
 
         self.verticalLayout_17.addWidget(self.exerciseOneThreeButton)
 
-        self.exerciseOneFourButton = QPushButton(self.verticalLayoutWidget_8)
+        self.exerciseOneFourButton = QPushButton(self.verticalLayoutWidget_9)
         self.exerciseOneFourButton.setObjectName(u"exerciseOneFourButton")
 
         self.verticalLayout_17.addWidget(self.exerciseOneFourButton)
 
-        self.label_7 = QLabel(self.verticalLayoutWidget_8)
+        self.label_7 = QLabel(self.verticalLayoutWidget_9)
         self.label_7.setObjectName(u"label_7")
 
         self.verticalLayout_17.addWidget(self.label_7)
 
-        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_17.addItem(self.verticalSpacer_3)
 
@@ -266,7 +271,7 @@ class Ui_Widget(object):
         self.oneOne.setObjectName(u"oneOne")
         self.layoutWidget_2 = QWidget(self.oneOne)
         self.layoutWidget_2.setObjectName(u"layoutWidget_2")
-        self.layoutWidget_2.setGeometry(QRect(20, 0, 1201, 791))
+        self.layoutWidget_2.setGeometry(QRect(0, 0, 1211, 761))
         self.verticalLayout_8 = QVBoxLayout(self.layoutWidget_2)
         self.verticalLayout_8.setObjectName(u"verticalLayout_8")
         self.verticalLayout_8.setContentsMargins(0, 0, 0, 0)
@@ -327,19 +332,13 @@ class Ui_Widget(object):
 
         self.verticalLayout_8.addWidget(self.textBrowser)
 
-        self.progressBarOne = QProgressBar(self.layoutWidget_2)
-        self.progressBarOne.setObjectName(u"progressBarOne")
-        self.progressBarOne.setValue(24)
-
-        self.verticalLayout_8.addWidget(self.progressBarOne)
-
         self.verticalLayout_8.setStretch(1, 6)
         self.exerciseOnePages.addWidget(self.oneOne)
         self.oneTwo = QWidget()
         self.oneTwo.setObjectName(u"oneTwo")
         self.layoutWidget_3 = QWidget(self.oneTwo)
         self.layoutWidget_3.setObjectName(u"layoutWidget_3")
-        self.layoutWidget_3.setGeometry(QRect(10, 0, 1211, 801))
+        self.layoutWidget_3.setGeometry(QRect(0, 0, 1211, 761))
         self.verticalLayout_14 = QVBoxLayout(self.layoutWidget_3)
         self.verticalLayout_14.setObjectName(u"verticalLayout_14")
         self.verticalLayout_14.setContentsMargins(0, 0, 0, 0)
@@ -365,7 +364,7 @@ class Ui_Widget(object):
 
         self.infoBrowser_4 = QTextBrowser(self.layoutWidget_3)
         self.infoBrowser_4.setObjectName(u"infoBrowser_4")
-        self.infoBrowser_4.setMaximumSize(QSize(16777215, 150))
+        self.infoBrowser_4.setMaximumSize(QSize(16777215, 145))
         self.infoBrowser_4.setStyleSheet(u"border-top: 1px solid gray;")
 
         self.verticalLayout_14.addWidget(self.infoBrowser_4)
@@ -380,7 +379,8 @@ class Ui_Widget(object):
 
         self.textBrowser_3 = QTextBrowser(self.layoutWidget_3)
         self.textBrowser_3.setObjectName(u"textBrowser_3")
-        self.textBrowser_3.setMaximumSize(QSize(16777215, 70))
+        self.textBrowser_3.setMaximumSize(QSize(16777215, 63))
+        self.textBrowser_3.setStyleSheet(u"border: none;")
 
         self.verticalLayout_14.addWidget(self.textBrowser_3)
 
@@ -392,16 +392,40 @@ class Ui_Widget(object):
 
         self.verticalLayout_14.addWidget(self.textBrowser_5)
 
+        self.textBrowser_8 = QTextBrowser(self.layoutWidget_3)
+        self.textBrowser_8.setObjectName(u"textBrowser_8")
+        self.textBrowser_8.setMaximumSize(QSize(16777215, 30))
+        self.textBrowser_8.setStyleSheet(u"border: none;")
+
+        self.verticalLayout_14.addWidget(self.textBrowser_8)
+
+        self.textBrowser_9 = QTextBrowser(self.layoutWidget_3)
+        self.textBrowser_9.setObjectName(u"textBrowser_9")
+        self.textBrowser_9.setMaximumSize(QSize(16777215, 39))
+        self.textBrowser_9.setStyleSheet(u"background-color: rgb(29, 29, 29);\n"
+"")
+
+        self.verticalLayout_14.addWidget(self.textBrowser_9)
+
+        self.textBrowser_10 = QTextBrowser(self.layoutWidget_3)
+        self.textBrowser_10.setObjectName(u"textBrowser_10")
+        self.textBrowser_10.setMaximumSize(QSize(16777215, 30))
+        self.textBrowser_10.setStyleSheet(u"border: none;")
+
+        self.verticalLayout_14.addWidget(self.textBrowser_10)
+
+        self.textBrowser_11 = QTextBrowser(self.layoutWidget_3)
+        self.textBrowser_11.setObjectName(u"textBrowser_11")
+        self.textBrowser_11.setMaximumSize(QSize(16777215, 39))
+        self.textBrowser_11.setStyleSheet(u"background-color: rgb(29, 29, 29);\n"
+"")
+
+        self.verticalLayout_14.addWidget(self.textBrowser_11)
+
         self.textBrowser_6 = QTextBrowser(self.layoutWidget_3)
         self.textBrowser_6.setObjectName(u"textBrowser_6")
 
         self.verticalLayout_14.addWidget(self.textBrowser_6)
-
-        self.progressBarOne_3 = QProgressBar(self.layoutWidget_3)
-        self.progressBarOne_3.setObjectName(u"progressBarOne_3")
-        self.progressBarOne_3.setValue(24)
-
-        self.verticalLayout_14.addWidget(self.progressBarOne_3)
 
         self.verticalLayout_14.setStretch(1, 6)
         self.exerciseOnePages.addWidget(self.oneTwo)
@@ -409,8 +433,9 @@ class Ui_Widget(object):
         self.oneThree.setObjectName(u"oneThree")
         self.layoutWidget_4 = QWidget(self.oneThree)
         self.layoutWidget_4.setObjectName(u"layoutWidget_4")
-        self.layoutWidget_4.setGeometry(QRect(10, 0, 1211, 801))
+        self.layoutWidget_4.setGeometry(QRect(0, 0, 1211, 761))
         self.verticalLayout_15 = QVBoxLayout(self.layoutWidget_4)
+        self.verticalLayout_15.setSpacing(7)
         self.verticalLayout_15.setObjectName(u"verticalLayout_15")
         self.verticalLayout_15.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_5 = QHBoxLayout()
@@ -433,64 +458,246 @@ class Ui_Widget(object):
 
         self.verticalLayout_15.addLayout(self.horizontalLayout_5)
 
-        self.infoBrowser_5 = QTextBrowser(self.layoutWidget_4)
-        self.infoBrowser_5.setObjectName(u"infoBrowser_5")
-        self.infoBrowser_5.setStyleSheet(u"border-top: 1px solid gray;")
+        self.label_3 = QLabel(self.layoutWidget_4)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setStyleSheet(u"border-top: 1px solid gray;\n"
+"padding-top: 20px;\n"
+"padding-bottom: 20px;")
 
-        self.verticalLayout_15.addWidget(self.infoBrowser_5)
+        self.verticalLayout_15.addWidget(self.label_3)
+
+        self.horizontalLayout_11 = QHBoxLayout()
+        self.horizontalLayout_11.setObjectName(u"horizontalLayout_11")
+        self.horizontalLayout_11.setContentsMargins(-1, -1, -1, 0)
+        self.label_8 = QLabel(self.layoutWidget_4)
+        self.label_8.setObjectName(u"label_8")
+
+        self.horizontalLayout_11.addWidget(self.label_8)
+
+        self.oneThreeCombo_1 = QComboBox(self.layoutWidget_4)
+        self.oneThreeCombo_1.addItem("")
+        self.oneThreeCombo_1.addItem("")
+        self.oneThreeCombo_1.addItem("")
+        self.oneThreeCombo_1.addItem("")
+        self.oneThreeCombo_1.addItem("")
+        self.oneThreeCombo_1.addItem("")
+        self.oneThreeCombo_1.addItem("")
+        self.oneThreeCombo_1.addItem("")
+        self.oneThreeCombo_1.addItem("")
+        self.oneThreeCombo_1.addItem("")
+        self.oneThreeCombo_1.addItem("")
+        self.oneThreeCombo_1.addItem("")
+        self.oneThreeCombo_1.setObjectName(u"oneThreeCombo_1")
+        self.oneThreeCombo_1.setStyleSheet(u"color: rgb(0, 0, 0);")
+
+        self.horizontalLayout_11.addWidget(self.oneThreeCombo_1)
+
+
+        self.verticalLayout_15.addLayout(self.horizontalLayout_11)
+
+        self.horizontalLayout_12 = QHBoxLayout()
+        self.horizontalLayout_12.setObjectName(u"horizontalLayout_12")
+        self.horizontalLayout_12.setContentsMargins(-1, 10, -1, -1)
+        self.label_9 = QLabel(self.layoutWidget_4)
+        self.label_9.setObjectName(u"label_9")
+
+        self.horizontalLayout_12.addWidget(self.label_9)
+
+        self.oneThreeCombo_2 = QComboBox(self.layoutWidget_4)
+        self.oneThreeCombo_2.addItem("")
+        self.oneThreeCombo_2.addItem("")
+        self.oneThreeCombo_2.addItem("")
+        self.oneThreeCombo_2.addItem("")
+        self.oneThreeCombo_2.addItem("")
+        self.oneThreeCombo_2.addItem("")
+        self.oneThreeCombo_2.addItem("")
+        self.oneThreeCombo_2.addItem("")
+        self.oneThreeCombo_2.addItem("")
+        self.oneThreeCombo_2.addItem("")
+        self.oneThreeCombo_2.addItem("")
+        self.oneThreeCombo_2.addItem("")
+        self.oneThreeCombo_2.setObjectName(u"oneThreeCombo_2")
+        self.oneThreeCombo_2.setStyleSheet(u"color: rgb(0, 0, 0);")
+
+        self.horizontalLayout_12.addWidget(self.oneThreeCombo_2)
+
+
+        self.verticalLayout_15.addLayout(self.horizontalLayout_12)
+
+        self.horizontalLayout_14 = QHBoxLayout()
+        self.horizontalLayout_14.setObjectName(u"horizontalLayout_14")
+        self.horizontalLayout_14.setContentsMargins(-1, 10, -1, -1)
+        self.label_11 = QLabel(self.layoutWidget_4)
+        self.label_11.setObjectName(u"label_11")
+
+        self.horizontalLayout_14.addWidget(self.label_11)
+
+        self.oneThreeCombo_3 = QComboBox(self.layoutWidget_4)
+        self.oneThreeCombo_3.addItem("")
+        self.oneThreeCombo_3.addItem("")
+        self.oneThreeCombo_3.addItem("")
+        self.oneThreeCombo_3.addItem("")
+        self.oneThreeCombo_3.addItem("")
+        self.oneThreeCombo_3.addItem("")
+        self.oneThreeCombo_3.addItem("")
+        self.oneThreeCombo_3.addItem("")
+        self.oneThreeCombo_3.addItem("")
+        self.oneThreeCombo_3.addItem("")
+        self.oneThreeCombo_3.addItem("")
+        self.oneThreeCombo_3.addItem("")
+        self.oneThreeCombo_3.setObjectName(u"oneThreeCombo_3")
+        self.oneThreeCombo_3.setStyleSheet(u"color: rgb(0, 0, 0);")
+
+        self.horizontalLayout_14.addWidget(self.oneThreeCombo_3)
+
+
+        self.verticalLayout_15.addLayout(self.horizontalLayout_14)
+
+        self.horizontalLayout_17 = QHBoxLayout()
+        self.horizontalLayout_17.setObjectName(u"horizontalLayout_17")
+        self.horizontalLayout_17.setContentsMargins(-1, 10, -1, -1)
+        self.label_12 = QLabel(self.layoutWidget_4)
+        self.label_12.setObjectName(u"label_12")
+
+        self.horizontalLayout_17.addWidget(self.label_12)
+
+        self.oneThreeCombo_4 = QComboBox(self.layoutWidget_4)
+        self.oneThreeCombo_4.addItem("")
+        self.oneThreeCombo_4.addItem("")
+        self.oneThreeCombo_4.addItem("")
+        self.oneThreeCombo_4.addItem("")
+        self.oneThreeCombo_4.addItem("")
+        self.oneThreeCombo_4.addItem("")
+        self.oneThreeCombo_4.addItem("")
+        self.oneThreeCombo_4.addItem("")
+        self.oneThreeCombo_4.addItem("")
+        self.oneThreeCombo_4.addItem("")
+        self.oneThreeCombo_4.addItem("")
+        self.oneThreeCombo_4.addItem("")
+        self.oneThreeCombo_4.setObjectName(u"oneThreeCombo_4")
+        self.oneThreeCombo_4.setStyleSheet(u"color: rgb(0, 0, 0);")
+
+        self.horizontalLayout_17.addWidget(self.oneThreeCombo_4)
+
+
+        self.verticalLayout_15.addLayout(self.horizontalLayout_17)
+
+        self.horizontalLayout_18 = QHBoxLayout()
+        self.horizontalLayout_18.setObjectName(u"horizontalLayout_18")
+        self.horizontalLayout_18.setContentsMargins(-1, 10, -1, -1)
+        self.label_13 = QLabel(self.layoutWidget_4)
+        self.label_13.setObjectName(u"label_13")
+
+        self.horizontalLayout_18.addWidget(self.label_13)
+
+        self.oneThreeCombo_5 = QComboBox(self.layoutWidget_4)
+        self.oneThreeCombo_5.addItem("")
+        self.oneThreeCombo_5.addItem("")
+        self.oneThreeCombo_5.addItem("")
+        self.oneThreeCombo_5.addItem("")
+        self.oneThreeCombo_5.addItem("")
+        self.oneThreeCombo_5.addItem("")
+        self.oneThreeCombo_5.addItem("")
+        self.oneThreeCombo_5.addItem("")
+        self.oneThreeCombo_5.addItem("")
+        self.oneThreeCombo_5.addItem("")
+        self.oneThreeCombo_5.addItem("")
+        self.oneThreeCombo_5.addItem("")
+        self.oneThreeCombo_5.setObjectName(u"oneThreeCombo_5")
+        self.oneThreeCombo_5.setStyleSheet(u"color: rgb(0, 0, 0);")
+
+        self.horizontalLayout_18.addWidget(self.oneThreeCombo_5)
+
+
+        self.verticalLayout_15.addLayout(self.horizontalLayout_18)
 
         self.horizontalLayout_15 = QHBoxLayout()
         self.horizontalLayout_15.setObjectName(u"horizontalLayout_15")
-        self.inputEdit_5 = QTextEdit(self.layoutWidget_4)
-        self.inputEdit_5.setObjectName(u"inputEdit_5")
-        self.inputEdit_5.setBaseSize(QSize(0, 4))
-        self.inputEdit_5.setAutoFillBackground(False)
-        self.inputEdit_5.setStyleSheet(u"border: 1px solid;\n"
-"border-radius: 10px;")
+        self.horizontalLayout_15.setContentsMargins(-1, 10, -1, -1)
+        self.label_14 = QLabel(self.layoutWidget_4)
+        self.label_14.setObjectName(u"label_14")
 
-        self.horizontalLayout_15.addWidget(self.inputEdit_5)
+        self.horizontalLayout_15.addWidget(self.label_14)
 
-        self.runButtonOneThree = QPushButton(self.layoutWidget_4)
-        self.runButtonOneThree.setObjectName(u"runButtonOneThree")
-        self.runButtonOneThree.setMinimumSize(QSize(0, 0))
-        self.runButtonOneThree.setStyleSheet(u"border: 1px solid;\n"
-"border-radius: 5px;\n"
-"padding-top: 15px;\n"
-"padding-bottom: 15px;")
+        self.oneThreeCombo_6 = QComboBox(self.layoutWidget_4)
+        self.oneThreeCombo_6.addItem("")
+        self.oneThreeCombo_6.addItem("")
+        self.oneThreeCombo_6.addItem("")
+        self.oneThreeCombo_6.addItem("")
+        self.oneThreeCombo_6.addItem("")
+        self.oneThreeCombo_6.addItem("")
+        self.oneThreeCombo_6.addItem("")
+        self.oneThreeCombo_6.addItem("")
+        self.oneThreeCombo_6.addItem("")
+        self.oneThreeCombo_6.addItem("")
+        self.oneThreeCombo_6.addItem("")
+        self.oneThreeCombo_6.addItem("")
+        self.oneThreeCombo_6.setObjectName(u"oneThreeCombo_6")
+        self.oneThreeCombo_6.setStyleSheet(u"color: rgb(0, 0, 0);")
 
-        self.horizontalLayout_15.addWidget(self.runButtonOneThree)
+        self.horizontalLayout_15.addWidget(self.oneThreeCombo_6)
 
 
         self.verticalLayout_15.addLayout(self.horizontalLayout_15)
 
-        self.label_17 = QLabel(self.layoutWidget_4)
-        self.label_17.setObjectName(u"label_17")
-        self.label_17.setStyleSheet(u"padding-left: 2px;")
+        self.horizontalLayout_20 = QHBoxLayout()
+        self.horizontalLayout_20.setObjectName(u"horizontalLayout_20")
+        self.horizontalLayout_20.setContentsMargins(-1, 10, -1, -1)
+        self.label_16 = QLabel(self.layoutWidget_4)
+        self.label_16.setObjectName(u"label_16")
 
-        self.verticalLayout_15.addWidget(self.label_17)
+        self.horizontalLayout_20.addWidget(self.label_16)
 
-        self.resultBrowser_5 = QTextBrowser(self.layoutWidget_4)
-        self.resultBrowser_5.setObjectName(u"resultBrowser_5")
-        self.resultBrowser_5.setStyleSheet(u"border: 1px solid;\n"
-"border-radius: 10px;")
+        self.oneThreeCombo_7 = QComboBox(self.layoutWidget_4)
+        self.oneThreeCombo_7.addItem("")
+        self.oneThreeCombo_7.addItem("")
+        self.oneThreeCombo_7.addItem("")
+        self.oneThreeCombo_7.addItem("")
+        self.oneThreeCombo_7.addItem("")
+        self.oneThreeCombo_7.addItem("")
+        self.oneThreeCombo_7.addItem("")
+        self.oneThreeCombo_7.addItem("")
+        self.oneThreeCombo_7.addItem("")
+        self.oneThreeCombo_7.addItem("")
+        self.oneThreeCombo_7.addItem("")
+        self.oneThreeCombo_7.addItem("")
+        self.oneThreeCombo_7.setObjectName(u"oneThreeCombo_7")
+        self.oneThreeCombo_7.setStyleSheet(u"color: rgb(0, 0, 0);")
 
-        self.verticalLayout_15.addWidget(self.resultBrowser_5)
+        self.horizontalLayout_20.addWidget(self.oneThreeCombo_7)
 
-        self.progressBarOne_4 = QProgressBar(self.layoutWidget_4)
-        self.progressBarOne_4.setObjectName(u"progressBarOne_4")
-        self.progressBarOne_4.setValue(24)
 
-        self.verticalLayout_15.addWidget(self.progressBarOne_4)
+        self.verticalLayout_15.addLayout(self.horizontalLayout_20)
 
-        self.verticalLayout_15.setStretch(1, 6)
-        self.verticalLayout_15.setStretch(2, 1)
-        self.verticalLayout_15.setStretch(4, 3)
+        self.horizontalLayout_22 = QHBoxLayout()
+        self.horizontalLayout_22.setObjectName(u"horizontalLayout_22")
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.horizontalLayout_22.addItem(self.horizontalSpacer_2)
+
+        self.checkOneThree = QPushButton(self.layoutWidget_4)
+        self.checkOneThree.setObjectName(u"checkOneThree")
+        self.checkOneThree.setMinimumSize(QSize(200, 40))
+        self.checkOneThree.setFont(font)
+        self.checkOneThree.setStyleSheet(u"margin-top: 10px;")
+
+        self.horizontalLayout_22.addWidget(self.checkOneThree)
+
+
+        self.verticalLayout_15.addLayout(self.horizontalLayout_22)
+
+        self.infoBrowser_5 = QTextBrowser(self.layoutWidget_4)
+        self.infoBrowser_5.setObjectName(u"infoBrowser_5")
+        self.infoBrowser_5.setStyleSheet(u"border-top: none;")
+
+        self.verticalLayout_15.addWidget(self.infoBrowser_5)
+
         self.exerciseOnePages.addWidget(self.oneThree)
         self.oneFour = QWidget()
         self.oneFour.setObjectName(u"oneFour")
         self.layoutWidget_5 = QWidget(self.oneFour)
         self.layoutWidget_5.setObjectName(u"layoutWidget_5")
-        self.layoutWidget_5.setGeometry(QRect(10, 0, 1211, 801))
+        self.layoutWidget_5.setGeometry(QRect(10, 0, 1201, 761))
         self.verticalLayout_16 = QVBoxLayout(self.layoutWidget_5)
         self.verticalLayout_16.setObjectName(u"verticalLayout_16")
         self.verticalLayout_16.setContentsMargins(0, 0, 0, 0)
@@ -516,30 +723,35 @@ class Ui_Widget(object):
 
         self.infoBrowser_6 = QTextBrowser(self.layoutWidget_5)
         self.infoBrowser_6.setObjectName(u"infoBrowser_6")
-        self.infoBrowser_6.setStyleSheet(u"border-top: 1px solid gray;")
+        self.infoBrowser_6.setMaximumSize(QSize(16777215, 90))
+        self.infoBrowser_6.setStyleSheet(u"border-top: 1px solid gray;\n"
+"padding-top:10px;")
 
         self.verticalLayout_16.addWidget(self.infoBrowser_6)
 
         self.horizontalLayout_16 = QHBoxLayout()
         self.horizontalLayout_16.setObjectName(u"horizontalLayout_16")
-        self.inputEdit_6 = QTextEdit(self.layoutWidget_5)
-        self.inputEdit_6.setObjectName(u"inputEdit_6")
-        self.inputEdit_6.setBaseSize(QSize(0, 4))
-        self.inputEdit_6.setAutoFillBackground(False)
-        self.inputEdit_6.setStyleSheet(u"border: 1px solid;\n"
-"border-radius: 10px;")
+        self.oneFourInput_1 = QTextEdit(self.layoutWidget_5)
+        self.oneFourInput_1.setObjectName(u"oneFourInput_1")
+        self.oneFourInput_1.setMaximumSize(QSize(16777215, 50))
+        self.oneFourInput_1.setBaseSize(QSize(0, 4))
+        self.oneFourInput_1.setAutoFillBackground(False)
+        self.oneFourInput_1.setStyleSheet(u"border: 1px solid gray;\n"
+"border-radius: 5px;")
 
-        self.horizontalLayout_16.addWidget(self.inputEdit_6)
+        self.horizontalLayout_16.addWidget(self.oneFourInput_1)
 
-        self.runButtonOneFour = QPushButton(self.layoutWidget_5)
-        self.runButtonOneFour.setObjectName(u"runButtonOneFour")
-        self.runButtonOneFour.setMinimumSize(QSize(0, 0))
-        self.runButtonOneFour.setStyleSheet(u"border: 1px solid;\n"
+        self.oneFourButton_1 = QPushButton(self.layoutWidget_5)
+        self.oneFourButton_1.setObjectName(u"oneFourButton_1")
+        self.oneFourButton_1.setMinimumSize(QSize(0, 0))
+        self.oneFourButton_1.setMaximumSize(QSize(16777215, 50))
+        self.oneFourButton_1.setStyleSheet(u"border: 1px solid gray;\n"
 "border-radius: 5px;\n"
 "padding-top: 15px;\n"
-"padding-bottom: 15px;")
+"padding-bottom: 15px;\n"
+"background-color: rgb(176, 194, 221);")
 
-        self.horizontalLayout_16.addWidget(self.runButtonOneFour)
+        self.horizontalLayout_16.addWidget(self.oneFourButton_1)
 
 
         self.verticalLayout_16.addLayout(self.horizontalLayout_16)
@@ -550,23 +762,75 @@ class Ui_Widget(object):
 
         self.verticalLayout_16.addWidget(self.label_18)
 
-        self.resultBrowser_6 = QTextBrowser(self.layoutWidget_5)
-        self.resultBrowser_6.setObjectName(u"resultBrowser_6")
-        self.resultBrowser_6.setStyleSheet(u"border: 1px solid;\n"
-"border-radius: 10px;")
+        self.oneFourResult_1 = QTextBrowser(self.layoutWidget_5)
+        self.oneFourResult_1.setObjectName(u"oneFourResult_1")
+        self.oneFourResult_1.setStyleSheet(u"border: 1px solid gray;\n"
+"border-radius: 5px;")
 
-        self.verticalLayout_16.addWidget(self.resultBrowser_6)
+        self.verticalLayout_16.addWidget(self.oneFourResult_1)
 
-        self.progressBarOne_5 = QProgressBar(self.layoutWidget_5)
-        self.progressBarOne_5.setObjectName(u"progressBarOne_5")
-        self.progressBarOne_5.setValue(24)
+        self.textBrowser_13 = QTextBrowser(self.layoutWidget_5)
+        self.textBrowser_13.setObjectName(u"textBrowser_13")
+        self.textBrowser_13.setMaximumSize(QSize(16777215, 40))
+        self.textBrowser_13.setStyleSheet(u"border: none;\n"
+"margin-top:10px;")
 
-        self.verticalLayout_16.addWidget(self.progressBarOne_5)
+        self.verticalLayout_16.addWidget(self.textBrowser_13)
+
+        self.horizontalLayout_28 = QHBoxLayout()
+        self.horizontalLayout_28.setObjectName(u"horizontalLayout_28")
+        self.oneFourInput_2 = QTextEdit(self.layoutWidget_5)
+        self.oneFourInput_2.setObjectName(u"oneFourInput_2")
+        self.oneFourInput_2.setMaximumSize(QSize(16777215, 50))
+        self.oneFourInput_2.setStyleSheet(u"border: 1px solid gray;\n"
+"border-radius: 5px;")
+
+        self.horizontalLayout_28.addWidget(self.oneFourInput_2)
+
+        self.oneFourButton_2 = QPushButton(self.layoutWidget_5)
+        self.oneFourButton_2.setObjectName(u"oneFourButton_2")
+        self.oneFourButton_2.setMaximumSize(QSize(16777215, 50))
+        self.oneFourButton_2.setStyleSheet(u"border: 1px solid gray;\n"
+"border-radius: 5px;\n"
+"padding-top: 15px;\n"
+"padding-bottom: 15px;\n"
+"background-color: rgb(176, 194, 221);")
+
+        self.horizontalLayout_28.addWidget(self.oneFourButton_2)
+
+
+        self.verticalLayout_16.addLayout(self.horizontalLayout_28)
+
+        self.label_19 = QLabel(self.layoutWidget_5)
+        self.label_19.setObjectName(u"label_19")
+        self.label_19.setStyleSheet(u"padding-left: 2px;")
+
+        self.verticalLayout_16.addWidget(self.label_19)
+
+        self.oneFourResult_2 = QTextBrowser(self.layoutWidget_5)
+        self.oneFourResult_2.setObjectName(u"oneFourResult_2")
+        self.oneFourResult_2.setStyleSheet(u"border: 1px solid gray;\n"
+"border-radius: 5px;")
+
+        self.verticalLayout_16.addWidget(self.oneFourResult_2)
+
+        self.verticalSpacer_4 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+
+        self.verticalLayout_16.addItem(self.verticalSpacer_4)
 
         self.verticalLayout_16.setStretch(1, 6)
         self.verticalLayout_16.setStretch(2, 1)
         self.verticalLayout_16.setStretch(4, 3)
         self.exerciseOnePages.addWidget(self.oneFour)
+
+        self.verticalLayout_3.addWidget(self.exerciseOnePages)
+
+        self.progressBarOne = QProgressBar(self.verticalLayoutWidget_8)
+        self.progressBarOne.setObjectName(u"progressBarOne")
+        self.progressBarOne.setValue(24)
+
+        self.verticalLayout_3.addWidget(self.progressBarOne)
+
         self.stackedWidget_2.addWidget(self.exerciseOne)
         self.menuPages.addWidget(self.exercisesPage)
         self.userInfoPage = QWidget()
@@ -817,7 +1081,7 @@ class Ui_Widget(object):
 
         self.verticalLayout.addWidget(self.logoutButton)
 
-        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout.addItem(self.verticalSpacer)
 
@@ -825,7 +1089,7 @@ class Ui_Widget(object):
 
         self.retranslateUi(Widget)
 
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(0)
         self.stackedWidget_2.setCurrentIndex(1)
 
 
@@ -835,7 +1099,7 @@ class Ui_Widget(object):
     def retranslateUi(self, Widget):
         self.loginButton.setText(QCoreApplication.translate("Widget", u"Kirjaudu", None))
         self.loginWarning.setText("")
-        self.label.setText(QCoreApplication.translate("Widget", u"K\u00e4ytt\u00e4j\u00e4n nimi:", None))
+        self.label.setText(QCoreApplication.translate("Widget", u"K\u00e4ytt\u00e4j\u00e4n nimi: \u270b ", None))
         self.title.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:24pt; font-weight:700;\">Kubernetes Oppimisty\u00f6kalu</span></p></body></html>", None))
         self.subMain.setText(QCoreApplication.translate("Widget", u"Hei ", None))
         self.desc.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p>Tervetuloa interaktiiviseen Kubernetes oppimisty\u00f6kaluun!</p></body></html>", None))
@@ -862,14 +1126,14 @@ class Ui_Widget(object):
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Candara'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-size:11pt; font-weight:700;\">Kubernetes</span><span style=\" font-family:'Segoe UI'; font-size:11pt;\"> on avoimen l\u00e4hdekoodin alusta, jonka avulla voidaan toteuttaa konttiorkestrointia. Kuberneteksen </span><span style=\" font-family:'Segoe UI'; font-size:11pt; font-weight:700;\">klusteri</span><span style=\" font-family:'Segoe UI'; font-size:11pt;\">"
-                        " koordinoi joukkoa tietokoneita, jotka ovat yhteydess\u00e4 toisiinsa ja toimivat yhten\u00e4isen\u00e4 kokonaisuutena. Jotta Kuberneteksen hajautettua k\u00e4ytt\u00f6\u00f6nottomallia voitaisiin hy\u00f6dynt\u00e4\u00e4, sovellukset tulee pakata siten, ett\u00e4 ne eiv\u00e4t ole riippuvaisia yksitt\u00e4isist\u00e4 is\u00e4nt\u00e4koneista. Sovellukset tulee siis </span><span style=\" font-family:'Segoe UI'; font-size:11pt; font-weight:700;\">kontittaa. </span><span style=\" font-family:'Segoe UI'; font-size:11pt;\">Kubernetes automatisoi sovelluskonttien yll\u00e4pitoa klusterissa.</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI'; font-size:11pt;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">Kuberneteksen klusteri koostuu kahden tyyppisest\u00e4 p\u00e4"
-                        "\u00e4komponentista:</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">        -</span><span style=\" font-size:11pt; font-weight:700;\"> </span><span style=\" font-size:11pt;\">Ohjaustaso koordinoi klusteria</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">        -</span><span style=\" font-size:11pt; font-weight:700;\"> </span><span style=\" font-size:11pt;\">Solmut ovat klusterin ty\u00f6ntekij\u00f6it\u00e4, jotka ajavat kontitettuja sovelluksia</span></p></body></html>", None))
+"</style></head><body style=\" font-family:'MS Reference Sans Serif'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-weight:700;\">Kubernetes</span><span style=\" font-family:'Segoe UI';\"> on avoimen l\u00e4hdekoodin alusta, jonka avulla voidaan toteuttaa konttiorkestrointia. Kuberneteksen </span><span style=\" font-family:'Segoe UI'; font-weight:700;\">klusteri</span><span style=\" font-family:'Segoe UI';\"> koordinoi joukkoa tietokoneita, jotka ovat yhte"
+                        "ydess\u00e4 toisiinsa ja toimivat yhten\u00e4isen\u00e4 kokonaisuutena. Jotta Kuberneteksen hajautettua k\u00e4ytt\u00f6\u00f6nottomallia voitaisiin hy\u00f6dynt\u00e4\u00e4, sovellukset tulee pakata siten, ett\u00e4 ne eiv\u00e4t ole riippuvaisia yksitt\u00e4isist\u00e4 is\u00e4nt\u00e4koneista. Sovellukset tulee siis </span><span style=\" font-family:'Segoe UI'; font-weight:700;\">kontittaa. </span><span style=\" font-family:'Segoe UI';\">Kubernetes automatisoi sovelluskonttien yll\u00e4pitoa klusterissa.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI';\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">Kuberneteksen klusteri koostuu kahden tyyppisest\u00e4 p\u00e4\u00e4komponentista:</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin"
+                        "-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">        -</span><span style=\" font-family:'Candara'; font-weight:700;\"> </span><span style=\" font-family:'Candara';\">Ohjaustaso koordinoi klusteria</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">        -</span><span style=\" font-family:'Candara'; font-weight:700;\"> </span><span style=\" font-family:'Candara';\">Solmut ovat klusterin ty\u00f6ntekij\u00f6it\u00e4, jotka ajavat kontitettuja sovelluksia</span></p></body></html>", None))
         self.clusterImage.setText("")
         self.textBrowser_2.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
@@ -877,25 +1141,26 @@ class Ui_Widget(object):
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Candara'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt; font-weight:700;\">Ohjaustaso</span><span style=\" font-size:11pt;\"> vastaa klusterin yll\u00e4pidosta. Ohjaustaso hallinnoi klusterin kaikkia aktiviteetteja, kuten sovellusten aikataulutusta, sovellusten skaalauksesta sek\u00e4 halutun tilan yll\u00e4pidosta.</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-                        "right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">Ohjaustasosta l\u00f6ytyy viisi erilaista komponenttia. </span><span style=\" font-size:11pt; font-weight:700;\">API-palvelin</span><span style=\" font-size:11pt;\"> paljastaa Kubernetes APIn klusterille ja toimii frontendin\u00e4 ohjaustasolle. </span><span style=\" font-size:11pt; font-weight:700;\">etcd</span><span style=\" font-size:11pt;\"> on johdonmukainen ja saatavilla oleva avainarvos\u00e4il\u00f6 kaikille klusteritiedoille. </span><span style=\" font-size:11pt; font-weight:700;\">Ajastin</span><span style=\" font-size:11pt;\"> seuraa luotuja s\u00e4ili\u00f6it\u00e4 ja valitsee niille sopivan solmun. </span><span style=\" font-size:11pt; font-weight:700;\">Ohjainmanageri </span><span style=\" font-size:11pt;\">ajaa ohjainprosesseja, ja </span><span style=\" font-size:1"
-                        "1pt; font-weight:700;\">pilviohjainmanageri </span><span style=\" font-size:11pt;\">upottaa klusteriin pilvikohtaisen ohjauslogiikan, ajaa pilveen liittyvi\u00e4 ohjainprosesseja ja mahdollistaa yhdist\u00e4misen pilvitarjoajan APIin.</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt; font-weight:700;\">Solmu</span><span style=\" font-size:11pt;\"> on virtuaalikone tai fyysinen kone, joka k\u00e4ytt\u00e4ytyy ty\u00f6ntekij\u00e4koneena Kuberneteksen klusterissa.</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-r"
-                        "ight:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">Solmu koostuu my\u00f6s erilaisista komponenteista. </span><span style=\" font-size:11pt; font-weight:700;\">Kubelet</span><span style=\" font-size:11pt;\"> on agentti, joka itsen\u00e4isesti yll\u00e4pit\u00e4\u00e4 solmua ja kommunikoi ohjaustason kanssa. </span><span style=\" font-size:11pt; font-weight:700;\">V\u00e4lipalvelin</span><span style=\" font-size:11pt;\"> yll\u00e4pit\u00e4\u00e4 solmujen verkkos\u00e4\u00e4nt\u00f6ja. </span><span style=\" font-size:11pt; font-weight:700;\">Kontin ajoaika</span><span style=\" font-size:11pt;\"> vastaa konttien toteutuksesta ja elinkaaren hallinnasta. </span><span style=\" font-size:11pt; font-weight:700;\">S\u00e4ili\u00f6 </span><span style=\" font-size:11pt;\">on joukko solmussa ajettavia kontteja.</span></p></body></html>", None))
+"</style></head><body style=\" font-family:'MS Reference Sans Serif'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara'; font-weight:700;\">Ohjaustaso</span><span style=\" font-family:'Candara';\"> vastaa klusterin yll\u00e4pidosta. Ohjaustaso hallinnoi klusterin kaikkia aktiviteetteja, kuten sovellusten aikataulutusta, sovellusten skaalauksesta sek\u00e4 halutun tilan yll\u00e4pidosta.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom"
+                        ":0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Candara';\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">Ohjaustasosta l\u00f6ytyy viisi erilaista komponenttia. </span><span style=\" font-family:'Candara'; font-weight:700;\">API-palvelin</span><span style=\" font-family:'Candara';\"> paljastaa Kubernetes APIn klusterille ja toimii frontendin\u00e4 ohjaustasolle. </span><span style=\" font-family:'Candara'; font-weight:700;\">etcd</span><span style=\" font-family:'Candara';\"> on johdonmukainen ja saatavilla oleva avainarvos\u00e4il\u00f6 kaikille klusteritiedoille. </span><span style=\" font-family:'Candara'; font-weight:700;\">Ajastin</span><span style=\" font-family:'Candara';\"> seuraa luotuja s\u00e4ili\u00f6it\u00e4 ja valitsee niille sopivan solmun. </span><span style=\" font-family:'Candara'; font-weight:700;\">Ohjainmanageri </span"
+                        "><span style=\" font-family:'Candara';\">ajaa ohjainprosesseja, ja </span><span style=\" font-family:'Candara'; font-weight:700;\">pilviohjainmanageri </span><span style=\" font-family:'Candara';\">upottaa klusteriin pilvikohtaisen ohjauslogiikan, ajaa pilveen liittyvi\u00e4 ohjainprosesseja ja mahdollistaa yhdist\u00e4misen pilvitarjoajan APIin.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Candara';\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara'; font-weight:700;\">Solmu</span><span style=\" font-family:'Candara';\"> on virtuaalikone tai fyysinen kone, joka k\u00e4ytt\u00e4ytyy ty\u00f6ntekij\u00e4koneena Kuberneteksen klusterissa. Solmuja on klusterissa aina ainakin yksi.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+                        "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Candara';\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">Solmu koostuu my\u00f6s erilaisista komponenteista. </span><span style=\" font-family:'Candara'; font-weight:700;\">Kubelet</span><span style=\" font-family:'Candara';\"> on agentti, joka itsen\u00e4isesti yll\u00e4pit\u00e4\u00e4 solmua ja kommunikoi ohjaustason kanssa. </span><span style=\" font-family:'Candara'; font-weight:700;\">V\u00e4lipalvelin</span><span style=\" font-family:'Candara';\"> yll\u00e4pit\u00e4\u00e4 solmujen verkkos\u00e4\u00e4nt\u00f6ja. </span><span style=\" font-family:'Candara'; font-weight:700;\">Kontin ajoaika</span><span style=\" font-family:'Candara';\"> vastaa konttien toteutuksesta ja elinkaaren hallinnasta. </span><span style=\" font-family:'Candara'; font-weight:700;\">S\u00e4ili\u00f6 </span><span style=\" "
+                        "font-family:'Candara';\">on joukko solmussa ajettavia kontteja.</span></p></body></html>", None))
         self.textBrowser.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Candara'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">Kuberneteksen klusteri voidaan luoda fyysiselle koneelle tai virtuaalikoneelle. T\u00e4ss\u00e4 oppimisty\u00f6kalussa klusterin luonti toteutetaan Minikuben avulla, jota k\u00e4sitell\u00e4\u00e4n seuraavassa osiossa.</span></p></body></html>", None))
+"</style></head><body style=\" font-family:'MS Reference Sans Serif'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">Kuberneteksen klusteri voidaan luoda fyysiselle koneelle tai virtuaalikoneelle. T\u00e4ss\u00e4 oppimisty\u00f6kalussa klusterin luonti toteutetaan Minikuben avulla, jota k\u00e4sitell\u00e4\u00e4n seuraavassa osiossa.</span></p></body></html>", None))
         self.prevOneTwo.setText(QCoreApplication.translate("Widget", u"Edellinen", None))
         self.label_4.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:14pt;\">1.2. Minikube</span></p></body></html>", None))
         self.nextOneTwo.setText(QCoreApplication.translate("Widget", u"Seuraava", None))
@@ -905,49 +1170,208 @@ class Ui_Widget(object):
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Candara'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt; font-weight:700;\">Minikube</span><span style=\" font-size:11pt;\"> on kevyt ja lokaalisti ajettava Kubernetes. Minikube luo virtuaalikoneen paikalliselle koneellesi ja ottaa k\u00e4ytt\u00f6\u00f6n yksinkertaisen klusterin. Luotu klusteri sis\u00e4lt\u00e4\u00e4 yhden solmun. Minikuben komentorivik\u00e4ytt\u00f6liittym\u00e4 tarjoaa mahdollisuuden ajaa klusterin perust"
-                        "oimintoja.</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">Minikuben sivuilta voi tarkkailla Minikubesta l\u00f6ytyvi\u00e4 komentoja: </span><a href=\"https://minikube.sigs.k8s.io/docs/commands/\"><span style=\" font-size:11pt; text-decoration: underline; color:#0078d4;\">https://minikube.sigs.k8s.io/docs/commands/</span></a></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt; text-decoration: underline; color:#0078d4;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">Klusterin voi k\u00e4"
-                        "ynnist\u00e4\u00e4 komennolla:</span></p></body></html>", None))
+"</style></head><body style=\" font-family:'MS Reference Sans Serif'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara'; font-weight:700;\">Minikube</span><span style=\" font-family:'Candara';\"> on kevyt ja lokaalisti ajettava Kubernetes. Minikube luo virtuaalikoneen paikalliselle koneellesi ja ottaa k\u00e4ytt\u00f6\u00f6n yksinkertaisen klusterin. Luotu klusteri sis\u00e4lt\u00e4\u00e4 yhden solmun. Minikuben komentorivik\u00e4ytt\u00f6liittym\u00e4 tarjoaa mahdol"
+                        "lisuuden ajaa klusterin perustoimintoja.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Candara';\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">Minikuben sivuilta voi tarkkailla Minikubesta l\u00f6ytyvi\u00e4 komentoja: </span><a href=\"https://minikube.sigs.k8s.io/docs/commands/\"><span style=\" font-family:'Candara'; text-decoration: underline; color:#0078d4;\">https://minikube.sigs.k8s.io/docs/commands/</span></a></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Candara'; text-decoration: underline; color:#0078d4;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-inden"
+                        "t:0px;\"><span style=\" font-family:'Candara';\">Klusterin voi k\u00e4ynnist\u00e4\u00e4 komennolla:</span></p></body></html>", None))
         self.textBrowser_4.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Candara'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:145%;\"><span style=\" font-family:'Courier New'; font-size:11pt; color:#e6edf3;\">$ minikube start</span></p></body></html>", None))
+"</style></head><body style=\" font-family:'MS Reference Sans Serif'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:145%;\"><span style=\" font-family:'Courier New'; color:#e6edf3;\">$ minikube start</span></p></body></html>", None))
         self.textBrowser_3.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Candara'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt;\">Minikuben 1.32.0 versiossa on raportoitu h\u00e4iri\u00f6it\u00e4 eri k\u00e4ytt\u00f6j\u00e4rjestelmill\u00e4. </span><span style=\" font-size:11pt; font-weight:700;\">Jos k\u00e4yt\u00f6ss\u00e4si on Minikuben versio 1.32.0</span><span style=\" font-size:11pt;\"> (tai mahdollisesti my\u00f6hempi versio), on klusterin k\u00e4ynnistyksen yhteydess\u00e4 hyv\u00e4 k\u00e4"
-                        "ytt\u00e4\u00e4 jotai muuta kun version mukana tulevaa alkuper\u00e4ist\u00e4 kuvaa. Alla on esimerkki vaihtoehtoisesta ajamisesta:</span></p></body></html>", None))
+"</style></head><body style=\" font-family:'MS Reference Sans Serif'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">Minikuben 1.32.0 versiossa on raportoitu h\u00e4iri\u00f6it\u00e4 eri k\u00e4ytt\u00f6j\u00e4rjestelmill\u00e4. </span><span style=\" font-family:'Candara'; font-weight:700;\">Jos k\u00e4yt\u00f6ss\u00e4si on Minikuben versio 1.32.0</span><span style=\" font-family:'Candara';\"> (tai mahdollisesti my\u00f6hempi versio), on klusterin k\u00e4ynnist"
+                        "yksen yhteydess\u00e4 hyv\u00e4 k\u00e4ytt\u00e4\u00e4 jotain muuta kun version mukana tulevaa alkuper\u00e4ist\u00e4 kuvaa. Alla on esimerkki vaihtoehtoisesta ajamisesta:</span></p></body></html>", None))
         self.textBrowser_5.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Candara'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:145%;\"><span style=\" font-family:'Courier New'; font-size:11pt; color:#e6edf3;\">$ minikube start --base-image gcr.io/k8s-minikube/kicbase-builds:v0.0.42-1703092832-17830</span></p></body></html>", None))
+"</style></head><body style=\" font-family:'MS Reference Sans Serif'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:145%;\"><span style=\" font-family:'Courier New'; color:#e6edf3;\">$ minikube start --base-image gcr.io/k8s-minikube/kicbase-builds:v0.0.42-1703092832-17830</span></p></body></html>", None))
+        self.textBrowser_8.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'MS Reference Sans Serif'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">Kun on valmis lopettamaan klusterin k\u00e4yt\u00f6n, klusteri voidaan pys\u00e4ytt\u00e4\u00e4 komennolla:</span></p></body></html>", None))
+        self.textBrowser_9.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'MS Reference Sans Serif'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:145%;\"><span style=\" font-family:'Courier New'; color:#e6edf3;\">$ minikube stop</span></p></body></html>", None))
+        self.textBrowser_10.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'MS Reference Sans Serif'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">Vaihtoehtoisesti jos kokee, ettei klusteria en\u00e4\u00e4 tarvitse ollenkaan, Minikuben virtuaalikone ja sen yhteydess\u00e4 my\u00f6s klusteri voidaan poistaa:</span></p></body></html>", None))
+        self.textBrowser_11.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'MS Reference Sans Serif'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:145%;\"><span style=\" font-family:'Courier New'; color:#e6edf3;\">$ minikube delete</span></p></body></html>", None))
         self.prevOneThree.setText(QCoreApplication.translate("Widget", u"Edellinen", None))
         self.label_5.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:14pt;\">1.3. Klusterin rakenne</span></p></body></html>", None))
         self.nextOneThree.setText(QCoreApplication.translate("Widget", u"Seuraava", None))
-        self.runButtonOneThree.setText(QCoreApplication.translate("Widget", u" Aja komento", None))
-        self.label_17.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:12pt;\">Tuloste:</span></p></body></html>", None))
+        self.label_3.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:11pt;\">Valitse klusterin komponentti, joka sopii parhaiten esitettyyn ominaisuuteen/ty\u00f6teht\u00e4v\u00e4\u00e4n.</span></p></body></html>", None))
+        self.label_8.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:11pt;\">1. Joukko ajettavia kontteja.</span></p></body></html>", None))
+        self.oneThreeCombo_1.setItemText(0, QCoreApplication.translate("Widget", u"Valitse komponentti", None))
+        self.oneThreeCombo_1.setItemText(1, QCoreApplication.translate("Widget", u"Ajastin", None))
+        self.oneThreeCombo_1.setItemText(2, QCoreApplication.translate("Widget", u"API-palvelin", None))
+        self.oneThreeCombo_1.setItemText(3, QCoreApplication.translate("Widget", u"etcd", None))
+        self.oneThreeCombo_1.setItemText(4, QCoreApplication.translate("Widget", u"Kontin ajoaika", None))
+        self.oneThreeCombo_1.setItemText(5, QCoreApplication.translate("Widget", u"Kubelet", None))
+        self.oneThreeCombo_1.setItemText(6, QCoreApplication.translate("Widget", u"Ohjainmanageri", None))
+        self.oneThreeCombo_1.setItemText(7, QCoreApplication.translate("Widget", u"Ohjaustaso", None))
+        self.oneThreeCombo_1.setItemText(8, QCoreApplication.translate("Widget", u"Pilviohjainmanageri", None))
+        self.oneThreeCombo_1.setItemText(9, QCoreApplication.translate("Widget", u"Solmu(t)", None))
+        self.oneThreeCombo_1.setItemText(10, QCoreApplication.translate("Widget", u"S\u00e4ili\u00f6", None))
+        self.oneThreeCombo_1.setItemText(11, QCoreApplication.translate("Widget", u"V\u00e4lipalvelin", None))
+
+        self.oneThreeCombo_1.setPlaceholderText("")
+        self.label_9.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:11pt;\">2. Yll\u00e4pit\u00e4\u00e4 solmujen verkkos\u00e4\u00e4nt\u00f6j\u00e4.</span></p></body></html>", None))
+        self.oneThreeCombo_2.setItemText(0, QCoreApplication.translate("Widget", u"Valitse komponentti", None))
+        self.oneThreeCombo_2.setItemText(1, QCoreApplication.translate("Widget", u"Ajastin", None))
+        self.oneThreeCombo_2.setItemText(2, QCoreApplication.translate("Widget", u"API-palvelin", None))
+        self.oneThreeCombo_2.setItemText(3, QCoreApplication.translate("Widget", u"etcd", None))
+        self.oneThreeCombo_2.setItemText(4, QCoreApplication.translate("Widget", u"Kontin ajoaika", None))
+        self.oneThreeCombo_2.setItemText(5, QCoreApplication.translate("Widget", u"Kubelet", None))
+        self.oneThreeCombo_2.setItemText(6, QCoreApplication.translate("Widget", u"Ohjainmanageri", None))
+        self.oneThreeCombo_2.setItemText(7, QCoreApplication.translate("Widget", u"Ohjaustaso", None))
+        self.oneThreeCombo_2.setItemText(8, QCoreApplication.translate("Widget", u"Pilviohjainmanageri", None))
+        self.oneThreeCombo_2.setItemText(9, QCoreApplication.translate("Widget", u"Solmu(t)", None))
+        self.oneThreeCombo_2.setItemText(10, QCoreApplication.translate("Widget", u"S\u00e4ili\u00f6", None))
+        self.oneThreeCombo_2.setItemText(11, QCoreApplication.translate("Widget", u"V\u00e4lipalvelin", None))
+
+        self.label_11.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:11pt;\">3. Mahdollistaa klusterin yhdist\u00e4misen pilvitarjoajan APIin.</span></p></body></html>", None))
+        self.oneThreeCombo_3.setItemText(0, QCoreApplication.translate("Widget", u"Valitse komponentti", None))
+        self.oneThreeCombo_3.setItemText(1, QCoreApplication.translate("Widget", u"Ajastin", None))
+        self.oneThreeCombo_3.setItemText(2, QCoreApplication.translate("Widget", u"API-palvelin", None))
+        self.oneThreeCombo_3.setItemText(3, QCoreApplication.translate("Widget", u"etcd", None))
+        self.oneThreeCombo_3.setItemText(4, QCoreApplication.translate("Widget", u"Kontin ajoaika", None))
+        self.oneThreeCombo_3.setItemText(5, QCoreApplication.translate("Widget", u"Kubelet", None))
+        self.oneThreeCombo_3.setItemText(6, QCoreApplication.translate("Widget", u"Ohjainmanageri", None))
+        self.oneThreeCombo_3.setItemText(7, QCoreApplication.translate("Widget", u"Ohjaustaso", None))
+        self.oneThreeCombo_3.setItemText(8, QCoreApplication.translate("Widget", u"Pilviohjainmanageri", None))
+        self.oneThreeCombo_3.setItemText(9, QCoreApplication.translate("Widget", u"Solmu(t)", None))
+        self.oneThreeCombo_3.setItemText(10, QCoreApplication.translate("Widget", u"S\u00e4ili\u00f6", None))
+        self.oneThreeCombo_3.setItemText(11, QCoreApplication.translate("Widget", u"V\u00e4lipalvelin", None))
+
+        self.label_12.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:11pt;\">4. Huolehtii yleisesti klusterin yll\u00e4pidosta.</span></p></body></html>", None))
+        self.oneThreeCombo_4.setItemText(0, QCoreApplication.translate("Widget", u"Valitse komponentti", None))
+        self.oneThreeCombo_4.setItemText(1, QCoreApplication.translate("Widget", u"Ajastin", None))
+        self.oneThreeCombo_4.setItemText(2, QCoreApplication.translate("Widget", u"API-palvelin", None))
+        self.oneThreeCombo_4.setItemText(3, QCoreApplication.translate("Widget", u"etcd", None))
+        self.oneThreeCombo_4.setItemText(4, QCoreApplication.translate("Widget", u"Kontin ajoaika", None))
+        self.oneThreeCombo_4.setItemText(5, QCoreApplication.translate("Widget", u"Kubelet", None))
+        self.oneThreeCombo_4.setItemText(6, QCoreApplication.translate("Widget", u"Ohjainmanageri", None))
+        self.oneThreeCombo_4.setItemText(7, QCoreApplication.translate("Widget", u"Ohjaustaso", None))
+        self.oneThreeCombo_4.setItemText(8, QCoreApplication.translate("Widget", u"Pilviohjainmanageri", None))
+        self.oneThreeCombo_4.setItemText(9, QCoreApplication.translate("Widget", u"Solmu(t)", None))
+        self.oneThreeCombo_4.setItemText(10, QCoreApplication.translate("Widget", u"S\u00e4ili\u00f6", None))
+        self.oneThreeCombo_4.setItemText(11, QCoreApplication.translate("Widget", u"V\u00e4lipalvelin", None))
+
+        self.label_13.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:11pt;\">5. Valitsee s\u00e4ili\u00f6lle sopivan solmun.</span></p></body></html>", None))
+        self.oneThreeCombo_5.setItemText(0, QCoreApplication.translate("Widget", u"Valitse komponentti", None))
+        self.oneThreeCombo_5.setItemText(1, QCoreApplication.translate("Widget", u"Ajastin", None))
+        self.oneThreeCombo_5.setItemText(2, QCoreApplication.translate("Widget", u"API-palvelin", None))
+        self.oneThreeCombo_5.setItemText(3, QCoreApplication.translate("Widget", u"etcd", None))
+        self.oneThreeCombo_5.setItemText(4, QCoreApplication.translate("Widget", u"Kontin ajoaika", None))
+        self.oneThreeCombo_5.setItemText(5, QCoreApplication.translate("Widget", u"Kubelet", None))
+        self.oneThreeCombo_5.setItemText(6, QCoreApplication.translate("Widget", u"Ohjainmanageri", None))
+        self.oneThreeCombo_5.setItemText(7, QCoreApplication.translate("Widget", u"Ohjaustaso", None))
+        self.oneThreeCombo_5.setItemText(8, QCoreApplication.translate("Widget", u"Pilviohjainmanageri", None))
+        self.oneThreeCombo_5.setItemText(9, QCoreApplication.translate("Widget", u"Solmu(t)", None))
+        self.oneThreeCombo_5.setItemText(10, QCoreApplication.translate("Widget", u"S\u00e4ili\u00f6", None))
+        self.oneThreeCombo_5.setItemText(11, QCoreApplication.translate("Widget", u"V\u00e4lipalvelin", None))
+
+        self.label_14.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:11pt;\">6. Kommunikoi solmussa ohjaustason kanssa.</span></p></body></html>", None))
+        self.oneThreeCombo_6.setItemText(0, QCoreApplication.translate("Widget", u"Valitse komponentti", None))
+        self.oneThreeCombo_6.setItemText(1, QCoreApplication.translate("Widget", u"Ajastin", None))
+        self.oneThreeCombo_6.setItemText(2, QCoreApplication.translate("Widget", u"API-palvelin", None))
+        self.oneThreeCombo_6.setItemText(3, QCoreApplication.translate("Widget", u"etcd", None))
+        self.oneThreeCombo_6.setItemText(4, QCoreApplication.translate("Widget", u"Kontin ajoaika", None))
+        self.oneThreeCombo_6.setItemText(5, QCoreApplication.translate("Widget", u"Kubelet", None))
+        self.oneThreeCombo_6.setItemText(6, QCoreApplication.translate("Widget", u"Ohjainmanageri", None))
+        self.oneThreeCombo_6.setItemText(7, QCoreApplication.translate("Widget", u"Ohjaustaso", None))
+        self.oneThreeCombo_6.setItemText(8, QCoreApplication.translate("Widget", u"Pilviohjainmanageri", None))
+        self.oneThreeCombo_6.setItemText(9, QCoreApplication.translate("Widget", u"Solmu(t)", None))
+        self.oneThreeCombo_6.setItemText(10, QCoreApplication.translate("Widget", u"S\u00e4ili\u00f6", None))
+        self.oneThreeCombo_6.setItemText(11, QCoreApplication.translate("Widget", u"V\u00e4lipalvelin", None))
+
+        self.label_16.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:11pt;\">7. Klusterin ty\u00f6ntekij\u00e4kone.</span></p></body></html>", None))
+        self.oneThreeCombo_7.setItemText(0, QCoreApplication.translate("Widget", u"Valitse komponentti", None))
+        self.oneThreeCombo_7.setItemText(1, QCoreApplication.translate("Widget", u"Ajastin", None))
+        self.oneThreeCombo_7.setItemText(2, QCoreApplication.translate("Widget", u"API-palvelin", None))
+        self.oneThreeCombo_7.setItemText(3, QCoreApplication.translate("Widget", u"etcd", None))
+        self.oneThreeCombo_7.setItemText(4, QCoreApplication.translate("Widget", u"Kontin ajoaika", None))
+        self.oneThreeCombo_7.setItemText(5, QCoreApplication.translate("Widget", u"Kubelet", None))
+        self.oneThreeCombo_7.setItemText(6, QCoreApplication.translate("Widget", u"Ohjainmanageri", None))
+        self.oneThreeCombo_7.setItemText(7, QCoreApplication.translate("Widget", u"Ohjaustaso", None))
+        self.oneThreeCombo_7.setItemText(8, QCoreApplication.translate("Widget", u"Pilviohjainmanageri", None))
+        self.oneThreeCombo_7.setItemText(9, QCoreApplication.translate("Widget", u"Solmu(t)", None))
+        self.oneThreeCombo_7.setItemText(10, QCoreApplication.translate("Widget", u"S\u00e4ili\u00f6", None))
+        self.oneThreeCombo_7.setItemText(11, QCoreApplication.translate("Widget", u"V\u00e4lipalvelin", None))
+
+        self.checkOneThree.setText(QCoreApplication.translate("Widget", u"Tarkista vastaukset", None))
         self.prevOneFour.setText(QCoreApplication.translate("Widget", u"Edellinen", None))
         self.label_6.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:14pt;\">1.4. Klusterin luonti</span></p></body></html>", None))
         self.nextOneFour.setText(QCoreApplication.translate("Widget", u"Lopeta", None))
-        self.runButtonOneFour.setText(QCoreApplication.translate("Widget", u" Aja komento", None))
+        self.infoBrowser_6.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'MS Reference Sans Serif'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">1. Luo Minikubella klusteri.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">Huom! Muista lis\u00e4t\u00e4 komennon loppuun </span><span style=\" font-family:'Courier New'; color:#000000;\">--base-image gcr.io/k8s-miniku"
+                        "be/kicbase-builds:v0.0.42-1703092832-17830 </span><span style=\" font-family:'Candara';\">jos k\u00e4yt\u00f6ss\u00e4si on Minikuben versio 1.32.0 (tai vanhempi). Voit tarkistaa version etusivulta.</span></p></body></html>", None))
+        self.oneFourButton_1.setText(QCoreApplication.translate("Widget", u" Aja komento", None))
         self.label_18.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:12pt;\">Tuloste:</span></p></body></html>", None))
+        self.oneFourResult_1.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'MS Reference Sans Serif'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI Symbol';\"><br /></p></body></html>", None))
+        self.textBrowser_13.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'MS Reference Sans Serif'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">2. Pys\u00e4yt\u00e4 klusteri.</span></p></body></html>", None))
+        self.oneFourButton_2.setText(QCoreApplication.translate("Widget", u"Aja komento", None))
+        self.label_19.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:12pt;\">Tuloste:</span></p></body></html>", None))
         self.title_6.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:24pt; font-weight:700;\">K\u00e4ytt\u00e4j\u00e4n tiedot</span></p></body></html>", None))
         self.subUserInfo.setText(QCoreApplication.translate("Widget", u"K\u00e4ytt\u00e4j\u00e4n nimi: ", None))
         self.desc_6.setText("")

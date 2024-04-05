@@ -1,11 +1,13 @@
+#--coding: utf-8 --
+
 import sys
 import json
 import os.path
 from PySide6.QtWidgets import QApplication, QWidget, QLabel, QPushButton
-from PySide6.QtGui import QPixmap
+from PySide6.QtGui import QPixmap, QFontDatabase, QFont
 from PySide6.QtCore import Qt
 from ui_form import Ui_Widget
-from utils.command_line import command_call
+from utils.command_line import command_call, multiple_line_command_call
 from utils.database import database
 
 class MyApplication(QWidget):
@@ -20,6 +22,7 @@ class MyApplication(QWidget):
         self.exercise_buttons_next = [[self.ui.nextOneOne, self.ui.nextOneTwo, self.ui.nextOneThree, self.ui.nextOneFour]]
         self.button_stylesheet_clickable = self.ui.exerciseOneOneMenuButton.styleSheet()
         self.button_stylesheet_not_clickable = self.ui.exerciseOneTwoMenuButton.styleSheet()
+        self.combo_style = self.ui.oneThreeCombo_1.styleSheet()
 
         self.db = database()
         if self.db.getItems() == []:
@@ -35,8 +38,9 @@ class MyApplication(QWidget):
         self.previously_clicked_style = self.ui.mainButton.styleSheet()
         self.ui.mainButton.setStyleSheet(self.previously_clicked_style + "font-weight: bold;")
 
-        self.ui.runButtonOneThree.clicked.connect(lambda: self.button_clicked(1, 3, False))
-        self.ui.runButtonOneFour.clicked.connect(lambda: self.button_clicked(1, 4, False))
+        self.ui.checkOneThree.clicked.connect(lambda: self.check_combo(1, 3))
+        self.ui.oneFourButton_1.clicked.connect(lambda: self.check_command(1, 4, 1))
+        self.ui.oneFourButton_2.clicked.connect(lambda: self.check_command(1, 4, 2))
 
         self.ui.loginButton.clicked.connect(self.userLogin)
         self.ui.mainButton.clicked.connect(lambda: self.menuClicked("mainButton"))
@@ -114,11 +118,12 @@ class MyApplication(QWidget):
             for j in range(len(self.exercise_buttons_menu[i])):
                 button = self.exercise_buttons[i][j]
                 menu_button = self.exercise_buttons_menu[i][j]
-                next_button = self.exercise_buttons_next[i][j]
+                next_button = self.exercise_buttons_next[i][j-1]
                 menu_button.setStyleSheet(self.button_stylesheet_not_clickable)
                 button.setEnabled(False)
                 menu_button.setEnabled(False)
                 next_button.setEnabled(False)
+
 
         for i in range(len(self.exercise_buttons)):
             if i > exercise:
@@ -128,11 +133,12 @@ class MyApplication(QWidget):
                     break
                 button = self.exercise_buttons[i][j]
                 menu_button = self.exercise_buttons_menu[i][j]
-                next_button = self.exercise_buttons_next[i][j]
                 button.setEnabled(True)
                 menu_button.setStyleSheet(self.button_stylesheet_clickable)
                 menu_button.setEnabled(True)
-                next_button.setEnabled(True)
+                if j != 0:
+                    next_button = self.exercise_buttons_next[i][j-1]
+                    next_button.setEnabled(True)
 
     def userLogout(self):
         self.ui.labelMinikube.setText("Käytössä oleva Minikube versio: ")
@@ -180,7 +186,11 @@ class MyApplication(QWidget):
             self.exercise_one_open = False
 
     def exerciseClicked(self, ex, part):
-        if not self.db.check_has_answer(ex, part):
+        if part != 0 and not self.db.check_has_answer(ex, part):
+            print(f"exercise: {ex}, current_exercise: {self.CURRENT_EXERCISE[0]}")
+            print(f"part: {part}, current_part: {self.CURRENT_EXERCISE[1]}")
+            if ex >= self.CURRENT_EXERCISE[0] and part >= self.CURRENT_EXERCISE[1]:
+                self.db.update_current_exercise(ex, part, self.username)
             self.set_buttons(ex, part)
         
         if ex == 1 and part == 0:
@@ -263,16 +273,8 @@ class MyApplication(QWidget):
     def set_buttons(self, ex, part):
         if part != 0:
             if len(self.exercise_buttons[ex-1]) == part:
-                if len(self.exercise_buttons) != ex:
-                    button = self.exercise_buttons[ex][0]
-                    menu_button = self.exercise_buttons_menu[ex][0]
-                    next_button = self.exercise_buttons_next[ex-1][part-1]
-                    button.setEnabled(True)
-                    menu_button.setEnabled(True)
-                    next_button.setEnabled(True)
-                else:
-                    next_button = self.exercise_buttons_next[ex-1][part-1]
-                    next_button.setEnabled(True)
+                next_button = self.exercise_buttons_next[ex-1][part-1]
+                next_button.setEnabled(True)
             elif len(self.exercise_buttons[ex-1]) != part:
                 button = self.exercise_buttons[ex-1][part]
                 menu_button = self.exercise_buttons_menu[ex-1][part]
@@ -282,21 +284,56 @@ class MyApplication(QWidget):
                 menu_button.setEnabled(True)
                 next_button.setEnabled(True)
 
-    def button_clicked(self, ex, part, is_command):
+    def check_command(self, ex, part, cmd):
         correct = self.db.get_answer(ex, part)
-        result = self.ui.inputEdit_5.toPlainText()
-        print(correct)
-        print(result)
-        if result != correct:
-            self.ui.resultBrowser_5.setPlainText("Väärin")
+        result = ""
+        browser = ""
+        inputs = [self.ui.oneFourInput_1, self.ui.oneFourInput_2]
+        result_browsers = [self.ui.oneFourResult_1, self.ui.oneFourResult_2]
+        if ex == 1 and part == 4 and cmd == 1:
+            correct = correct[0]
+            result = inputs[0].toPlainText()
+            browser = result_browsers[0]
+
+        if ex == 1 and part == 4 and cmd == 2:
+            correct = correct[1]
+            result = inputs[1].toPlainText()
+            browser = result_browsers[1]
+
+        ok = True
+        if correct[len(correct)-1] == '*':
+            if not result.startswith(correct[:-1]):
+                ok = False
         else:
-            self.db.update_current_exercise(ex, part, self.username)
+            if result != correct:
+                ok = False
+        
+        if ok:
+            if cmd == len(inputs):
+                if ex >= self.CURRENT_EXERCISE[0] and part >= self.CURRENT_EXERCISE[1]:
+                    self.db.update_current_exercise(ex, part, self.username)
+                self.set_buttons(ex, part)
+            _, rtn = multiple_line_command_call(result, browser)
+            print(rtn)
+        else:
+            browser.setPlainText("Väärin")
+            
+    def check_combo(self, ex, part):
+        correct = self.db.get_answer(ex, part)
+        combos = [self.ui.oneThreeCombo_1, self.ui.oneThreeCombo_2, self.ui.oneThreeCombo_3, self.ui.oneThreeCombo_4,
+                  self.ui.oneThreeCombo_5, self.ui.oneThreeCombo_6, self.ui.oneThreeCombo_7]
+        return_value = ""
+        
+        for i in range(len(combos)):
+            index = combos[i].currentIndex()
+            if correct[i] != index:
+                return_value += f"Kohta {i+1}. on väärin.\n"
+        if return_value == "":
+            return_value = "Oikein!"
+            if ex >= self.CURRENT_EXERCISE[0] and part >= self.CURRENT_EXERCISE[1]:
+                self.db.update_current_exercise(ex, part, self.username)
             self.set_buttons(ex, part)
-                #elif is_command:
-                    #rtn = command_call(result)
-                    #self.ui.resultBrowser.setPlainText(rtn)
-                #elif not is_command:
-                    #self.ui.resultBrowser.setPlainText("Oikein")
+        self.ui.infoBrowser_5.setText(return_value)
 
 
 
@@ -307,4 +344,3 @@ if __name__ == "__main__":
     widget = MyApplication()
     widget.show()
     sys.exit(app.exec())
-    

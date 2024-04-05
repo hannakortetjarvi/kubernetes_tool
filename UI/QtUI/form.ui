@@ -18,7 +18,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(240, 255, 254);
-font: 10pt &quot;Candara&quot;;</string>
+font: 11pt &quot;Consolas&quot;;</string>
   </property>
   <widget class="QStackedWidget" name="stackedWidget">
    <property name="geometry">
@@ -30,7 +30,7 @@ font: 10pt &quot;Candara&quot;;</string>
     </rect>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="loginPage">
     <widget class="QFrame" name="frame">
@@ -51,10 +51,10 @@ font: 10pt &quot;Candara&quot;;</string>
      <widget class="QPushButton" name="loginButton">
       <property name="geometry">
        <rect>
-        <x>230</x>
-        <y>430</y>
-        <width>111</width>
-        <height>51</height>
+        <x>220</x>
+        <y>420</y>
+        <width>121</width>
+        <height>61</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -98,7 +98,7 @@ padding-bottom: 15px;</string>
        <rect>
         <x>40</x>
         <y>180</y>
-        <width>111</width>
+        <width>191</width>
         <height>20</height>
        </rect>
       </property>
@@ -139,8 +139,8 @@ padding-bottom: 15px;</string>
           </property>
           <property name="font">
            <font>
-            <family>Candara</family>
-            <pointsize>10</pointsize>
+            <family>Consolas</family>
+            <pointsize>11</pointsize>
             <italic>false</italic>
             <bold>false</bold>
            </font>
@@ -230,8 +230,8 @@ padding-bottom: 15px;</string>
             </property>
             <property name="font">
              <font>
-              <family>Candara</family>
-              <pointsize>10</pointsize>
+              <family>Consolas</family>
+              <pointsize>11</pointsize>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -275,7 +275,7 @@ padding-bottom: 15px;</string>
                <x>0</x>
                <y>0</y>
                <width>1209</width>
-               <height>687</height>
+               <height>689</height>
               </rect>
              </property>
              <widget class="QWidget" name="verticalLayoutWidget_7">
@@ -350,8 +350,8 @@ padding-bottom: 15px;</string>
                      </property>
                      <property name="font">
                       <font>
-                       <family>Candara</family>
-                       <pointsize>10</pointsize>
+                       <family>Consolas</family>
+                       <pointsize>11</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
                       </font>
@@ -443,8 +443,8 @@ color: rgb(0, 85, 255);</string>
                  </property>
                  <property name="font">
                   <font>
-                   <family>Candara</family>
-                   <pointsize>10</pointsize>
+                   <family>Consolas</family>
+                   <pointsize>11</pointsize>
                    <italic>false</italic>
                    <bold>false</bold>
                   </font>
@@ -573,8 +573,8 @@ color: rgb(0, 85, 255);</string>
                  </property>
                  <property name="font">
                   <font>
-                   <family>Candara</family>
-                   <pointsize>10</pointsize>
+                   <family>Consolas</family>
+                   <pointsize>11</pointsize>
                    <italic>false</italic>
                    <bold>false</bold>
                   </font>
@@ -590,12 +590,12 @@ p, li { white-space: pre-wrap; }
 hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Candara'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:700;&quot;&gt;Kubernetes&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt;&quot;&gt; on avoimen lähdekoodin alusta, jonka avulla voidaan toteuttaa konttiorkestrointia. Kuberneteksen &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:700;&quot;&gt;klusteri&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt;&quot;&gt; koordinoi joukkoa tietokoneita, jotka ovat yhteydessä toisiinsa ja toimivat yhtenäisenä kokonaisuutena. Jotta Kuberneteksen hajautettua käyttöönottomallia voitaisiin hyödyntää, sovellukset tulee pakata siten, että ne eivät ole riippuvaisia yksittäisistä isäntäkoneista. Sovellukset tulee siis &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:700;&quot;&gt;kontittaa. &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt;&quot;&gt;Kubernetes automatisoi sovelluskonttien ylläpitoa klusterissa.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI'; font-size:11pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Kuberneteksen klusteri koostuu kahden tyyppisestä pääkomponentista:&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;        -&lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:700;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Ohjaustaso koordinoi klusteria&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;        -&lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:700;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Solmut ovat klusterin työntekijöitä, jotka ajavat kontitettuja sovelluksia&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-weight:700;&quot;&gt;Kubernetes&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI';&quot;&gt; on avoimen lähdekoodin alusta, jonka avulla voidaan toteuttaa konttiorkestrointia. Kuberneteksen &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-weight:700;&quot;&gt;klusteri&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI';&quot;&gt; koordinoi joukkoa tietokoneita, jotka ovat yhteydessä toisiinsa ja toimivat yhtenäisenä kokonaisuutena. Jotta Kuberneteksen hajautettua käyttöönottomallia voitaisiin hyödyntää, sovellukset tulee pakata siten, että ne eivät ole riippuvaisia yksittäisistä isäntäkoneista. Sovellukset tulee siis &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-weight:700;&quot;&gt;kontittaa. &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI';&quot;&gt;Kubernetes automatisoi sovelluskonttien ylläpitoa klusterissa.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI';&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt;Kuberneteksen klusteri koostuu kahden tyyppisestä pääkomponentista:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt;        -&lt;/span&gt;&lt;span style=&quot; font-family:'Candara'; font-weight:700;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt;Ohjaustaso koordinoi klusteria&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt;        -&lt;/span&gt;&lt;span style=&quot; font-family:'Candara'; font-weight:700;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt;Solmut ovat klusterin työntekijöitä, jotka ajavat kontitettuja sovelluksia&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                 </widget>
                </item>
@@ -636,14 +636,14 @@ p, li { white-space: pre-wrap; }
 hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Candara'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:700;&quot;&gt;Ohjaustaso&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt; vastaa klusterin ylläpidosta. Ohjaustaso hallinnoi klusterin kaikkia aktiviteetteja, kuten sovellusten aikataulutusta, sovellusten skaalauksesta sekä halutun tilan ylläpidosta.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Ohjaustasosta löytyy viisi erilaista komponenttia. &lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:700;&quot;&gt;API-palvelin&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt; paljastaa Kubernetes APIn klusterille ja toimii frontendinä ohjaustasolle. &lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:700;&quot;&gt;etcd&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt; on johdonmukainen ja saatavilla oleva avainarvosäilö kaikille klusteritiedoille. &lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:700;&quot;&gt;Ajastin&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt; seuraa luotuja säiliöitä ja valitsee niille sopivan solmun. &lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:700;&quot;&gt;Ohjainmanageri &lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;ajaa ohjainprosesseja, ja &lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:700;&quot;&gt;pilviohjainmanageri &lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;upottaa klusteriin pilvikohtaisen ohjauslogiikan, ajaa pilveen liittyviä ohjainprosesseja ja mahdollistaa yhdistämisen pilvitarjoajan APIin.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:700;&quot;&gt;Solmu&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt; on virtuaalikone tai fyysinen kone, joka käyttäytyy työntekijäkoneena Kuberneteksen klusterissa. Solmuja on klusterissa aina ainakin yksi.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Solmu koostuu myös erilaisista komponenteista. &lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:700;&quot;&gt;Kubelet&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt; on agentti, joka itsenäisesti ylläpitää solmua ja kommunikoi ohjaustason kanssa. &lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:700;&quot;&gt;Välipalvelin&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt; ylläpitää solmujen verkkosääntöja. &lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:700;&quot;&gt;Kontin ajoaika&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt; vastaa konttien toteutuksesta ja elinkaaren hallinnasta. &lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:700;&quot;&gt;Säiliö &lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;on joukko solmussa ajettavia kontteja.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Candara'; font-weight:700;&quot;&gt;Ohjaustaso&lt;/span&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt; vastaa klusterin ylläpidosta. Ohjaustaso hallinnoi klusterin kaikkia aktiviteetteja, kuten sovellusten aikataulutusta, sovellusten skaalauksesta sekä halutun tilan ylläpidosta.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Candara';&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt;Ohjaustasosta löytyy viisi erilaista komponenttia. &lt;/span&gt;&lt;span style=&quot; font-family:'Candara'; font-weight:700;&quot;&gt;API-palvelin&lt;/span&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt; paljastaa Kubernetes APIn klusterille ja toimii frontendinä ohjaustasolle. &lt;/span&gt;&lt;span style=&quot; font-family:'Candara'; font-weight:700;&quot;&gt;etcd&lt;/span&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt; on johdonmukainen ja saatavilla oleva avainarvosäilö kaikille klusteritiedoille. &lt;/span&gt;&lt;span style=&quot; font-family:'Candara'; font-weight:700;&quot;&gt;Ajastin&lt;/span&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt; seuraa luotuja säiliöitä ja valitsee niille sopivan solmun. &lt;/span&gt;&lt;span style=&quot; font-family:'Candara'; font-weight:700;&quot;&gt;Ohjainmanageri &lt;/span&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt;ajaa ohjainprosesseja, ja &lt;/span&gt;&lt;span style=&quot; font-family:'Candara'; font-weight:700;&quot;&gt;pilviohjainmanageri &lt;/span&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt;upottaa klusteriin pilvikohtaisen ohjauslogiikan, ajaa pilveen liittyviä ohjainprosesseja ja mahdollistaa yhdistämisen pilvitarjoajan APIin.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Candara';&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Candara'; font-weight:700;&quot;&gt;Solmu&lt;/span&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt; on virtuaalikone tai fyysinen kone, joka käyttäytyy työntekijäkoneena Kuberneteksen klusterissa. Solmuja on klusterissa aina ainakin yksi.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Candara';&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt;Solmu koostuu myös erilaisista komponenteista. &lt;/span&gt;&lt;span style=&quot; font-family:'Candara'; font-weight:700;&quot;&gt;Kubelet&lt;/span&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt; on agentti, joka itsenäisesti ylläpitää solmua ja kommunikoi ohjaustason kanssa. &lt;/span&gt;&lt;span style=&quot; font-family:'Candara'; font-weight:700;&quot;&gt;Välipalvelin&lt;/span&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt; ylläpitää solmujen verkkosääntöja. &lt;/span&gt;&lt;span style=&quot; font-family:'Candara'; font-weight:700;&quot;&gt;Kontin ajoaika&lt;/span&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt; vastaa konttien toteutuksesta ja elinkaaren hallinnasta. &lt;/span&gt;&lt;span style=&quot; font-family:'Candara'; font-weight:700;&quot;&gt;Säiliö &lt;/span&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt;on joukko solmussa ajettavia kontteja.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                    </property>
                   </widget>
                  </item>
@@ -661,8 +661,8 @@ p, li { white-space: pre-wrap; }
 hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Candara'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Kuberneteksen klusteri voidaan luoda fyysiselle koneelle tai virtuaalikoneelle. Tässä oppimistyökalussa klusterin luonti toteutetaan Minikuben avulla, jota käsitellään seuraavassa osiossa.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt;Kuberneteksen klusteri voidaan luoda fyysiselle koneelle tai virtuaalikoneelle. Tässä oppimistyökalussa klusterin luonti toteutetaan Minikuben avulla, jota käsitellään seuraavassa osiossa.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                 </widget>
                </item>
@@ -679,7 +679,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                 <height>761</height>
                </rect>
               </property>
-              <layout class="QVBoxLayout" name="verticalLayout_14" stretch="0,6,0,0,0,0">
+              <layout class="QVBoxLayout" name="verticalLayout_14" stretch="0,6,0,0,0,0,0,0,0,0">
                <item>
                 <layout class="QHBoxLayout" name="horizontalLayout_4">
                  <item>
@@ -710,7 +710,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                  <property name="maximumSize">
                   <size>
                    <width>16777215</width>
-                   <height>150</height>
+                   <height>145</height>
                   </size>
                  </property>
                  <property name="styleSheet">
@@ -723,12 +723,12 @@ p, li { white-space: pre-wrap; }
 hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Candara'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:700;&quot;&gt;Minikube&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt; on kevyt ja lokaalisti ajettava Kubernetes. Minikube luo virtuaalikoneen paikalliselle koneellesi ja ottaa käyttöön yksinkertaisen klusterin. Luotu klusteri sisältää yhden solmun. Minikuben komentorivikäyttöliittymä tarjoaa mahdollisuuden ajaa klusterin perustoimintoja.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Minikuben sivuilta voi tarkkailla Minikubesta löytyviä komentoja: &lt;/span&gt;&lt;a href=&quot;https://minikube.sigs.k8s.io/docs/commands/&quot;&gt;&lt;span style=&quot; font-size:11pt; text-decoration: underline; color:#0078d4;&quot;&gt;https://minikube.sigs.k8s.io/docs/commands/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt; text-decoration: underline; color:#0078d4;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Klusterin voi käynnistää komennolla:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Candara'; font-weight:700;&quot;&gt;Minikube&lt;/span&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt; on kevyt ja lokaalisti ajettava Kubernetes. Minikube luo virtuaalikoneen paikalliselle koneellesi ja ottaa käyttöön yksinkertaisen klusterin. Luotu klusteri sisältää yhden solmun. Minikuben komentorivikäyttöliittymä tarjoaa mahdollisuuden ajaa klusterin perustoimintoja.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Candara';&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt;Minikuben sivuilta voi tarkkailla Minikubesta löytyviä komentoja: &lt;/span&gt;&lt;a href=&quot;https://minikube.sigs.k8s.io/docs/commands/&quot;&gt;&lt;span style=&quot; font-family:'Candara'; text-decoration: underline; color:#0078d4;&quot;&gt;https://minikube.sigs.k8s.io/docs/commands/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Candara'; text-decoration: underline; color:#0078d4;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt;Klusterin voi käynnistää komennolla:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                 </widget>
                </item>
@@ -751,8 +751,8 @@ p, li { white-space: pre-wrap; }
 hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Candara'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:145%;&quot;&gt;&lt;span style=&quot; font-family:'Courier New'; font-size:11pt; color:#e6edf3;&quot;&gt;$ minikube start&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:145%;&quot;&gt;&lt;span style=&quot; font-family:'Courier New'; color:#e6edf3;&quot;&gt;$ minikube start&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                 </widget>
                </item>
@@ -761,8 +761,11 @@ li.checked::marker { content: &quot;\2612&quot;; }
                  <property name="maximumSize">
                   <size>
                    <width>16777215</width>
-                   <height>78</height>
+                   <height>63</height>
                   </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border: none;</string>
                  </property>
                  <property name="html">
                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -771,8 +774,8 @@ p, li { white-space: pre-wrap; }
 hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Candara'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Minikuben 1.32.0 versiossa on raportoitu häiriöitä eri käyttöjärjestelmillä. &lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:700;&quot;&gt;Jos käytössäsi on Minikuben versio 1.32.0&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt; (tai mahdollisesti myöhempi versio), on klusterin käynnistyksen yhteydessä hyvä käyttää jotai muuta kun version mukana tulevaa alkuperäistä kuvaa. Alla on esimerkki vaihtoehtoisesta ajamisesta:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt;Minikuben 1.32.0 versiossa on raportoitu häiriöitä eri käyttöjärjestelmillä. &lt;/span&gt;&lt;span style=&quot; font-family:'Candara'; font-weight:700;&quot;&gt;Jos käytössäsi on Minikuben versio 1.32.0&lt;/span&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt; (tai mahdollisesti myöhempi versio), on klusterin käynnistyksen yhteydessä hyvä käyttää jotain muuta kun version mukana tulevaa alkuperäistä kuvaa. Alla on esimerkki vaihtoehtoisesta ajamisesta:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                 </widget>
                </item>
@@ -795,8 +798,102 @@ p, li { white-space: pre-wrap; }
 hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Candara'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:145%;&quot;&gt;&lt;span style=&quot; font-family:'Courier New'; font-size:11pt; color:#e6edf3;&quot;&gt;$ minikube start --base-image gcr.io/k8s-minikube/kicbase-builds:v0.0.42-1703092832-17830&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:145%;&quot;&gt;&lt;span style=&quot; font-family:'Courier New'; color:#e6edf3;&quot;&gt;$ minikube start --base-image gcr.io/k8s-minikube/kicbase-builds:v0.0.42-1703092832-17830&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTextBrowser" name="textBrowser_8">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border: none;</string>
+                 </property>
+                 <property name="html">
+                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt;Kun on valmis lopettamaan klusterin käytön, klusteri voidaan pysäyttää komennolla:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTextBrowser" name="textBrowser_9">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>39</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(29, 29, 29);
+</string>
+                 </property>
+                 <property name="html">
+                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:145%;&quot;&gt;&lt;span style=&quot; font-family:'Courier New'; color:#e6edf3;&quot;&gt;$ minikube stop&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTextBrowser" name="textBrowser_10">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border: none;</string>
+                 </property>
+                 <property name="html">
+                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt;Vaihtoehtoisesti jos kokee, ettei klusteria enää tarvitse ollenkaan, Minikuben virtuaalikone ja sen yhteydessä myös klusteri voidaan poistaa:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTextBrowser" name="textBrowser_11">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>39</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(29, 29, 29);
+</string>
+                 </property>
+                 <property name="html">
+                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:145%;&quot;&gt;&lt;span style=&quot; font-family:'Courier New'; color:#e6edf3;&quot;&gt;$ minikube delete&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                 </widget>
                </item>
@@ -816,7 +913,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
                 <height>761</height>
                </rect>
               </property>
-              <layout class="QVBoxLayout" name="verticalLayout_15" stretch="0,6,1,0,3">
+              <layout class="QVBoxLayout" name="verticalLayout_15" stretch="0,0,0,0,0,0,0,0,0,0,0">
+               <property name="spacing">
+                <number>7</number>
+               </property>
                <item>
                 <layout class="QHBoxLayout" name="horizontalLayout_5">
                  <item>
@@ -843,67 +943,632 @@ li.checked::marker { content: &quot;\2612&quot;; }
                 </layout>
                </item>
                <item>
-                <widget class="QTextBrowser" name="infoBrowser_5">
+                <widget class="QLabel" name="label_3">
                  <property name="styleSheet">
-                  <string notr="true">border-top: 1px solid gray;</string>
+                  <string notr="true">border-top: 1px solid gray;
+padding-top: 20px;
+padding-bottom: 20px;</string>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Valitse klusterin komponentti, joka sopii parhaiten esitettyyn ominaisuuteen/työtehtävään.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_15">
+                <layout class="QHBoxLayout" name="horizontalLayout_11">
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
                  <item>
-                  <widget class="QTextEdit" name="inputEdit_5">
-                   <property name="baseSize">
-                    <size>
-                     <width>0</width>
-                     <height>4</height>
-                    </size>
-                   </property>
-                   <property name="autoFillBackground">
-                    <bool>false</bool>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">border: 1px solid;
-border-radius: 10px;</string>
+                  <widget class="QLabel" name="label_8">
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;1. Joukko ajettavia kontteja.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                    </property>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QPushButton" name="runButtonOneThree">
-                   <property name="minimumSize">
+                  <widget class="QComboBox" name="oneThreeCombo_1">
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(0, 0, 0);</string>
+                   </property>
+                   <property name="placeholderText">
+                    <string/>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>Valitse komponentti</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Ajastin</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>API-palvelin</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>etcd</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Kontin ajoaika</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Kubelet</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Ohjainmanageri</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Ohjaustaso</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Pilviohjainmanageri</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Solmu(t)</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Säiliö</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Välipalvelin</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_12">
+                 <property name="topMargin">
+                  <number>10</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="label_9">
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;2. Ylläpitää solmujen verkkosääntöjä.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="oneThreeCombo_2">
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(0, 0, 0);</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>Valitse komponentti</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Ajastin</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>API-palvelin</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>etcd</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Kontin ajoaika</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Kubelet</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Ohjainmanageri</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Ohjaustaso</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Pilviohjainmanageri</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Solmu(t)</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Säiliö</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Välipalvelin</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_14">
+                 <property name="topMargin">
+                  <number>10</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="label_11">
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;3. Mahdollistaa klusterin yhdistämisen pilvitarjoajan APIin.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="oneThreeCombo_3">
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(0, 0, 0);</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>Valitse komponentti</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Ajastin</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>API-palvelin</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>etcd</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Kontin ajoaika</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Kubelet</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Ohjainmanageri</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Ohjaustaso</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Pilviohjainmanageri</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Solmu(t)</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Säiliö</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Välipalvelin</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_17">
+                 <property name="topMargin">
+                  <number>10</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="label_12">
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;4. Huolehtii yleisesti klusterin ylläpidosta.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="oneThreeCombo_4">
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(0, 0, 0);</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>Valitse komponentti</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Ajastin</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>API-palvelin</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>etcd</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Kontin ajoaika</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Kubelet</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Ohjainmanageri</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Ohjaustaso</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Pilviohjainmanageri</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Solmu(t)</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Säiliö</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Välipalvelin</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_18">
+                 <property name="topMargin">
+                  <number>10</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="label_13">
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;5. Valitsee säiliölle sopivan solmun.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="oneThreeCombo_5">
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(0, 0, 0);</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>Valitse komponentti</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Ajastin</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>API-palvelin</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>etcd</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Kontin ajoaika</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Kubelet</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Ohjainmanageri</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Ohjaustaso</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Pilviohjainmanageri</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Solmu(t)</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Säiliö</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Välipalvelin</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_15">
+                 <property name="topMargin">
+                  <number>10</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="label_14">
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;6. Kommunikoi solmussa ohjaustason kanssa.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="oneThreeCombo_6">
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(0, 0, 0);</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>Valitse komponentti</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Ajastin</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>API-palvelin</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>etcd</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Kontin ajoaika</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Kubelet</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Ohjainmanageri</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Ohjaustaso</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Pilviohjainmanageri</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Solmu(t)</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Säiliö</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Välipalvelin</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_20">
+                 <property name="topMargin">
+                  <number>10</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="label_16">
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;7. Klusterin työntekijäkone.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="oneThreeCombo_7">
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(0, 0, 0);</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>Valitse komponentti</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Ajastin</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>API-palvelin</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>etcd</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Kontin ajoaika</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Kubelet</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Ohjainmanageri</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Ohjaustaso</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Pilviohjainmanageri</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Solmu(t)</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Säiliö</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Välipalvelin</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_22">
+                 <item>
+                  <spacer name="horizontalSpacer_2">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
                     <size>
-                     <width>0</width>
-                     <height>0</height>
+                     <width>40</width>
+                     <height>20</height>
                     </size>
                    </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="checkOneThree">
+                   <property name="minimumSize">
+                    <size>
+                     <width>200</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Consolas</family>
+                     <pointsize>11</pointsize>
+                     <italic>false</italic>
+                     <bold>false</bold>
+                    </font>
+                   </property>
                    <property name="styleSheet">
-                    <string notr="true">border: 1px solid;
-border-radius: 5px;
-padding-top: 15px;
-padding-bottom: 15px;</string>
+                    <string notr="true">margin-top: 10px;</string>
                    </property>
                    <property name="text">
-                    <string> Aja komento</string>
+                    <string>Tarkista vastaukset</string>
                    </property>
                   </widget>
                  </item>
                 </layout>
                </item>
                <item>
-                <widget class="QLabel" name="label_17">
+                <widget class="QTextBrowser" name="infoBrowser_5">
                  <property name="styleSheet">
-                  <string notr="true">padding-left: 2px;</string>
-                 </property>
-                 <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Tuloste:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QTextBrowser" name="resultBrowser_5">
-                 <property name="styleSheet">
-                  <string notr="true">border: 1px solid;
-border-radius: 10px;</string>
+                  <string notr="true">border-top: none;</string>
                  </property>
                 </widget>
                </item>
@@ -920,7 +1585,7 @@ border-radius: 10px;</string>
                 <height>761</height>
                </rect>
               </property>
-              <layout class="QVBoxLayout" name="verticalLayout_16" stretch="0,6,1,0,3">
+              <layout class="QVBoxLayout" name="verticalLayout_16" stretch="0,6,1,0,3,0,0,0,0,0">
                <item>
                 <layout class="QHBoxLayout" name="horizontalLayout_6">
                  <item>
@@ -948,15 +1613,39 @@ border-radius: 10px;</string>
                </item>
                <item>
                 <widget class="QTextBrowser" name="infoBrowser_6">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>90</height>
+                  </size>
+                 </property>
                  <property name="styleSheet">
-                  <string notr="true">border-top: 1px solid gray;</string>
+                  <string notr="true">border-top: 1px solid gray;
+padding-top:10px;</string>
+                 </property>
+                 <property name="html">
+                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt;1. Luo Minikubella klusteri.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt;Huom! Muista lisätä komennon loppuun &lt;/span&gt;&lt;span style=&quot; font-family:'Courier New'; color:#000000;&quot;&gt;--base-image gcr.io/k8s-minikube/kicbase-builds:v0.0.42-1703092832-17830 &lt;/span&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt;jos käytössäsi on Minikuben versio 1.32.0 (tai vanhempi). Voit tarkistaa version etusivulta.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <layout class="QHBoxLayout" name="horizontalLayout_16">
                  <item>
-                  <widget class="QTextEdit" name="inputEdit_6">
+                  <widget class="QTextEdit" name="oneFourInput_1">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>50</height>
+                    </size>
+                   </property>
                    <property name="baseSize">
                     <size>
                      <width>0</width>
@@ -967,24 +1656,31 @@ border-radius: 10px;</string>
                     <bool>false</bool>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">border: 1px solid;
-border-radius: 10px;</string>
+                    <string notr="true">border: 1px solid gray;
+border-radius: 5px;</string>
                    </property>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QPushButton" name="runButtonOneFour">
+                  <widget class="QPushButton" name="oneFourButton_1">
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
                      <height>0</height>
                     </size>
                    </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>50</height>
+                    </size>
+                   </property>
                    <property name="styleSheet">
-                    <string notr="true">border: 1px solid;
+                    <string notr="true">border: 1px solid gray;
 border-radius: 5px;
 padding-top: 15px;
-padding-bottom: 15px;</string>
+padding-bottom: 15px;
+background-color: rgb(176, 194, 221);</string>
                    </property>
                    <property name="text">
                     <string> Aja komento</string>
@@ -1004,12 +1700,115 @@ padding-bottom: 15px;</string>
                 </widget>
                </item>
                <item>
-                <widget class="QTextBrowser" name="resultBrowser_6">
+                <widget class="QTextBrowser" name="oneFourResult_1">
                  <property name="styleSheet">
-                  <string notr="true">border: 1px solid;
-border-radius: 10px;</string>
+                  <string notr="true">border: 1px solid gray;
+border-radius: 5px;</string>
+                 </property>
+                 <property name="html">
+                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI Symbol';&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                 </widget>
+               </item>
+               <item>
+                <widget class="QTextBrowser" name="textBrowser_13">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border: none;
+margin-top:10px;</string>
+                 </property>
+                 <property name="html">
+                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Candara';&quot;&gt;2. Pysäytä klusteri.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_28">
+                 <item>
+                  <widget class="QTextEdit" name="oneFourInput_2">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border: 1px solid gray;
+border-radius: 5px;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="oneFourButton_2">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border: 1px solid gray;
+border-radius: 5px;
+padding-top: 15px;
+padding-bottom: 15px;
+background-color: rgb(176, 194, 221);</string>
+                   </property>
+                   <property name="text">
+                    <string>Aja komento</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_19">
+                 <property name="styleSheet">
+                  <string notr="true">padding-left: 2px;</string>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Tuloste:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTextBrowser" name="oneFourResult_2">
+                 <property name="styleSheet">
+                  <string notr="true">border: 1px solid gray;
+border-radius: 5px;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_4">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
                </item>
               </layout>
              </widget>
@@ -1049,8 +1848,8 @@ border-radius: 10px;</string>
           </property>
           <property name="font">
            <font>
-            <family>Candara</family>
-            <pointsize>10</pointsize>
+            <family>Consolas</family>
+            <pointsize>11</pointsize>
             <italic>false</italic>
             <bold>false</bold>
            </font>
@@ -1104,8 +1903,8 @@ border-radius: 10px;</string>
           </property>
           <property name="font">
            <font>
-            <family>Candara</family>
-            <pointsize>10</pointsize>
+            <family>Consolas</family>
+            <pointsize>11</pointsize>
             <italic>false</italic>
             <bold>false</bold>
            </font>
@@ -1152,8 +1951,8 @@ border-radius: 10px;</string>
           </property>
           <property name="font">
            <font>
-            <family>Candara</family>
-            <pointsize>10</pointsize>
+            <family>Consolas</family>
+            <pointsize>11</pointsize>
             <italic>false</italic>
             <bold>false</bold>
            </font>
@@ -1180,8 +1979,8 @@ border-radius: 10px;</string>
          <widget class="QLabel" name="desc_5">
           <property name="font">
            <font>
-            <family>Candara</family>
-            <pointsize>10</pointsize>
+            <family>Consolas</family>
+            <pointsize>11</pointsize>
             <italic>false</italic>
             <bold>false</bold>
            </font>
