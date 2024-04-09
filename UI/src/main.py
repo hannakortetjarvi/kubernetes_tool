@@ -111,6 +111,8 @@ class MyApplication(QWidget):
                 self.ui.labelKubectl.setText(self.ui.labelKubectl.text() + version)
 
     def initExerciseButtons(self):
+        progress_bars = [self.ui.progressBarOne]
+        progress_bars_global = [self.ui.progressBarOneGlobal]
         exercise = self.CURRENT_EXERCISE[0]
         part = self.CURRENT_EXERCISE[1]
 
@@ -124,10 +126,11 @@ class MyApplication(QWidget):
                 menu_button.setEnabled(False)
                 next_button.setEnabled(False)
 
-
         for i in range(len(self.exercise_buttons)):
             if i > exercise:
                 break
+            j = 0
+            temp = -1
             for j in range(len(self.exercise_buttons_menu[i])):
                 if i+1 == exercise and j > part:
                     break
@@ -139,6 +142,11 @@ class MyApplication(QWidget):
                 if j != 0:
                     next_button = self.exercise_buttons_next[i][j-1]
                     next_button.setEnabled(True)
+                elif temp == -1:
+                    temp = j
+            if temp >= part:
+                self.update_progress_bar(progress_bars[i], i+1, j)
+                self.update_progress_bar(progress_bars_global[i], i+1, j)
 
     def userLogout(self):
         self.ui.labelMinikube.setText("Käytössä oleva Minikube versio: ")
@@ -157,7 +165,7 @@ class MyApplication(QWidget):
         self.ui.exercisesShow.setText("▲")
         self.ui.exerciseOneShow.setText("▲")
         self.changeBoldedText(self.ui.mainButton)
-        self.CURRENT_EXERCISE = [0,0]
+        self.CURRENT_EXERCISE = [1,0]
     
     def setupExercise(self):
         cluster = os.path.join(self.CURRENT_DIRECTORY, "../../images/cluster.png")
@@ -187,10 +195,10 @@ class MyApplication(QWidget):
 
     def exerciseClicked(self, ex, part):
         if part != 0 and not self.db.check_has_answer(ex, part):
-            print(f"exercise: {ex}, current_exercise: {self.CURRENT_EXERCISE[0]}")
-            print(f"part: {part}, current_part: {self.CURRENT_EXERCISE[1]}")
             if ex >= self.CURRENT_EXERCISE[0] and part >= self.CURRENT_EXERCISE[1]:
                 self.db.update_current_exercise(ex, part, self.username)
+                self.update_progress_bar(self.ui.progressBarOne, ex, part)
+                self.update_progress_bar(self.ui.progressBarOneGlobal, ex, part)
             self.set_buttons(ex, part)
         
         if ex == 1 and part == 0:
@@ -312,9 +320,11 @@ class MyApplication(QWidget):
             if cmd == len(inputs):
                 if ex >= self.CURRENT_EXERCISE[0] and part >= self.CURRENT_EXERCISE[1]:
                     self.db.update_current_exercise(ex, part, self.username)
+                    if ex == 1:
+                        self.update_progress_bar(self.ui.progressBarOne, ex, part)
+                        self.update_progress_bar(self.ui.progressBarOneGlobal, ex, part)
                 self.set_buttons(ex, part)
             _, rtn = multiple_line_command_call(result, browser)
-            print(rtn)
         else:
             browser.setPlainText("Väärin")
             
@@ -332,8 +342,19 @@ class MyApplication(QWidget):
             return_value = "Oikein!"
             if ex >= self.CURRENT_EXERCISE[0] and part >= self.CURRENT_EXERCISE[1]:
                 self.db.update_current_exercise(ex, part, self.username)
+                if ex == 1:
+                    self.update_progress_bar(self.ui.progressBarOne, ex, part)
+                    self.update_progress_bar(self.ui.progressBarOneGlobal, ex, part)
             self.set_buttons(ex, part)
         self.ui.infoBrowser_5.setText(return_value)
+
+    def update_progress_bar(self, bar, ex, part):
+        if ex == 0:
+             bar.setValue(0)
+        else:
+            progress = round((self.db.get_exercise(self.username)[1] / self.db.exercise_count(ex)), 2) * 100
+            bar.setValue(progress)
+        
 
 
 

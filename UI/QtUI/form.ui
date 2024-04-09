@@ -30,7 +30,7 @@ font: 11pt &quot;Consolas&quot;;</string>
     </rect>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="loginPage">
     <widget class="QFrame" name="frame">
@@ -207,7 +207,7 @@ padding-bottom: 15px;</string>
         </rect>
        </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="exercisesMain">
         <widget class="QWidget" name="verticalLayoutWidget_4">
@@ -275,7 +275,7 @@ padding-bottom: 15px;</string>
                <x>0</x>
                <y>0</y>
                <width>1209</width>
-               <height>689</height>
+               <height>687</height>
               </rect>
              </property>
              <widget class="QWidget" name="verticalLayoutWidget_7">
@@ -365,6 +365,13 @@ color: rgb(0, 85, 255);</string>
                      </property>
                      <property name="checkable">
                       <bool>false</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QProgressBar" name="progressBarOneGlobal">
+                     <property name="value">
+                      <number>24</number>
                      </property>
                     </widget>
                    </item>
@@ -1818,7 +1825,7 @@ border-radius: 5px;</string>
           <item>
            <widget class="QProgressBar" name="progressBarOne">
             <property name="value">
-             <number>24</number>
+             <number>0</number>
             </property>
            </widget>
           </item>

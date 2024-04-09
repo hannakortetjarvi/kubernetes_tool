@@ -43,6 +43,17 @@ class database():
         else:
             found_user = data[0]
             return found_user["completed"]
+        
+    def get_exercise(self, user):
+        query = {"username": user}
+        data = self.users.getByQuery(query)
+        return data[0]["completed"]
+        
+    def exercise_count(self, ex):
+        query = {"exercise": ex}
+        data = self.db.getByQuery(query)
+        return len(data)
+
 
     def init(self):
         self.db.deleteAll()

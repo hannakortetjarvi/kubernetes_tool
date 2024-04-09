@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'form.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.6.2
+## Created by: Qt User Interface Compiler version 6.2.4
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -28,7 +28,7 @@ class Ui_Widget(object):
         Widget.resize(1570, 834)
         Widget.setWindowTitle(u"Kubernetes Learning Tool")
         Widget.setStyleSheet(u"background-color: rgb(240, 255, 254);\n"
-"font: 11pt \"MS Reference Sans Serif\";")
+"font: 11pt \"Consolas\";")
         self.stackedWidget = QStackedWidget(Widget)
         self.stackedWidget.setObjectName(u"stackedWidget")
         self.stackedWidget.setGeometry(QRect(9, 9, 1551, 811))
@@ -41,7 +41,7 @@ class Ui_Widget(object):
         self.frame.setFrameShadow(QFrame.Raised)
         self.loginButton = QPushButton(self.frame)
         self.loginButton.setObjectName(u"loginButton")
-        self.loginButton.setGeometry(QRect(230, 430, 111, 51))
+        self.loginButton.setGeometry(QRect(220, 420, 121, 61))
         self.loginButton.setStyleSheet(u"border: 1px solid;\n"
 "border-radius: 5px;\n"
 "padding-top: 15px;\n"
@@ -74,7 +74,7 @@ class Ui_Widget(object):
         self.title.setObjectName(u"title")
         self.title.setMaximumSize(QSize(16777215, 50))
         font = QFont()
-        font.setFamilies([u"MS Reference Sans Serif"])
+        font.setFamilies([u"Consolas"])
         font.setPointSize(11)
         font.setBold(False)
         font.setItalic(False)
@@ -148,7 +148,7 @@ class Ui_Widget(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 1209, 689))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 1209, 687))
         self.verticalLayoutWidget_7 = QWidget(self.scrollAreaWidgetContents)
         self.verticalLayoutWidget_7.setObjectName(u"verticalLayoutWidget_7")
         self.verticalLayoutWidget_7.setGeometry(QRect(0, 0, 1211, 691))
@@ -176,7 +176,7 @@ class Ui_Widget(object):
         self.exerciseOneButton = QPushButton(self.horizontalLayoutWidget)
         self.exerciseOneButton.setObjectName(u"exerciseOneButton")
         self.exerciseOneButton.setEnabled(True)
-        sizePolicy = QSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Fixed)
+        sizePolicy = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.exerciseOneButton.sizePolicy().hasHeightForWidth())
@@ -189,14 +189,20 @@ class Ui_Widget(object):
 
         self.horizontalLayout_2.addWidget(self.exerciseOneButton)
 
-        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        self.progressBarOneGlobal = QProgressBar(self.horizontalLayoutWidget)
+        self.progressBarOneGlobal.setObjectName(u"progressBarOneGlobal")
+        self.progressBarOneGlobal.setValue(24)
+
+        self.horizontalLayout_2.addWidget(self.progressBarOneGlobal)
+
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_2.addItem(self.horizontalSpacer)
 
 
         self.verticalLayout_2.addWidget(self.widget)
 
-        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_2.addItem(self.verticalSpacer_2)
 
@@ -262,7 +268,7 @@ class Ui_Widget(object):
 
         self.verticalLayout_17.addWidget(self.label_7)
 
-        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_17.addItem(self.verticalSpacer_3)
 
@@ -671,7 +677,7 @@ class Ui_Widget(object):
 
         self.horizontalLayout_22 = QHBoxLayout()
         self.horizontalLayout_22.setObjectName(u"horizontalLayout_22")
-        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_22.addItem(self.horizontalSpacer_2)
 
@@ -814,7 +820,7 @@ class Ui_Widget(object):
 
         self.verticalLayout_16.addWidget(self.oneFourResult_2)
 
-        self.verticalSpacer_4 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+        self.verticalSpacer_4 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_16.addItem(self.verticalSpacer_4)
 
@@ -827,7 +833,7 @@ class Ui_Widget(object):
 
         self.progressBarOne = QProgressBar(self.verticalLayoutWidget_8)
         self.progressBarOne.setObjectName(u"progressBarOne")
-        self.progressBarOne.setValue(24)
+        self.progressBarOne.setValue(0)
 
         self.verticalLayout_3.addWidget(self.progressBarOne)
 
@@ -1081,7 +1087,7 @@ class Ui_Widget(object):
 
         self.verticalLayout.addWidget(self.logoutButton)
 
-        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout.addItem(self.verticalSpacer)
 
@@ -1089,8 +1095,8 @@ class Ui_Widget(object):
 
         self.retranslateUi(Widget)
 
-        self.stackedWidget.setCurrentIndex(0)
-        self.stackedWidget_2.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget_2.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(Widget)
@@ -1099,7 +1105,7 @@ class Ui_Widget(object):
     def retranslateUi(self, Widget):
         self.loginButton.setText(QCoreApplication.translate("Widget", u"Kirjaudu", None))
         self.loginWarning.setText("")
-        self.label.setText(QCoreApplication.translate("Widget", u"K\u00e4ytt\u00e4j\u00e4n nimi: \u270b ", None))
+        self.label.setText(QCoreApplication.translate("Widget", u"K\u00e4ytt\u00e4j\u00e4n nimi:", None))
         self.title.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:24pt; font-weight:700;\">Kubernetes Oppimisty\u00f6kalu</span></p></body></html>", None))
         self.subMain.setText(QCoreApplication.translate("Widget", u"Hei ", None))
         self.desc.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p>Tervetuloa interaktiiviseen Kubernetes oppimisty\u00f6kaluun!</p></body></html>", None))
@@ -1126,13 +1132,13 @@ class Ui_Widget(object):
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'MS Reference Sans Serif'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-weight:700;\">Kubernetes</span><span style=\" font-family:'Segoe UI';\"> on avoimen l\u00e4hdekoodin alusta, jonka avulla voidaan toteuttaa konttiorkestrointia. Kuberneteksen </span><span style=\" font-family:'Segoe UI'; font-weight:700;\">klusteri</span><span style=\" font-family:'Segoe UI';\"> koordinoi joukkoa tietokoneita, jotka ovat yhte"
-                        "ydess\u00e4 toisiinsa ja toimivat yhten\u00e4isen\u00e4 kokonaisuutena. Jotta Kuberneteksen hajautettua k\u00e4ytt\u00f6\u00f6nottomallia voitaisiin hy\u00f6dynt\u00e4\u00e4, sovellukset tulee pakata siten, ett\u00e4 ne eiv\u00e4t ole riippuvaisia yksitt\u00e4isist\u00e4 is\u00e4nt\u00e4koneista. Sovellukset tulee siis </span><span style=\" font-family:'Segoe UI'; font-weight:700;\">kontittaa. </span><span style=\" font-family:'Segoe UI';\">Kubernetes automatisoi sovelluskonttien yll\u00e4pitoa klusterissa.</span></p>\n"
+"</style></head><body style=\" font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-weight:700;\">Kubernetes</span><span style=\" font-family:'Segoe UI';\"> on avoimen l\u00e4hdekoodin alusta, jonka avulla voidaan toteuttaa konttiorkestrointia. Kuberneteksen </span><span style=\" font-family:'Segoe UI'; font-weight:700;\">klusteri</span><span style=\" font-family:'Segoe UI';\"> koordinoi joukkoa tietokoneita, jotka ovat yhteydess\u00e4 toi"
+                        "siinsa ja toimivat yhten\u00e4isen\u00e4 kokonaisuutena. Jotta Kuberneteksen hajautettua k\u00e4ytt\u00f6\u00f6nottomallia voitaisiin hy\u00f6dynt\u00e4\u00e4, sovellukset tulee pakata siten, ett\u00e4 ne eiv\u00e4t ole riippuvaisia yksitt\u00e4isist\u00e4 is\u00e4nt\u00e4koneista. Sovellukset tulee siis </span><span style=\" font-family:'Segoe UI'; font-weight:700;\">kontittaa. </span><span style=\" font-family:'Segoe UI';\">Kubernetes automatisoi sovelluskonttien yll\u00e4pitoa klusterissa.</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI';\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">Kuberneteksen klusteri koostuu kahden tyyppisest\u00e4 p\u00e4\u00e4komponentista:</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin"
-                        "-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">        -</span><span style=\" font-family:'Candara'; font-weight:700;\"> </span><span style=\" font-family:'Candara';\">Ohjaustaso koordinoi klusteria</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; marg"
+                        "in-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">        -</span><span style=\" font-family:'Candara'; font-weight:700;\"> </span><span style=\" font-family:'Candara';\">Ohjaustaso koordinoi klusteria</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">        -</span><span style=\" font-family:'Candara'; font-weight:700;\"> </span><span style=\" font-family:'Candara';\">Solmut ovat klusterin ty\u00f6ntekij\u00f6it\u00e4, jotka ajavat kontitettuja sovelluksia</span></p></body></html>", None))
         self.clusterImage.setText("")
         self.textBrowser_2.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
@@ -1141,25 +1147,25 @@ class Ui_Widget(object):
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'MS Reference Sans Serif'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara'; font-weight:700;\">Ohjaustaso</span><span style=\" font-family:'Candara';\"> vastaa klusterin yll\u00e4pidosta. Ohjaustaso hallinnoi klusterin kaikkia aktiviteetteja, kuten sovellusten aikataulutusta, sovellusten skaalauksesta sek\u00e4 halutun tilan yll\u00e4pidosta.</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom"
-                        ":0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Candara';\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">Ohjaustasosta l\u00f6ytyy viisi erilaista komponenttia. </span><span style=\" font-family:'Candara'; font-weight:700;\">API-palvelin</span><span style=\" font-family:'Candara';\"> paljastaa Kubernetes APIn klusterille ja toimii frontendin\u00e4 ohjaustasolle. </span><span style=\" font-family:'Candara'; font-weight:700;\">etcd</span><span style=\" font-family:'Candara';\"> on johdonmukainen ja saatavilla oleva avainarvos\u00e4il\u00f6 kaikille klusteritiedoille. </span><span style=\" font-family:'Candara'; font-weight:700;\">Ajastin</span><span style=\" font-family:'Candara';\"> seuraa luotuja s\u00e4ili\u00f6it\u00e4 ja valitsee niille sopivan solmun. </span><span style=\" font-family:'Candara'; font-weight:700;\">Ohjainmanageri </span"
-                        "><span style=\" font-family:'Candara';\">ajaa ohjainprosesseja, ja </span><span style=\" font-family:'Candara'; font-weight:700;\">pilviohjainmanageri </span><span style=\" font-family:'Candara';\">upottaa klusteriin pilvikohtaisen ohjauslogiikan, ajaa pilveen liittyvi\u00e4 ohjainprosesseja ja mahdollistaa yhdist\u00e4misen pilvitarjoajan APIin.</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-le"
+                        "ft:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Candara';\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">Ohjaustasosta l\u00f6ytyy viisi erilaista komponenttia. </span><span style=\" font-family:'Candara'; font-weight:700;\">API-palvelin</span><span style=\" font-family:'Candara';\"> paljastaa Kubernetes APIn klusterille ja toimii frontendin\u00e4 ohjaustasolle. </span><span style=\" font-family:'Candara'; font-weight:700;\">etcd</span><span style=\" font-family:'Candara';\"> on johdonmukainen ja saatavilla oleva avainarvos\u00e4il\u00f6 kaikille klusteritiedoille. </span><span style=\" font-family:'Candara'; font-weight:700;\">Ajastin</span><span style=\" font-family:'Candara';\"> seuraa luotuja s\u00e4ili\u00f6it\u00e4 ja valitsee niille sopivan solmun. </span><span style=\" font-family:'Candara'; font-weight:700;\">Ohjainmanageri </span><span style=\""
+                        " font-family:'Candara';\">ajaa ohjainprosesseja, ja </span><span style=\" font-family:'Candara'; font-weight:700;\">pilviohjainmanageri </span><span style=\" font-family:'Candara';\">upottaa klusteriin pilvikohtaisen ohjauslogiikan, ajaa pilveen liittyvi\u00e4 ohjainprosesseja ja mahdollistaa yhdist\u00e4misen pilvitarjoajan APIin.</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Candara';\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara'; font-weight:700;\">Solmu</span><span style=\" font-family:'Candara';\"> on virtuaalikone tai fyysinen kone, joka k\u00e4ytt\u00e4ytyy ty\u00f6ntekij\u00e4koneena Kuberneteksen klusterissa. Solmuja on klusterissa aina ainakin yksi.</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-                        "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Candara';\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">Solmu koostuu my\u00f6s erilaisista komponenteista. </span><span style=\" font-family:'Candara'; font-weight:700;\">Kubelet</span><span style=\" font-family:'Candara';\"> on agentti, joka itsen\u00e4isesti yll\u00e4pit\u00e4\u00e4 solmua ja kommunikoi ohjaustason kanssa. </span><span style=\" font-family:'Candara'; font-weight:700;\">V\u00e4lipalvelin</span><span style=\" font-family:'Candara';\"> yll\u00e4pit\u00e4\u00e4 solmujen verkkos\u00e4\u00e4nt\u00f6ja. </span><span style=\" font-family:'Candara'; font-weight:700;\">Kontin ajoaika</span><span style=\" font-family:'Candara';\"> vastaa konttien toteutuksesta ja elinkaaren hallinnasta. </span><span style=\" font-family:'Candara'; font-weight:700;\">S\u00e4ili\u00f6 </span><span style=\" "
-                        "font-family:'Candara';\">on joukko solmussa ajettavia kontteja.</span></p></body></html>", None))
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px"
+                        "; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Candara';\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">Solmu koostuu my\u00f6s erilaisista komponenteista. </span><span style=\" font-family:'Candara'; font-weight:700;\">Kubelet</span><span style=\" font-family:'Candara';\"> on agentti, joka itsen\u00e4isesti yll\u00e4pit\u00e4\u00e4 solmua ja kommunikoi ohjaustason kanssa. </span><span style=\" font-family:'Candara'; font-weight:700;\">V\u00e4lipalvelin</span><span style=\" font-family:'Candara';\"> yll\u00e4pit\u00e4\u00e4 solmujen verkkos\u00e4\u00e4nt\u00f6ja. </span><span style=\" font-family:'Candara'; font-weight:700;\">Kontin ajoaika</span><span style=\" font-family:'Candara';\"> vastaa konttien toteutuksesta ja elinkaaren hallinnasta. </span><span style=\" font-family:'Candara'; font-weight:700;\">S\u00e4ili\u00f6 </span><span style=\" font-family:'Ca"
+                        "ndara';\">on joukko solmussa ajettavia kontteja.</span></p></body></html>", None))
         self.textBrowser.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'MS Reference Sans Serif'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">Kuberneteksen klusteri voidaan luoda fyysiselle koneelle tai virtuaalikoneelle. T\u00e4ss\u00e4 oppimisty\u00f6kalussa klusterin luonti toteutetaan Minikuben avulla, jota k\u00e4sitell\u00e4\u00e4n seuraavassa osiossa.</span></p></body></html>", None))
         self.prevOneTwo.setText(QCoreApplication.translate("Widget", u"Edellinen", None))
         self.label_4.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:14pt;\">1.2. Minikube</span></p></body></html>", None))
@@ -1170,21 +1176,21 @@ class Ui_Widget(object):
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'MS Reference Sans Serif'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara'; font-weight:700;\">Minikube</span><span style=\" font-family:'Candara';\"> on kevyt ja lokaalisti ajettava Kubernetes. Minikube luo virtuaalikoneen paikalliselle koneellesi ja ottaa k\u00e4ytt\u00f6\u00f6n yksinkertaisen klusterin. Luotu klusteri sis\u00e4lt\u00e4\u00e4 yhden solmun. Minikuben komentorivik\u00e4ytt\u00f6liittym\u00e4 tarjoaa mahdol"
-                        "lisuuden ajaa klusterin perustoimintoja.</span></p>\n"
+"</style></head><body style=\" font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara'; font-weight:700;\">Minikube</span><span style=\" font-family:'Candara';\"> on kevyt ja lokaalisti ajettava Kubernetes. Minikube luo virtuaalikoneen paikalliselle koneellesi ja ottaa k\u00e4ytt\u00f6\u00f6n yksinkertaisen klusterin. Luotu klusteri sis\u00e4lt\u00e4\u00e4 yhden solmun. Minikuben komentorivik\u00e4ytt\u00f6liittym\u00e4 tarjoaa mahdollisuuden ajaa k"
+                        "lusterin perustoimintoja.</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Candara';\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">Minikuben sivuilta voi tarkkailla Minikubesta l\u00f6ytyvi\u00e4 komentoja: </span><a href=\"https://minikube.sigs.k8s.io/docs/commands/\"><span style=\" font-family:'Candara'; text-decoration: underline; color:#0078d4;\">https://minikube.sigs.k8s.io/docs/commands/</span></a></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Candara'; text-decoration: underline; color:#0078d4;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-inden"
-                        "t:0px;\"><span style=\" font-family:'Candara';\">Klusterin voi k\u00e4ynnist\u00e4\u00e4 komennolla:</span></p></body></html>", None))
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span "
+                        "style=\" font-family:'Candara';\">Klusterin voi k\u00e4ynnist\u00e4\u00e4 komennolla:</span></p></body></html>", None))
         self.textBrowser_4.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'MS Reference Sans Serif'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:145%;\"><span style=\" font-family:'Courier New'; color:#e6edf3;\">$ minikube start</span></p></body></html>", None))
         self.textBrowser_3.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
@@ -1192,16 +1198,16 @@ class Ui_Widget(object):
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'MS Reference Sans Serif'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">Minikuben 1.32.0 versiossa on raportoitu h\u00e4iri\u00f6it\u00e4 eri k\u00e4ytt\u00f6j\u00e4rjestelmill\u00e4. </span><span style=\" font-family:'Candara'; font-weight:700;\">Jos k\u00e4yt\u00f6ss\u00e4si on Minikuben versio 1.32.0</span><span style=\" font-family:'Candara';\"> (tai mahdollisesti my\u00f6hempi versio), on klusterin k\u00e4ynnist"
-                        "yksen yhteydess\u00e4 hyv\u00e4 k\u00e4ytt\u00e4\u00e4 jotain muuta kun version mukana tulevaa alkuper\u00e4ist\u00e4 kuvaa. Alla on esimerkki vaihtoehtoisesta ajamisesta:</span></p></body></html>", None))
+"</style></head><body style=\" font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">Minikuben 1.32.0 versiossa on raportoitu h\u00e4iri\u00f6it\u00e4 eri k\u00e4ytt\u00f6j\u00e4rjestelmill\u00e4. </span><span style=\" font-family:'Candara'; font-weight:700;\">Jos k\u00e4yt\u00f6ss\u00e4si on Minikuben versio 1.32.0</span><span style=\" font-family:'Candara';\"> (tai mahdollisesti my\u00f6hempi versio), on klusterin k\u00e4ynnistyksen yhteydess"
+                        "\u00e4 hyv\u00e4 k\u00e4ytt\u00e4\u00e4 jotain muuta kun version mukana tulevaa alkuper\u00e4ist\u00e4 kuvaa. Alla on esimerkki vaihtoehtoisesta ajamisesta:</span></p></body></html>", None))
         self.textBrowser_5.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'MS Reference Sans Serif'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:145%;\"><span style=\" font-family:'Courier New'; color:#e6edf3;\">$ minikube start --base-image gcr.io/k8s-minikube/kicbase-builds:v0.0.42-1703092832-17830</span></p></body></html>", None))
         self.textBrowser_8.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
@@ -1209,7 +1215,7 @@ class Ui_Widget(object):
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'MS Reference Sans Serif'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">Kun on valmis lopettamaan klusterin k\u00e4yt\u00f6n, klusteri voidaan pys\u00e4ytt\u00e4\u00e4 komennolla:</span></p></body></html>", None))
         self.textBrowser_9.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
@@ -1217,7 +1223,7 @@ class Ui_Widget(object):
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'MS Reference Sans Serif'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:145%;\"><span style=\" font-family:'Courier New'; color:#e6edf3;\">$ minikube stop</span></p></body></html>", None))
         self.textBrowser_10.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
@@ -1225,7 +1231,7 @@ class Ui_Widget(object):
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'MS Reference Sans Serif'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">Vaihtoehtoisesti jos kokee, ettei klusteria en\u00e4\u00e4 tarvitse ollenkaan, Minikuben virtuaalikone ja sen yhteydess\u00e4 my\u00f6s klusteri voidaan poistaa:</span></p></body></html>", None))
         self.textBrowser_11.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
@@ -1233,7 +1239,7 @@ class Ui_Widget(object):
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'MS Reference Sans Serif'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:145%;\"><span style=\" font-family:'Courier New'; color:#e6edf3;\">$ minikube delete</span></p></body></html>", None))
         self.prevOneThree.setText(QCoreApplication.translate("Widget", u"Edellinen", None))
         self.label_5.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:14pt;\">1.3. Klusterin rakenne</span></p></body></html>", None))
@@ -1348,10 +1354,10 @@ class Ui_Widget(object):
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'MS Reference Sans Serif'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">1. Luo Minikubella klusteri.</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">Huom! Muista lis\u00e4t\u00e4 komennon loppuun </span><span style=\" font-family:'Courier New'; color:#000000;\">--base-image gcr.io/k8s-miniku"
-                        "be/kicbase-builds:v0.0.42-1703092832-17830 </span><span style=\" font-family:'Candara';\">jos k\u00e4yt\u00f6ss\u00e4si on Minikuben versio 1.32.0 (tai vanhempi). Voit tarkistaa version etusivulta.</span></p></body></html>", None))
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">Huom! Muista lis\u00e4t\u00e4 komennon loppuun </span><span style=\" font-family:'Courier New'; color:#000000;\">--base-image gcr.io/k8s-minikube/kicbase-buil"
+                        "ds:v0.0.42-1703092832-17830 </span><span style=\" font-family:'Candara';\">jos k\u00e4yt\u00f6ss\u00e4si on Minikuben versio 1.32.0 (tai vanhempi). Voit tarkistaa version etusivulta.</span></p></body></html>", None))
         self.oneFourButton_1.setText(QCoreApplication.translate("Widget", u" Aja komento", None))
         self.label_18.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:12pt;\">Tuloste:</span></p></body></html>", None))
         self.oneFourResult_1.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
@@ -1360,7 +1366,7 @@ class Ui_Widget(object):
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'MS Reference Sans Serif'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI Symbol';\"><br /></p></body></html>", None))
         self.textBrowser_13.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
@@ -1368,7 +1374,7 @@ class Ui_Widget(object):
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'MS Reference Sans Serif'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Candara';\">2. Pys\u00e4yt\u00e4 klusteri.</span></p></body></html>", None))
         self.oneFourButton_2.setText(QCoreApplication.translate("Widget", u"Aja komento", None))
         self.label_19.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:12pt;\">Tuloste:</span></p></body></html>", None))
