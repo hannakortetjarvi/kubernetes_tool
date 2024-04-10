@@ -1,0 +1,29 @@
+{
+    "data": [
+        {
+            "code": 1,
+            "return": "Virhe: Minikubessa ongelma", 
+            "details": "Komentoa ajettaessa tapahtui ongelma."
+        },
+        {
+            "code": 2,
+            "return": "Virhe: Väärä komento", 
+            "details": "Käyttämäsi komento on väärä."
+        },
+        {
+            "code": 3,
+            "return": "Virhe: Väärä komento", 
+            "details": "Käyttämäsi Minikuben komento on väärä."
+        },
+        {
+            "code": 0,
+            "return": "Virhe: Määrittelemätön ongelma", 
+            "details": "Komennon ajaminen ei onnistunut."
+        },
+        {
+            "code": 5,
+            "return": "Virhe: Ei annettua komentoa", 
+            "details": "Sinun tulee antaa vaadittava komento."
+        }
+    ]
+ }

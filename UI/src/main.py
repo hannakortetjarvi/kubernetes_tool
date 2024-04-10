@@ -130,7 +130,7 @@ class MyApplication(QWidget):
             if i > exercise:
                 break
             j = 0
-            temp = -1
+            temp = 0
             for j in range(len(self.exercise_buttons_menu[i])):
                 if i+1 == exercise and j > part:
                     break
@@ -142,9 +142,10 @@ class MyApplication(QWidget):
                 if j != 0:
                     next_button = self.exercise_buttons_next[i][j-1]
                     next_button.setEnabled(True)
-                elif temp == -1:
-                    temp = j
+                temp = j + 1
             if temp >= part:
+                next_button = self.exercise_buttons_next[i][part-1]
+                next_button.setEnabled(True)
                 self.update_progress_bar(progress_bars[i], i+1, j)
                 self.update_progress_bar(progress_bars_global[i], i+1, j)
 
@@ -293,6 +294,9 @@ class MyApplication(QWidget):
                 next_button.setEnabled(True)
 
     def check_command(self, ex, part, cmd):
+        error_file_location = os.path.join(self.CURRENT_DIRECTORY, "utils/return_values.json")
+        error_file = open(error_file_location)
+        errors = json.load(error_file)["data"]
         correct = self.db.get_answer(ex, part)
         result = ""
         browser = ""
@@ -308,14 +312,26 @@ class MyApplication(QWidget):
             result = inputs[1].toPlainText()
             browser = result_browsers[1]
 
+        browser.setText("")
+
         ok = True
+        return_text = ""
         if correct[len(correct)-1] == '*':
-            if not result.startswith(correct[:-1]):
+            parts_correct = correct[:-1].split(" ")
+            parts_result = result.split(" ")
+            parts_result = [x for x in parts_result if x != ""]
+            if len(parts_result) == 0:
+                return_text = [x for x in errors if x["code"] == 5][0]["return"]
+                ok = False
+            if parts_result[0] != parts_correct[0]:
+                return_text = [x for x in errors if x["code"] == 2][0]["return"]
+                ok = False
+            elif len(parts_result) == 1 or parts_result[1] != parts_correct[1]:
+                return_text = [x for x in errors if x["code"] == 3][0]["return"]
                 ok = False
         else:
             if result != correct:
                 ok = False
-        
         if ok:
             if cmd == len(inputs):
                 if ex >= self.CURRENT_EXERCISE[0] and part >= self.CURRENT_EXERCISE[1]:
@@ -324,9 +340,12 @@ class MyApplication(QWidget):
                         self.update_progress_bar(self.ui.progressBarOne, ex, part)
                         self.update_progress_bar(self.ui.progressBarOneGlobal, ex, part)
                 self.set_buttons(ex, part)
-            _, rtn = multiple_line_command_call(result, browser)
-        else:
-            browser.setPlainText("Väärin")
+            rtn = multiple_line_command_call(result, browser)
+            if rtn == None or rtn == "":
+                return_text = ""
+            else:
+                return_text = [x for x in errors if x["code"] == 1][0]["return"] + "\n" + str(rtn)
+        browser.append(return_text)
             
     def check_combo(self, ex, part):
         correct = self.db.get_answer(ex, part)

@@ -148,7 +148,7 @@ class Ui_Widget(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 1209, 687))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 100, 30))
         self.verticalLayoutWidget_7 = QWidget(self.scrollAreaWidgetContents)
         self.verticalLayoutWidget_7.setObjectName(u"verticalLayoutWidget_7")
         self.verticalLayoutWidget_7.setGeometry(QRect(0, 0, 1211, 691))
@@ -191,6 +191,7 @@ class Ui_Widget(object):
 
         self.progressBarOneGlobal = QProgressBar(self.horizontalLayoutWidget)
         self.progressBarOneGlobal.setObjectName(u"progressBarOneGlobal")
+        self.progressBarOneGlobal.setStyleSheet(u"border: 1px solid;")
         self.progressBarOneGlobal.setValue(24)
 
         self.horizontalLayout_2.addWidget(self.progressBarOneGlobal)
@@ -1096,7 +1097,7 @@ class Ui_Widget(object):
         self.retranslateUi(Widget)
 
         self.stackedWidget.setCurrentIndex(1)
-        self.stackedWidget_2.setCurrentIndex(0)
+        self.stackedWidget_2.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(Widget)
