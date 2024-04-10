@@ -17,9 +17,16 @@ class MyApplication(QWidget):
         self.ui.setupUi(self)
         self.ui.stackedWidget.setCurrentIndex(0)
 
-        self.exercise_buttons_menu = [[self.ui.exerciseOneOneMenuButton, self.ui.exerciseOneTwoMenuButton, self.ui.exerciseOneThreeMenuButton, self.ui.exerciseOneFourMenuButton]]
-        self.exercise_buttons = [[self.ui.exerciseOneOneButton, self.ui.exerciseOneTwoButton, self.ui.exerciseOneThreeButton, self.ui.exerciseOneFourButton]]
-        self.exercise_buttons_next = [[self.ui.nextOneOne, self.ui.nextOneTwo, self.ui.nextOneThree, self.ui.nextOneFour]]
+        self.exercise_buttons = [[self.ui.exerciseOneOneButton, self.ui.exerciseOneTwoButton, self.ui.exerciseOneThreeButton, self.ui.exerciseOneFourButton],
+                                 [self.ui.exerciseTwoOneButton, self.ui.exerciseTwoTwoButton, self.ui.exerciseTwoThreeButton, self.ui.exerciseTwoFourButton]]
+        self.exercise_buttons_next = [[self.ui.nextOneOne, self.ui.nextOneTwo, self.ui.nextOneThree, self.ui.nextOneFour],
+                                      [self.ui.nextTwoOne, self.ui.nextTwoTwo, self.ui.nextTwoThree, self.ui.nextTwoFour]]
+        self.exercise_buttons_menu = [[self.ui.exerciseOneOneMenuButton, self.ui.exerciseOneTwoMenuButton, self.ui.exerciseOneThreeMenuButton, self.ui.exerciseOneFourMenuButton],
+                                        [self.ui.exerciseTwoOneMenuButton, self.ui.exerciseTwoTwoMenuButton, self.ui.exerciseTwoThreeMenuButton, self.ui.exerciseTwoFourMenuButton]]
+        self.exercise_layouts = [self.ui.exerciseOneMenuLayout, self.ui.exerciseTwoMenuLayout]
+        self.exercise_arrows = [self.ui.exerciseOneShow, self.ui.exerciseTwoShow]
+        self.exercise_pages = [self.ui.exerciseOnePages, self.ui.exerciseTwoPages]
+        
         self.button_stylesheet_clickable = self.ui.exerciseOneOneMenuButton.styleSheet()
         self.button_stylesheet_not_clickable = self.ui.exerciseOneTwoMenuButton.styleSheet()
         self.combo_style = self.ui.oneThreeCombo_1.styleSheet()
@@ -32,8 +39,7 @@ class MyApplication(QWidget):
         self.CURRENT_DIRECTORY = os.path.dirname(os.path.realpath(__file__))
         filename = os.path.join(self.CURRENT_DIRECTORY, "../../images/ex1.png")
 
-        self.exercises_open = False
-        self.exercise_one_open = False
+        self.exercises_open = [False, False, False]
         self.previously_clicked = self.ui.mainButton
         self.previously_clicked_style = self.ui.mainButton.styleSheet()
         self.ui.mainButton.setStyleSheet(self.previously_clicked_style + "font-weight: bold;")
@@ -70,6 +76,7 @@ class MyApplication(QWidget):
         self.ui.nextOneFour.clicked.connect(lambda: self.menuClicked("exercisesButton"))
         self.ui.exercisesShow.clicked.connect(lambda: self.arrowClicked(0))
         self.ui.exerciseOneShow.clicked.connect(lambda: self.arrowClicked(1))
+        self.ui.exerciseTwoShow.clicked.connect(lambda: self.arrowClicked(2))
 
         self.ui.loginButton.setCursor(Qt.PointingHandCursor)
         btns = self.findChildren(QPushButton)
@@ -93,10 +100,14 @@ class MyApplication(QWidget):
             self.ui.menuPages.setCurrentIndex(0)
             self.ui.stackedWidget.setCurrentIndex(1)
             self.ui.stackedWidget_2.setCurrentIndex(0)
-            self.showExerciseMenu(False)
-            self.ui.exerciseOneMenuLayout.setVisible(False)
+
+            for i in range(len(self.exercise_layouts)):
+                self.exercise_layouts[i].setVisible(False)
+                self.showExerciseMenu(False, i)
+
             self.CURRENT_EXERCISE = self.db.init_user(self.username)
             self.initExerciseButtons()
+
             success, res = command_call("minikube version")
             if not success:
                 self.ui.labelMinikube.setText(self.ui.labelMinikube.text() + "VERSION NOT FOUND")
@@ -111,11 +122,12 @@ class MyApplication(QWidget):
                 self.ui.labelKubectl.setText(self.ui.labelKubectl.text() + version)
 
     def initExerciseButtons(self):
-        progress_bars = [self.ui.progressBarOne]
-        progress_bars_global = [self.ui.progressBarOneGlobal]
         exercise = self.CURRENT_EXERCISE[0]
         part = self.CURRENT_EXERCISE[1]
 
+        progress_bars = [self.ui.progressBarOne, self.ui.progressBarTwo]
+        progress_bars_global = [self.ui.progressBarOneGlobal, self.ui.progressBarTwoGlobal]
+        
         for i in range(len(self.exercise_buttons_menu)):
             for j in range(len(self.exercise_buttons_menu[i])):
                 button = self.exercise_buttons[i][j]
@@ -159,12 +171,16 @@ class MyApplication(QWidget):
         leng = leng - 1
         user_info.setText(user_info.text()[:-leng])
         self.username = ""
-        self.exercises_open = False
-        self.exercise_one_open = False
+
+        for i in range(len(self.exercises_open)):
+            self.exercises_open[i] = False
+
         self.ui.stackedWidget.setCurrentIndex(0)
-        self.ui.exerciseOneMenuLayout.setVisible(False)
+        for layout in self.exercise_layouts:
+            layout.setVisible(False)
         self.ui.exercisesShow.setText("▲")
-        self.ui.exerciseOneShow.setText("▲")
+        for arrow in self.exercise_arrows:
+            arrow.setText("▲")
         self.changeBoldedText(self.ui.mainButton)
         self.CURRENT_EXERCISE = [1,0]
     
@@ -174,25 +190,31 @@ class MyApplication(QWidget):
         self.ui.clusterImage.setPixmap(cluster_pixmap)
 
     def arrowClicked(self, num):
-        if num == 0 and not self.exercises_open:
-            self.ui.exerciseOneMenuLayout.setVisible(True)
+        if num == 0 and self.exercises_open[0] == False:
+            for layout in self.exercise_layouts:
+                layout.setVisible(True)
             self.ui.exercisesShow.setText("▼")
-            self.exercises_open = True
-        elif num == 0 and self.exercises_open:
-            self.ui.exerciseOneMenuLayout.setVisible(False)
-            self.showExerciseMenu(False)
+            self.exercises_open[0] = True
+        elif num == 0 and self.exercises_open[0] == True:
+            for layout in self.exercise_layouts:
+                layout.setVisible(False)
+            for arrow in self.exercise_arrows:
+                arrow.setVisible(False)
+                arrow.setText("▲")
+            self.showExerciseMenu(False, 0)
+            self.showExerciseMenu(False, 1)
             self.ui.exercisesShow.setText("▲")
-            self.ui.exerciseOneShow.setText("▲")
-            self.exercise_one_open = False
-            self.exercises_open = False
-        elif num == 1 and not self.exercise_one_open:
-            self.showExerciseMenu(True)
-            self.ui.exerciseOneShow.setText("▼")
-            self.exercise_one_open = True
-        elif num == 1 and self.exercise_one_open:
-            self.showExerciseMenu(False)
-            self.ui.exerciseOneShow.setText("▲")
-            self.exercise_one_open = False
+            self.exercises_open[2] = False
+            self.exercises_open[1] = False
+            self.exercises_open[0] = False
+        else:
+            is_open = not self.exercises_open[num]
+            self.exercises_open[num] = is_open
+            self.showExerciseMenu(is_open, num-1)
+            if is_open:
+                self.exercise_arrows[num-1].setText("▼")
+            else:
+                self.exercise_arrows[num-1].setText("▲")
 
     def exerciseClicked(self, ex, part):
         if part != 0 and not self.db.check_has_answer(ex, part):
@@ -208,7 +230,7 @@ class MyApplication(QWidget):
             self.ui.stackedWidget_2.setCurrentIndex(1)
             self.ui.exerciseOnePages.setCurrentIndex(0)
             self.ui.exerciseOneShow.setText("▼")
-            self.showExerciseMenu(True)
+            self.showExerciseMenu(True, ex-1)
             self.changeBoldedText(self.ui.exerciseOneMenuButton)
         elif ex == 1 and part == 1:
             self.ui.menuPages.setCurrentIndex(1)
@@ -230,12 +252,14 @@ class MyApplication(QWidget):
             self.ui.stackedWidget_2.setCurrentIndex(1)
             self.ui.exerciseOnePages.setCurrentIndex(4)
             self.changeBoldedText(self.ui.exerciseOneFourMenuButton)
+        
+        self.ui.menuPages.setCurrentIndex(ex)
+        self.ui.stackedWidget_2.setCurrentIndex(ex)
+        self.exercise_pages[ex-1].setCurrentIndex(part)
 
-    def showExerciseMenu(self, value):
-        self.ui.exerciseOneOneMenuButton.setVisible(value)
-        self.ui.exerciseOneTwoMenuButton.setVisible(value)
-        self.ui.exerciseOneThreeMenuButton.setVisible(value)
-        self.ui.exerciseOneFourMenuButton.setVisible(value)
+    def showExerciseMenu(self, value, num):
+        for button in self.exercise_buttons_menu[num]:
+            button.setVisible(value)
 
     def changeBoldedText(self, btn):
         btn_prev = self.previously_clicked
@@ -245,38 +269,50 @@ class MyApplication(QWidget):
         btn.setStyleSheet(self.previously_clicked_style + "font-weight: bold;")
 
     def menuClicked(self, name):
-        self.exercises_open = False
-        self.exercise_one_open = False
+        self.exercises_open[0] = False
+        self.exercises_open[1] = False
+        self.exercises_open[2] = False
         self.ui.exercisesShow.setText("▲")
-        self.ui.exerciseOneShow.setText("▲")
+        for arrow in self.exercise_arrows:
+            arrow.setText("▲")
         if name == "mainButton":
             self.ui.menuPages.setCurrentIndex(0)
-            self.ui.exerciseOneMenuLayout.setVisible(False)
-            self.showExerciseMenu(False)
+            for layout in self.exercise_layouts:
+                layout.setVisible(False)
+            self.showExerciseMenu(False, 0)
+            self.showExerciseMenu(False, 1)
             self.changeBoldedText(self.ui.mainButton)
         elif name == "exercisesButton":
-            self.exercises_open = True
+            self.exercises_open[0] = True
             self.ui.exercisesShow.setText("▼")
             self.ui.menuPages.setCurrentIndex(1)
             self.ui.stackedWidget_2.setCurrentIndex(0)
             self.ui.exerciseOnePages.setCurrentIndex(0)
-            self.ui.exerciseOneMenuLayout.setVisible(True)
-            self.showExerciseMenu(False)
+            for layout in self.exercise_layouts:
+                layout.setVisible(True)
+            self.showExerciseMenu(False, 0)
+            self.showExerciseMenu(False, 1)
             self.changeBoldedText(self.ui.exercisesButton)
         elif name == "userInfoButton":
             self.ui.menuPages.setCurrentIndex(2)
-            self.ui.exerciseOneMenuLayout.setVisible(False)
-            self.showExerciseMenu(False)
+            for layout in self.exercise_layouts:
+                layout.setVisible(False)
+            self.showExerciseMenu(False, 0)
+            self.showExerciseMenu(False, 1)
             self.changeBoldedText(self.ui.userInfoButton)
         elif name == "infoButton":
             self.ui.menuPages.setCurrentIndex(3)
-            self.ui.exerciseOneMenuLayout.setVisible(False)
-            self.showExerciseMenu(False)
+            for layout in self.exercise_layouts:
+                layout.setVisible(False)
+            self.showExerciseMenu(False, 0)
+            self.showExerciseMenu(False, 1)
             self.changeBoldedText(self.ui.infoButton)
         elif name == "settingsButton":
             self.ui.menuPages.setCurrentIndex(4)
-            self.ui.exerciseOneMenuLayout.setVisible(False)
-            self.showExerciseMenu(False)
+            for layout in self.exercise_layouts:
+                layout.setVisible(False)
+            self.showExerciseMenu(False, 0)
+            self.showExerciseMenu(False, 1)
             self.changeBoldedText(self.ui.settingsButton)
 
     def set_buttons(self, ex, part):

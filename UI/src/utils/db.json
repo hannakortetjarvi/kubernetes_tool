@@ -5,28 +5,67 @@
          "part": 1,
          "has_answer": false,
          "answer": "",
-         "id": 312809228073701628
+         "id": 158360733628509428
       },
       {
          "exercise": 1,
          "part": 2,
          "has_answer": false,
          "answer": "",
-         "id": 288973287114974206
+         "id": 266273987557358047
       },
       {
          "exercise": 1,
          "part": 3,
          "has_answer": true,
-         "answer": [10, 11, 8, 7, 1, 5, 9],
-         "id": 196254305737331787
+         "answer": [
+            10,
+            11,
+            8,
+            7,
+            1,
+            5,
+            9
+         ],
+         "id": 230010253546422885
       },
       {
          "exercise": 1,
          "part": 4,
          "has_answer": true,
-         "answer": ["minikube start*", "minikube stop"],
-         "id": 271278649599094677
+         "answer": [
+            "minikube start*",
+            "minikube stop"
+         ],
+         "id": 281717108233014230
+      },
+      {
+         "exercise": 2,
+         "part": 1,
+         "has_answer": false,
+         "answer": "",
+         "id": 134860614342912826
+      },
+      {
+         "exercise": 2,
+         "part": 2,
+         "has_answer": false,
+         "answer": "",
+         "id": 166151644894395584
+      },
+      {
+         "exercise": 2,
+         "part": 3,
+         "has_answer": true,
+         "answer": "ok",
+         "id": 574281495671503204
+      },
+      {
+         "exercise": 2,
+         "part": 4,
+         "has_answer": true,
+         "answer": "ok",
+         "id": 321670017042833978
       }
    ]
 }

@@ -13,8 +13,12 @@ class database():
     def migrations(self):
         self.db.add({"exercise":1, "part":1, "has_answer":False, "answer":""})
         self.db.add({"exercise":1, "part":2, "has_answer":False, "answer":""})
-        self.db.add({"exercise":1, "part":3, "has_answer":True, "answer":"ok"})
-        self.db.add({"exercise":1, "part":4, "has_answer":True, "answer":"ok"})
+        self.db.add({"exercise":1, "part":3, "has_answer":True, "answer":[10, 11, 8, 7, 1, 5, 9]})
+        self.db.add({"exercise":1, "part":4, "has_answer":True, "answer":["minikube start*", "minikube stop"]})
+        self.db.add({"exercise":2, "part":1, "has_answer":False, "answer":""})
+        self.db.add({"exercise":2, "part":2, "has_answer":False, "answer":""})
+        self.db.add({"exercise":2, "part":3, "has_answer":True, "answer":"ok"})
+        self.db.add({"exercise":2, "part":4, "has_answer":True, "answer":"ok"})
 
     def getItems(self):
         return self.db.getAll()
