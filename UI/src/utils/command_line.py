@@ -16,7 +16,11 @@ def command_call(command):
     
 def multiple_line_command_call(command, browser):
     cmds = command.split(" ")
-    result = subprocess.Popen(cmds, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    result = ""
+    try:
+        result = subprocess.Popen(cmds, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    except:
+        return "Command does not exist."
     app = QApplication.instance()
 
     for line in result.stdout:

@@ -5,14 +5,14 @@
          "part": 1,
          "has_answer": false,
          "answer": "",
-         "id": 158360733628509428
+         "id": 201447618559423401
       },
       {
          "exercise": 1,
          "part": 2,
          "has_answer": false,
          "answer": "",
-         "id": 266273987557358047
+         "id": 399497697450985119
       },
       {
          "exercise": 1,
@@ -27,7 +27,7 @@
             5,
             9
          ],
-         "id": 230010253546422885
+         "id": 845666446746636561
       },
       {
          "exercise": 1,
@@ -37,35 +37,60 @@
             "minikube start*",
             "minikube stop"
          ],
-         "id": 281717108233014230
+         "id": 143486463589351288
       },
       {
          "exercise": 2,
          "part": 1,
          "has_answer": false,
          "answer": "",
-         "id": 134860614342912826
+         "id": 890560088784296499
       },
       {
          "exercise": 2,
          "part": 2,
          "has_answer": false,
          "answer": "",
-         "id": 166151644894395584
+         "id": 194596570045836192
       },
       {
          "exercise": 2,
          "part": 3,
          "has_answer": true,
-         "answer": "ok",
-         "id": 574281495671503204
+         "answer": [
+            [
+               "kubectl delete service palve",
+               "kubectl delete svc palve"
+            ],
+            [
+               "kubectl get replicationcontrollers",
+               "kubectl get rc"
+            ],
+            [
+               "kubectl edit role/johtaja"
+            ],
+            [
+               "kubectl scale --replicas=3 deployment/käyttö",
+               "kubectl scale --replicas=3 deploy/käyttö"
+            ],
+            [
+               "kubectl expose pod validi-säiliö"
+            ],
+            [
+               "kubectl describe jobs"
+            ]
+         ],
+         "id": 303367561700993572
       },
       {
          "exercise": 2,
          "part": 4,
          "has_answer": true,
-         "answer": "ok",
-         "id": 321670017042833978
+         "answer": [
+            "kubectl create deployment !insert --image=gcr.io/google-samples/kubernetes-bootcamp:v1",
+            "kubectl get deployments"
+         ],
+         "id": 479321856943395484
       }
    ]
 }

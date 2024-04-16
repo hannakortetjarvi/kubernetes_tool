@@ -21,11 +21,17 @@ class MyApplication(QWidget):
                                  [self.ui.exerciseTwoOneButton, self.ui.exerciseTwoTwoButton, self.ui.exerciseTwoThreeButton, self.ui.exerciseTwoFourButton]]
         self.exercise_buttons_next = [[self.ui.nextOneOne, self.ui.nextOneTwo, self.ui.nextOneThree, self.ui.nextOneFour],
                                       [self.ui.nextTwoOne, self.ui.nextTwoTwo, self.ui.nextTwoThree, self.ui.nextTwoFour]]
+        self.exercise_buttons_prev = [[self.ui.prevOneOne, self.ui.prevOneTwo, self.ui.prevOneThree, self.ui.prevOneFour],
+                                      [self.ui.prevTwoOne, self.ui.prevTwoTwo, self.ui.prevTwoThree, self.ui.prevTwoFour]]
         self.exercise_buttons_menu = [[self.ui.exerciseOneOneMenuButton, self.ui.exerciseOneTwoMenuButton, self.ui.exerciseOneThreeMenuButton, self.ui.exerciseOneFourMenuButton],
                                         [self.ui.exerciseTwoOneMenuButton, self.ui.exerciseTwoTwoMenuButton, self.ui.exerciseTwoThreeMenuButton, self.ui.exerciseTwoFourMenuButton]]
+        self.exercise_main_buttons = [self.ui.exerciseOneButton, self.ui.exerciseTwoButton]
+        self.exercise_main_buttons_menu = [self.ui.exerciseOneMenuButton, self.ui.exerciseTwoMenuButton]
         self.exercise_layouts = [self.ui.exerciseOneMenuLayout, self.ui.exerciseTwoMenuLayout]
         self.exercise_arrows = [self.ui.exerciseOneShow, self.ui.exerciseTwoShow]
         self.exercise_pages = [self.ui.exerciseOnePages, self.ui.exerciseTwoPages]
+        self.progress_bars = [self.ui.progressBarOne, self.ui.progressBarTwo]
+        self.progress_bars_global = [self.ui.progressBarOneGlobal, self.ui.progressBarTwoGlobal]
         
         self.button_stylesheet_clickable = self.ui.exerciseOneOneMenuButton.styleSheet()
         self.button_stylesheet_not_clickable = self.ui.exerciseOneTwoMenuButton.styleSheet()
@@ -37,7 +43,9 @@ class MyApplication(QWidget):
 
         self.CURRENT_EXERCISE = []
         self.CURRENT_DIRECTORY = os.path.dirname(os.path.realpath(__file__))
-        filename = os.path.join(self.CURRENT_DIRECTORY, "../../images/ex1.png")
+
+        ex1_image = os.path.join(self.CURRENT_DIRECTORY, "../../images/ex1.png")
+        ex2_image = os.path.join(self.CURRENT_DIRECTORY, "../../images/ex2.png")
 
         self.exercises_open = [False, False, False]
         self.previously_clicked = self.ui.mainButton
@@ -47,43 +55,68 @@ class MyApplication(QWidget):
         self.ui.checkOneThree.clicked.connect(lambda: self.check_combo(1, 3))
         self.ui.oneFourButton_1.clicked.connect(lambda: self.check_command(1, 4, 1))
         self.ui.oneFourButton_2.clicked.connect(lambda: self.check_command(1, 4, 2))
+        self.ui.twoFourButton_1.clicked.connect(lambda: self.check_command(2, 4, 1))
+        self.ui.twoFourButton_2.clicked.connect(lambda: self.check_command(2, 4, 2))
+        self.ui.checkTwoThree.clicked.connect(lambda: self.check_inputs(2, 3))
 
         self.ui.loginButton.clicked.connect(self.userLogin)
         self.ui.mainButton.clicked.connect(lambda: self.menuClicked("mainButton"))
+        self.ui.commandButton.clicked.connect(lambda: self.menuClicked("commandButton"))
         self.ui.exercisesButton.clicked.connect(lambda: self.menuClicked("exercisesButton"))
-        self.ui.userInfoButton.clicked.connect(lambda: self.menuClicked("userInfoButton"))
         self.ui.infoButton.clicked.connect(lambda: self.menuClicked("infoButton"))
         self.ui.settingsButton.clicked.connect(lambda: self.menuClicked("settingsButton"))
         self.ui.logoutButton.clicked.connect(self.userLogout)
 
-        self.ui.exerciseOneButton.clicked.connect(lambda: self.exerciseClicked(1,0))
-        self.ui.exerciseOneMenuButton.clicked.connect(lambda: self.exerciseClicked(1,0))
-        self.ui.exerciseOneOneButton.clicked.connect(lambda: self.exerciseClicked(1,1))
-        self.ui.exerciseOneOneMenuButton.clicked.connect(lambda: self.exerciseClicked(1,1))
-        self.ui.exerciseOneTwoButton.clicked.connect(lambda: self.exerciseClicked(1,2))
-        self.ui.exerciseOneTwoMenuButton.clicked.connect(lambda: self.exerciseClicked(1,2))
-        self.ui.exerciseOneThreeButton.clicked.connect(lambda: self.exerciseClicked(1,3))
-        self.ui.exerciseOneThreeMenuButton.clicked.connect(lambda: self.exerciseClicked(1,3))
-        self.ui.exerciseOneFourButton.clicked.connect(lambda: self.exerciseClicked(1,4))
-        self.ui.exerciseOneFourMenuButton.clicked.connect(lambda: self.exerciseClicked(1,4))
-        self.ui.prevOneOne.clicked.connect(lambda: self.exerciseClicked(1,0))
-        self.ui.nextOneOne.clicked.connect(lambda: self.exerciseClicked(1,2))
-        self.ui.prevOneTwo.clicked.connect(lambda: self.exerciseClicked(1,1))
-        self.ui.nextOneTwo.clicked.connect(lambda: self.exerciseClicked(1,3))
-        self.ui.prevOneThree.clicked.connect(lambda: self.exerciseClicked(1,2))
-        self.ui.nextOneThree.clicked.connect(lambda: self.exerciseClicked(1,4))
-        self.ui.prevOneFour.clicked.connect(lambda: self.exerciseClicked(1,3))
-        self.ui.nextOneFour.clicked.connect(lambda: self.menuClicked("exercisesButton"))
+        self.exercise_main_buttons_menu[0].clicked.connect(lambda: self.exerciseClicked(1,0))
+        self.exercise_main_buttons_menu[1].clicked.connect(lambda: self.exerciseClicked(2,0))
+        self.exercise_main_buttons[0].clicked.connect(lambda: self.exerciseClicked(1,0))
+        self.exercise_main_buttons[1].clicked.connect(lambda: self.exerciseClicked(2,0))
+        self.exercise_buttons[0][0].clicked.connect(lambda: self.exerciseClicked(1,1))
+        self.exercise_buttons_menu[0][0].clicked.connect(lambda: self.exerciseClicked(1,1))
+        self.exercise_buttons[0][1].clicked.connect(lambda: self.exerciseClicked(1,2))
+        self.exercise_buttons_menu[0][1].clicked.connect(lambda: self.exerciseClicked(1,2))
+        self.exercise_buttons[0][2].clicked.connect(lambda: self.exerciseClicked(1,3))
+        self.exercise_buttons_menu[0][2].clicked.connect(lambda: self.exerciseClicked(1,3))
+        self.exercise_buttons[0][3].clicked.connect(lambda: self.exerciseClicked(1,4))
+        self.exercise_buttons_menu[0][3].clicked.connect(lambda: self.exerciseClicked(1,4))
+        self.exercise_buttons[1][0].clicked.connect(lambda: self.exerciseClicked(2,1))
+        self.exercise_buttons_menu[1][0].clicked.connect(lambda: self.exerciseClicked(2,1))
+        self.exercise_buttons[1][1].clicked.connect(lambda: self.exerciseClicked(2,2))
+        self.exercise_buttons_menu[1][1].clicked.connect(lambda: self.exerciseClicked(2,2))
+        self.exercise_buttons[1][2].clicked.connect(lambda: self.exerciseClicked(2,3))
+        self.exercise_buttons_menu[1][2].clicked.connect(lambda: self.exerciseClicked(2,3))
+        self.exercise_buttons[1][3].clicked.connect(lambda: self.exerciseClicked(2,4))
+        self.exercise_buttons_menu[1][3].clicked.connect(lambda: self.exerciseClicked(2,4))
+
+        self.exercise_buttons_prev[0][0].clicked.connect(lambda: self.exerciseClicked(1,0))
+        self.exercise_buttons_prev[1][0].clicked.connect(lambda: self.exerciseClicked(2,0))
+        self.exercise_buttons_next[0][0].clicked.connect(lambda: self.exerciseClicked(1,2))
+        self.exercise_buttons_next[1][0].clicked.connect(lambda: self.exerciseClicked(2,2))
+        self.exercise_buttons_prev[0][1].clicked.connect(lambda: self.exerciseClicked(1,1))
+        self.exercise_buttons_prev[1][1].clicked.connect(lambda: self.exerciseClicked(2,1))
+        self.exercise_buttons_next[0][1].clicked.connect(lambda: self.exerciseClicked(1,3))
+        self.exercise_buttons_next[1][1].clicked.connect(lambda: self.exerciseClicked(2,3))
+        self.exercise_buttons_prev[0][2].clicked.connect(lambda: self.exerciseClicked(1,2))
+        self.exercise_buttons_prev[1][2].clicked.connect(lambda: self.exerciseClicked(2,2))
+        self.exercise_buttons_next[0][2].clicked.connect(lambda: self.exerciseClicked(1,4))
+        self.exercise_buttons_next[1][2].clicked.connect(lambda: self.exerciseClicked(2,4))
+        self.exercise_buttons_prev[0][3].clicked.connect(lambda: self.exerciseClicked(1,3))
+        self.exercise_buttons_prev[1][3].clicked.connect(lambda: self.exerciseClicked(2,3))
+        self.exercise_buttons_next[0][3].clicked.connect(lambda: self.menuClicked("exercisesButton"))
+        self.exercise_buttons_next[1][3].clicked.connect(lambda: self.menuClicked("exercisesButton"))
+
+        self.ui.commandLineButton.clicked.connect(lambda: self.run_command_line())
         self.ui.exercisesShow.clicked.connect(lambda: self.arrowClicked(0))
-        self.ui.exerciseOneShow.clicked.connect(lambda: self.arrowClicked(1))
-        self.ui.exerciseTwoShow.clicked.connect(lambda: self.arrowClicked(2))
+        self.exercise_arrows[0].clicked.connect(lambda: self.arrowClicked(1))
+        self.exercise_arrows[1].clicked.connect(lambda: self.arrowClicked(2))
 
         self.ui.loginButton.setCursor(Qt.PointingHandCursor)
         btns = self.findChildren(QPushButton)
         for btn in btns:
             btn.setCursor(Qt.PointingHandCursor)
 
-        self.ui.exOneImage.setPixmap(QPixmap(filename))
+        self.ui.exOneImage.setPixmap(QPixmap(ex1_image))
+        self.ui.exTwoImage.setPixmap(QPixmap(ex2_image))
         self.setupExercise()
 
     def userLogin(self):
@@ -122,29 +155,20 @@ class MyApplication(QWidget):
                 self.ui.labelKubectl.setText(self.ui.labelKubectl.text() + version)
 
     def initExerciseButtons(self):
-        exercise = self.CURRENT_EXERCISE[0]
-        part = self.CURRENT_EXERCISE[1]
-
-        progress_bars = [self.ui.progressBarOne, self.ui.progressBarTwo]
-        progress_bars_global = [self.ui.progressBarOneGlobal, self.ui.progressBarTwoGlobal]
-        
         for i in range(len(self.exercise_buttons_menu)):
             for j in range(len(self.exercise_buttons_menu[i])):
                 button = self.exercise_buttons[i][j]
                 menu_button = self.exercise_buttons_menu[i][j]
-                next_button = self.exercise_buttons_next[i][j-1]
+                next_button = self.exercise_buttons_next[i][j]
                 menu_button.setStyleSheet(self.button_stylesheet_not_clickable)
                 button.setEnabled(False)
                 menu_button.setEnabled(False)
                 next_button.setEnabled(False)
 
         for i in range(len(self.exercise_buttons)):
-            if i > exercise:
-                break
-            j = 0
             temp = 0
             for j in range(len(self.exercise_buttons_menu[i])):
-                if i+1 == exercise and j > part:
+                if self.CURRENT_EXERCISE[i] < j and j != 0:
                     break
                 button = self.exercise_buttons[i][j]
                 menu_button = self.exercise_buttons_menu[i][j]
@@ -155,11 +179,11 @@ class MyApplication(QWidget):
                     next_button = self.exercise_buttons_next[i][j-1]
                     next_button.setEnabled(True)
                 temp = j + 1
-            if temp >= part:
-                next_button = self.exercise_buttons_next[i][part-1]
+            if temp >= self.CURRENT_EXERCISE[i] and self.CURRENT_EXERCISE[i] != 0:
+                next_button = self.exercise_buttons_next[i][self.CURRENT_EXERCISE[i]-1]
                 next_button.setEnabled(True)
-                self.update_progress_bar(progress_bars[i], i+1, j)
-                self.update_progress_bar(progress_bars_global[i], i+1, j)
+                self.update_progress_bar(self.progress_bars[i], i+1)
+                self.update_progress_bar(self.progress_bars_global[i], i+1)
 
     def userLogout(self):
         self.ui.labelMinikube.setText("Käytössä oleva Minikube versio: ")
@@ -182,7 +206,7 @@ class MyApplication(QWidget):
         for arrow in self.exercise_arrows:
             arrow.setText("▲")
         self.changeBoldedText(self.ui.mainButton)
-        self.CURRENT_EXERCISE = [1,0]
+        self.CURRENT_EXERCISE = [0,0]
     
     def setupExercise(self):
         cluster = os.path.join(self.CURRENT_DIRECTORY, "../../images/cluster.png")
@@ -193,6 +217,9 @@ class MyApplication(QWidget):
         if num == 0 and self.exercises_open[0] == False:
             for layout in self.exercise_layouts:
                 layout.setVisible(True)
+            for arrow in self.exercise_arrows:
+                arrow.setVisible(True)
+                arrow.setText("▲")
             self.ui.exercisesShow.setText("▼")
             self.exercises_open[0] = True
         elif num == 0 and self.exercises_open[0] == True:
@@ -218,44 +245,31 @@ class MyApplication(QWidget):
 
     def exerciseClicked(self, ex, part):
         if part != 0 and not self.db.check_has_answer(ex, part):
-            if ex >= self.CURRENT_EXERCISE[0] and part >= self.CURRENT_EXERCISE[1]:
+            if part >= self.CURRENT_EXERCISE[ex-1]:
                 self.db.update_current_exercise(ex, part, self.username)
-                self.update_progress_bar(self.ui.progressBarOne, ex, part)
-                self.update_progress_bar(self.ui.progressBarOneGlobal, ex, part)
+                self.update_progress_bar(self.progress_bars[ex-1], ex)
+                self.update_progress_bar(self.progress_bars_global[ex-1], ex)
             self.set_buttons(ex, part)
-        
-        if ex == 1 and part == 0:
-            self.ui.exerciseOneShow.setVisible(True)
-            self.ui.menuPages.setCurrentIndex(1)
-            self.ui.stackedWidget_2.setCurrentIndex(1)
-            self.ui.exerciseOnePages.setCurrentIndex(0)
-            self.ui.exerciseOneShow.setText("▼")
-            self.showExerciseMenu(True, ex-1)
-            self.changeBoldedText(self.ui.exerciseOneMenuButton)
-        elif ex == 1 and part == 1:
-            self.ui.menuPages.setCurrentIndex(1)
-            self.ui.stackedWidget_2.setCurrentIndex(1)
-            self.ui.exerciseOnePages.setCurrentIndex(1)
-            self.changeBoldedText(self.ui.exerciseOneOneMenuButton)
-        elif ex == 1 and part == 2:
-            self.ui.menuPages.setCurrentIndex(1)
-            self.ui.stackedWidget_2.setCurrentIndex(1)
-            self.ui.exerciseOnePages.setCurrentIndex(2)
-            self.changeBoldedText(self.ui.exerciseOneTwoMenuButton)
-        elif ex == 1 and part == 3:
-            self.ui.menuPages.setCurrentIndex(1)
-            self.ui.stackedWidget_2.setCurrentIndex(1)
-            self.ui.exerciseOnePages.setCurrentIndex(3)
-            self.changeBoldedText(self.ui.exerciseOneThreeMenuButton)
-        elif ex == 1 and part == 4:
-            self.ui.menuPages.setCurrentIndex(1)
-            self.ui.stackedWidget_2.setCurrentIndex(1)
-            self.ui.exerciseOnePages.setCurrentIndex(4)
-            self.changeBoldedText(self.ui.exerciseOneFourMenuButton)
-        
-        self.ui.menuPages.setCurrentIndex(ex)
+
+        self.ui.menuPages.setCurrentIndex(2)
         self.ui.stackedWidget_2.setCurrentIndex(ex)
-        self.exercise_pages[ex-1].setCurrentIndex(part)
+
+        for i in range(len(self.exercise_pages)):
+            self.exercise_pages[i].setCurrentIndex(part)
+        
+        if part == 0:
+            self.changeBoldedText(self.exercise_main_buttons_menu[ex-1])
+            self.exercise_arrows[ex-1].setVisible(True)
+            self.exercise_arrows[ex-1].setText("▼")
+            self.showExerciseMenu(True, ex-1)
+        else:
+            self.changeBoldedText(self.exercise_buttons_menu[ex-1][part-1])
+            for i in range(len(self.exercise_arrows)):
+                if i+1 == ex:
+                    continue
+                self.exercise_arrows[i].setText("▲")
+                self.exercises_open[i+1] = False
+                self.showExerciseMenu(False, i)
 
     def showExerciseMenu(self, value, num):
         for button in self.exercise_buttons_menu[num]:
@@ -282,10 +296,17 @@ class MyApplication(QWidget):
             self.showExerciseMenu(False, 0)
             self.showExerciseMenu(False, 1)
             self.changeBoldedText(self.ui.mainButton)
+        elif name == "commandButton":
+            self.ui.menuPages.setCurrentIndex(1)
+            for layout in self.exercise_layouts:
+                layout.setVisible(False)
+            self.showExerciseMenu(False, 0)
+            self.showExerciseMenu(False, 1)
+            self.changeBoldedText(self.ui.commandButton)
         elif name == "exercisesButton":
             self.exercises_open[0] = True
             self.ui.exercisesShow.setText("▼")
-            self.ui.menuPages.setCurrentIndex(1)
+            self.ui.menuPages.setCurrentIndex(2)
             self.ui.stackedWidget_2.setCurrentIndex(0)
             self.ui.exerciseOnePages.setCurrentIndex(0)
             for layout in self.exercise_layouts:
@@ -293,13 +314,6 @@ class MyApplication(QWidget):
             self.showExerciseMenu(False, 0)
             self.showExerciseMenu(False, 1)
             self.changeBoldedText(self.ui.exercisesButton)
-        elif name == "userInfoButton":
-            self.ui.menuPages.setCurrentIndex(2)
-            for layout in self.exercise_layouts:
-                layout.setVisible(False)
-            self.showExerciseMenu(False, 0)
-            self.showExerciseMenu(False, 1)
-            self.changeBoldedText(self.ui.userInfoButton)
         elif name == "infoButton":
             self.ui.menuPages.setCurrentIndex(3)
             for layout in self.exercise_layouts:
@@ -317,10 +331,7 @@ class MyApplication(QWidget):
 
     def set_buttons(self, ex, part):
         if part != 0:
-            if len(self.exercise_buttons[ex-1]) == part:
-                next_button = self.exercise_buttons_next[ex-1][part-1]
-                next_button.setEnabled(True)
-            elif len(self.exercise_buttons[ex-1]) != part:
+            if len(self.exercise_buttons[ex-1]) != part:
                 button = self.exercise_buttons[ex-1][part]
                 menu_button = self.exercise_buttons_menu[ex-1][part]
                 next_button = self.exercise_buttons_next[ex-1][part-1]
@@ -328,59 +339,107 @@ class MyApplication(QWidget):
                 menu_button.setStyleSheet(self.button_stylesheet_clickable)
                 menu_button.setEnabled(True)
                 next_button.setEnabled(True)
+            else:
+                next_button = self.exercise_buttons_next[ex-1][part-1]
+                next_button.setEnabled(True)
 
-    def check_command(self, ex, part, cmd):
+    def get_feedback_amount(self, code):
         error_file_location = os.path.join(self.CURRENT_DIRECTORY, "utils/return_values.json")
         error_file = open(error_file_location)
         errors = json.load(error_file)["data"]
+        feedback_value = self.ui.feedbackValue.value()
+        feedback = ""
+        if feedback_value >= 1:
+            feedback += "Väärin!"
+        if feedback_value >= 2:
+            error = [x for x in errors if x["code"] == code][0]["return"]
+            feedback += "\n" + error
+        if feedback_value >= 3:
+            error = [x for x in errors if x["code"] == code][0]["details"]
+            feedback += "\n" + error
+        return feedback
+
+    def run_command_line(self):
+        self.ui.commandLine.setText("")
+        result = self.ui.commandInput.toPlainText()
+        rtn = multiple_line_command_call(result, self.ui.commandLine)
+        if rtn == None or rtn == "":
+            return_text = ""
+        else:
+            return_text = self.get_feedback_amount(6)
+            return_text += "\n" + str(rtn)
+        self.ui.commandLine.append(return_text)
+
+    def check_command(self, ex, part, cmd):
+        print(ex, part, cmd)
         correct = self.db.get_answer(ex, part)
         result = ""
         browser = ""
-        inputs = [self.ui.oneFourInput_1, self.ui.oneFourInput_2]
-        result_browsers = [self.ui.oneFourResult_1, self.ui.oneFourResult_2]
-        if ex == 1 and part == 4 and cmd == 1:
-            correct = correct[0]
-            result = inputs[0].toPlainText()
-            browser = result_browsers[0]
+        inputs = [[self.ui.oneFourInput_1, self.ui.oneFourInput_2], [self.ui.twoFourInput_1, self.ui.twoFourInput_2]]
+        result_browsers = [[self.ui.oneFourResult_1, self.ui.oneFourResult_2], [self.ui.twoFourResult_1, self.ui.twoFourResult_2]]
 
-        if ex == 1 and part == 4 and cmd == 2:
-            correct = correct[1]
-            result = inputs[1].toPlainText()
-            browser = result_browsers[1]
-
+        correct = correct[cmd-1]
+        result = inputs[ex-1][cmd-1].toPlainText()
+        browser = result_browsers[ex-1][cmd-1]
         browser.setText("")
 
         ok = True
         return_text = ""
-        if correct[len(correct)-1] == '*':
+        if result == "":
+            return_text = self.get_feedback_amount(5)
+            ok = False
+        elif correct[len(correct)-1] == '*':
             parts_correct = correct[:-1].split(" ")
             parts_result = result.split(" ")
             parts_result = [x for x in parts_result if x != ""]
-            if len(parts_result) == 0:
-                return_text = [x for x in errors if x["code"] == 5][0]["return"]
-                ok = False
             if parts_result[0] != parts_correct[0]:
-                return_text = [x for x in errors if x["code"] == 2][0]["return"]
+                return_text = self.get_feedback_amount(2)
                 ok = False
             elif len(parts_result) == 1 or parts_result[1] != parts_correct[1]:
-                return_text = [x for x in errors if x["code"] == 3][0]["return"]
+                return_text = self.get_feedback_amount(3)
                 ok = False
+        elif '!insert' in correct.split(' '):
+            parts_correct = correct.split(" ")
+            parts_result = result.split(" ")
+            if parts_result[0] != parts_correct[0]:
+                return_text = self.get_feedback_amount(2)
+                ok = False
+            else:
+                for i in range(len(parts_correct)):
+                    if i+1 > len(parts_result):
+                        return_text = self.get_feedback_amount(3)
+                        ok = False
+                        break
+                    if parts_correct[i] == '!insert':
+                        continue
+                    if parts_correct[i] != parts_result[i]:
+                        return_text = self.get_feedback_amount(3)
+                        ok = False
+                        break
         else:
             if result != correct:
+                parts_correct = correct[:-1].split(" ")
+                parts_result = result.split(" ")
+                parts_result = [x for x in parts_result if x != ""]
+                if parts_result[0] != parts_correct[0]:
+                    return_text = self.get_feedback_amount(2)
+                else:
+                    return_text = self.get_feedback_amount(3)
                 ok = False
+
         if ok:
             if cmd == len(inputs):
-                if ex >= self.CURRENT_EXERCISE[0] and part >= self.CURRENT_EXERCISE[1]:
+                if part >= self.CURRENT_EXERCISE[ex-1]:
                     self.db.update_current_exercise(ex, part, self.username)
-                    if ex == 1:
-                        self.update_progress_bar(self.ui.progressBarOne, ex, part)
-                        self.update_progress_bar(self.ui.progressBarOneGlobal, ex, part)
+                    self.update_progress_bar(self.progress_bars[ex-1], ex)
+                    self.update_progress_bar(self.progress_bars_global[ex-1], ex)
                 self.set_buttons(ex, part)
             rtn = multiple_line_command_call(result, browser)
             if rtn == None or rtn == "":
                 return_text = ""
             else:
-                return_text = [x for x in errors if x["code"] == 1][0]["return"] + "\n" + str(rtn)
+                return_text = self.get_feedback_amount(1)
+                return_text += "Vastaus oli silti oikein."
         browser.append(return_text)
             
     def check_combo(self, ex, part):
@@ -395,19 +454,64 @@ class MyApplication(QWidget):
                 return_value += f"Kohta {i+1}. on väärin.\n"
         if return_value == "":
             return_value = "Oikein!"
-            if ex >= self.CURRENT_EXERCISE[0] and part >= self.CURRENT_EXERCISE[1]:
+            if part >= self.CURRENT_EXERCISE[ex-1]:
                 self.db.update_current_exercise(ex, part, self.username)
-                if ex == 1:
-                    self.update_progress_bar(self.ui.progressBarOne, ex, part)
-                    self.update_progress_bar(self.ui.progressBarOneGlobal, ex, part)
+                self.update_progress_bar(self.progress_bars[ex-1], ex)
+                self.update_progress_bar(self.progress_bars_global[ex-1], ex)
             self.set_buttons(ex, part)
         self.ui.infoBrowser_5.setText(return_value)
 
-    def update_progress_bar(self, bar, ex, part):
+    def check_inputs(self, ex, part):
+        correct = self.db.get_answer(ex, part)
+        print(correct)
+        inputs = [self.ui.inputTwoThree_1, self.ui.inputTwoThree_2, self.ui.inputTwoThree_3, self.ui.inputTwoThree_4,
+                  self.ui.inputTwoThree_5, self.ui.inputTwoThree_6]
+        labels = [self.ui.resultTwoThree_1, self.ui.resultTwoThree_2, self.ui.resultTwoThree_3, self.ui.resultTwoThree_4,
+                  self.ui.resultTwoThree_5, self.ui.resultTwoThree_6]
+        return_value = ""
+        for i in range(len(inputs)):
+            input = inputs[i].text()
+            input_set = input.split(' ')
+            correct_vals = correct[i]
+            print(f'input set: {input_set}')
+            print(f'correct vals: {correct_vals}')
+            if input.replace(' ', '') == "" and return_value == "":
+                return_value = f'Ensimmäinen havaittu virhe: Kohdassa {i+1}. ei ole annettu komentoa.'
+            if input not in correct_vals:
+                labels[i].setText('Väärin!')
+                if return_value == "":
+                    for j in range(len(correct_vals)):
+                        ok = False
+                        correct_set = correct_vals[j].split(' ')
+                        print(f'correct set: {correct_set}')
+                        for k in range(len(correct_set)):
+                            if len(input_set) <= k:
+                                return_value = f'Ensimmäinen havaittu virhe: Kohdassa {i+1}. puuttuu komennosta osa/osia.'
+                            elif correct_set[k] != input_set[k]:
+                                ok = True
+                                break
+                        if ok:
+                            return_value = f'Ensimmäinen havaittu virhe: Kohdassa {i+1}. väärä komennon osa: {input_set[k]}.'
+                        if return_value != "":
+                            break
+            elif input not in correct_vals and return_value == "":
+                return_value = f'Ensimmäinen havaittu virhe: Kohdassa {i+1}. annettu liian pitkä komento.'
+            else:
+                labels[i].setText('Oikein!')
+        if return_value == "":
+            return_value = "Kaikki oikein!"
+            if part >= self.CURRENT_EXERCISE[ex-1]:
+                self.db.update_current_exercise(ex, part, self.username)
+                self.update_progress_bar(self.progress_bars[ex-1], ex)
+                self.update_progress_bar(self.progress_bars_global[ex-1], ex)
+            self.set_buttons(ex, part)
+        self.ui.infoTwoThree.setText(return_value)
+
+    def update_progress_bar(self, bar, ex):
         if ex == 0:
              bar.setValue(0)
         else:
-            progress = round((self.db.get_exercise(self.username)[1] / self.db.exercise_count(ex)), 2) * 100
+            progress = round((self.db.get_exercise(self.username)[ex-1] / self.db.exercise_count(ex)), 2) * 100
             bar.setValue(progress)
         
 

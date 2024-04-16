@@ -17,8 +17,10 @@ class database():
         self.db.add({"exercise":1, "part":4, "has_answer":True, "answer":["minikube start*", "minikube stop"]})
         self.db.add({"exercise":2, "part":1, "has_answer":False, "answer":""})
         self.db.add({"exercise":2, "part":2, "has_answer":False, "answer":""})
-        self.db.add({"exercise":2, "part":3, "has_answer":True, "answer":"ok"})
-        self.db.add({"exercise":2, "part":4, "has_answer":True, "answer":"ok"})
+        self.db.add({"exercise":2, "part":3, "has_answer":True, "answer":[['kubectl delete service palve','kubectl delete svc palve'], ['kubectl get replicationcontrollers','kubectl get rc'],
+                                                                          ['kubectl edit role/johtaja'], ['kubectl scale --replicas=3 deployment/käyttö', 'kubectl scale --replicas=3 deploy/käyttö'],
+                                                                          ['kubectl expose pod validi-säiliö'], ['kubectl describe jobs']]})
+        self.db.add({"exercise":2, "part":4, "has_answer":True, "answer":["kubectl create deployment !insert --image=gcr.io/google-samples/kubernetes-bootcamp:v1", "kubectl get deployments"]})
 
     def getItems(self):
         return self.db.getAll()
@@ -35,15 +37,17 @@ class database():
     
     def update_current_exercise(self, ex, part, user):
         query = {"username": user}
-        data = self.users.update(query, {"completed":[ex, part]})
+        data = self.get_exercise(user)
+        data[ex-1] = part
+        data = self.users.update(query, {"completed":data})
     
     def init_user(self, user):
         query = {"username": user}
         data = self.users.getByQuery(query)
 
         if data == []:
-            self.users.add({"username": user, "completed":[1,0]})
-            return [1, 0]
+            self.users.add({"username": user, "completed":[0, 0]})
+            return [0, 0]
         else:
             found_user = data[0]
             return found_user["completed"]
