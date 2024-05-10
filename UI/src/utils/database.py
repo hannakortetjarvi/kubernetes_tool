@@ -62,7 +62,6 @@ class database():
         data = self.db.getByQuery(query)
         return len(data)
 
-
     def init(self):
         self.db.deleteAll()
         self.users.deleteAll()

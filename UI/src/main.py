@@ -1,5 +1,5 @@
 #--coding: utf-8 --
-
+from datetime import datetime
 import sys
 import json
 import os.path
@@ -36,6 +36,8 @@ class MyApplication(QWidget):
         self.button_stylesheet_clickable = self.ui.exerciseOneOneMenuButton.styleSheet()
         self.button_stylesheet_not_clickable = self.ui.exerciseOneTwoMenuButton.styleSheet()
         self.combo_style = self.ui.oneThreeCombo_1.styleSheet()
+        self.ui.oneFourButton_2.setEnabled(False)
+        self.ui.twoFourButton_2.setEnabled(False)
 
         self.db = database()
         if self.db.getItems() == []:
@@ -143,16 +145,17 @@ class MyApplication(QWidget):
 
             success, res = command_call("minikube version")
             if not success:
-                self.ui.labelMinikube.setText(self.ui.labelMinikube.text() + "VERSION NOT FOUND")
+                self.ui.labelMinikube.setText(self.ui.labelMinikube.text() + "VERSIOTA EI LÖYTYNYT")
             else:
                 version = res.split("\n")[1].split(': ')[1]
                 self.ui.labelMinikube.setText(self.ui.labelMinikube.text() + version)
             success, res = command_call("kubectl version --client=true")
             if not success:
-                self.ui.labelKubectl.setText(self.ui.labelKubectl.text() + "VERSION NOT FOUND")
+                self.ui.labelKubectl.setText(self.ui.labelKubectl.text() + "VERSIOTA EI LÖYTYNYT")
             else:
                 version = res.split("\n")[1].split(': ')[1]
                 self.ui.labelKubectl.setText(self.ui.labelKubectl.text() + version)
+        self.informAchievements()
 
     def initExerciseButtons(self):
         for i in range(len(self.exercise_buttons_menu)):
@@ -249,6 +252,7 @@ class MyApplication(QWidget):
                 self.db.update_current_exercise(ex, part, self.username)
                 self.update_progress_bar(self.progress_bars[ex-1], ex)
                 self.update_progress_bar(self.progress_bars_global[ex-1], ex)
+                self.informAchievements()
             self.set_buttons(ex, part)
 
         self.ui.menuPages.setCurrentIndex(2)
@@ -371,12 +375,12 @@ class MyApplication(QWidget):
         self.ui.commandLine.append(return_text)
 
     def check_command(self, ex, part, cmd):
-        print(ex, part, cmd)
         correct = self.db.get_answer(ex, part)
         result = ""
         browser = ""
         inputs = [[self.ui.oneFourInput_1, self.ui.oneFourInput_2], [self.ui.twoFourInput_1, self.ui.twoFourInput_2]]
         result_browsers = [[self.ui.oneFourResult_1, self.ui.oneFourResult_2], [self.ui.twoFourResult_1, self.ui.twoFourResult_2]]
+        buttons = [[self.ui.oneFourButton_1, self.ui.oneFourButton_2], [self.ui.twoFourButton_1, self.ui.twoFourButton_2]]
 
         correct = correct[cmd-1]
         result = inputs[ex-1][cmd-1].toPlainText()
@@ -433,7 +437,12 @@ class MyApplication(QWidget):
                     self.db.update_current_exercise(ex, part, self.username)
                     self.update_progress_bar(self.progress_bars[ex-1], ex)
                     self.update_progress_bar(self.progress_bars_global[ex-1], ex)
+                    self.informAchievements()
                 self.set_buttons(ex, part)
+            else:
+                style = buttons[ex-1][cmd-1].styleSheet()
+                buttons[ex-1][cmd].setEnabled(True)
+                buttons[ex-1][cmd].setStyleSheet(style)
             rtn = multiple_line_command_call(result, browser)
             if rtn == None or rtn == "":
                 return_text = ""
@@ -458,12 +467,12 @@ class MyApplication(QWidget):
                 self.db.update_current_exercise(ex, part, self.username)
                 self.update_progress_bar(self.progress_bars[ex-1], ex)
                 self.update_progress_bar(self.progress_bars_global[ex-1], ex)
+                self.informAchievements()
             self.set_buttons(ex, part)
         self.ui.infoBrowser_5.setText(return_value)
 
     def check_inputs(self, ex, part):
         correct = self.db.get_answer(ex, part)
-        print(correct)
         inputs = [self.ui.inputTwoThree_1, self.ui.inputTwoThree_2, self.ui.inputTwoThree_3, self.ui.inputTwoThree_4,
                   self.ui.inputTwoThree_5, self.ui.inputTwoThree_6]
         labels = [self.ui.resultTwoThree_1, self.ui.resultTwoThree_2, self.ui.resultTwoThree_3, self.ui.resultTwoThree_4,
@@ -504,6 +513,7 @@ class MyApplication(QWidget):
                 self.db.update_current_exercise(ex, part, self.username)
                 self.update_progress_bar(self.progress_bars[ex-1], ex)
                 self.update_progress_bar(self.progress_bars_global[ex-1], ex)
+                self.informAchievements()
             self.set_buttons(ex, part)
         self.ui.infoTwoThree.setText(return_value)
 
@@ -513,6 +523,23 @@ class MyApplication(QWidget):
         else:
             progress = round((self.db.get_exercise(self.username)[ex-1] / self.db.exercise_count(ex)), 2) * 100
             bar.setValue(progress)
+
+    def informAchievements(self):
+        exercises = self.db.get_exercise(self.username)
+        achievementTable = self.ui.achievements
+        achievementTable.setText("")
+
+        for i in range(len(exercises)):
+            part = exercises[i]
+            count = self.db.exercise_count(i+1)
+            if count == part:
+                achievementTable.append(f"Käyttäjä {self.username} on suorittanut tehtäväkokonaisuuden {i+1}!")
+        date = datetime.now()
+        formatted_date = date.strftime("%d-%m-%Y %H:%M")
+        achievementTable.append(f"\nSaavutustaulu on luotu {formatted_date}.")
+
+
+
         
 
 

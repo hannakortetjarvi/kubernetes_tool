@@ -28,7 +28,7 @@ class Ui_Widget(object):
             Widget.setObjectName(u"Widget")
         Widget.setEnabled(True)
         Widget.resize(1562, 834)
-        Widget.setWindowTitle(u"Kubernetes Learning Tool")
+        Widget.setWindowTitle(u"Interaktiivinen Kubernetes Oppimisty\u00f6kalu")
         Widget.setStyleSheet(u"background-color: rgb(240, 255, 254);\n"
 "font: 11pt \"Consolas\";")
         self.stackedWidget = QStackedWidget(Widget)
@@ -68,7 +68,7 @@ class Ui_Widget(object):
         self.mainPage.setObjectName(u"mainPage")
         self.verticalLayoutWidget_2 = QWidget(self.mainPage)
         self.verticalLayoutWidget_2.setObjectName(u"verticalLayoutWidget_2")
-        self.verticalLayoutWidget_2.setGeometry(QRect(10, 10, 1211, 801))
+        self.verticalLayoutWidget_2.setGeometry(QRect(10, 10, 1211, 791))
         self.verticalLayout_7 = QVBoxLayout(self.verticalLayoutWidget_2)
         self.verticalLayout_7.setObjectName(u"verticalLayout_7")
         self.verticalLayout_7.setContentsMargins(0, 0, 0, 0)
@@ -103,13 +103,55 @@ class Ui_Widget(object):
 
         self.labelKubectl = QLabel(self.verticalLayoutWidget_2)
         self.labelKubectl.setObjectName(u"labelKubectl")
+        self.labelKubectl.setStyleSheet(u"border-bottom: 1px dotted;\n"
+"padding-bottom: 15px;")
 
         self.verticalLayout_7.addWidget(self.labelKubectl)
 
-        self.textBrowser_7 = QTextBrowser(self.verticalLayoutWidget_2)
-        self.textBrowser_7.setObjectName(u"textBrowser_7")
+        self.textBrowser_27 = QTextBrowser(self.verticalLayoutWidget_2)
+        self.textBrowser_27.setObjectName(u"textBrowser_27")
+        sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.textBrowser_27.sizePolicy().hasHeightForWidth())
+        self.textBrowser_27.setSizePolicy(sizePolicy)
+        self.textBrowser_27.setMinimumSize(QSize(0, 0))
+        self.textBrowser_27.setMaximumSize(QSize(16777215, 130))
+        self.textBrowser_27.setStyleSheet(u"border: none;\n"
+"padding-top: 5px;")
 
-        self.verticalLayout_7.addWidget(self.textBrowser_7)
+        self.verticalLayout_7.addWidget(self.textBrowser_27)
+
+        self.textBrowser_28 = QTextBrowser(self.verticalLayoutWidget_2)
+        self.textBrowser_28.setObjectName(u"textBrowser_28")
+        self.textBrowser_28.setMinimumSize(QSize(0, 100))
+        self.textBrowser_28.setMaximumSize(QSize(16777215, 150))
+        self.textBrowser_28.setStyleSheet(u"border: none;\n"
+"padding-top: 5px;")
+
+        self.verticalLayout_7.addWidget(self.textBrowser_28)
+
+        self.textBrowser_29 = QTextBrowser(self.verticalLayoutWidget_2)
+        self.textBrowser_29.setObjectName(u"textBrowser_29")
+        self.textBrowser_29.setMinimumSize(QSize(0, 100))
+        self.textBrowser_29.setMaximumSize(QSize(16777215, 200))
+        self.textBrowser_29.setStyleSheet(u"border: none;\n"
+"padding-top: 5px;")
+
+        self.verticalLayout_7.addWidget(self.textBrowser_29)
+
+        self.verticalSpacer_13 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_7.addItem(self.verticalSpacer_13)
+
+        self.textBrowser_25 = QTextBrowser(self.verticalLayoutWidget_2)
+        self.textBrowser_25.setObjectName(u"textBrowser_25")
+        self.textBrowser_25.setMinimumSize(QSize(0, 100))
+        self.textBrowser_25.setMaximumSize(QSize(16777215, 150))
+        self.textBrowser_25.setStyleSheet(u"border: none;\n"
+"padding-top: 5px;")
+
+        self.verticalLayout_7.addWidget(self.textBrowser_25)
 
         self.menuPages.addWidget(self.mainPage)
         self.commandPage = QWidget()
@@ -141,9 +183,6 @@ class Ui_Widget(object):
         self.horizontalLayout_34.setObjectName(u"horizontalLayout_34")
         self.commandInput = QTextEdit(self.verticalLayoutWidget_12)
         self.commandInput.setObjectName(u"commandInput")
-        sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.commandInput.sizePolicy().hasHeightForWidth())
         self.commandInput.setSizePolicy(sizePolicy)
         self.commandInput.setMinimumSize(QSize(0, 40))
@@ -251,6 +290,11 @@ class Ui_Widget(object):
 
         self.verticalLayout_5.addWidget(self.exerciseOneButton)
 
+        self.label_26 = QLabel(self.horizontalLayoutWidget)
+        self.label_26.setObjectName(u"label_26")
+
+        self.verticalLayout_5.addWidget(self.label_26)
+
         self.verticalSpacer_10 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_5.addItem(self.verticalSpacer_10)
@@ -305,6 +349,11 @@ class Ui_Widget(object):
 "margin-top: 8px;")
 
         self.verticalLayout_23.addWidget(self.exerciseTwoButton)
+
+        self.label_27 = QLabel(self.horizontalLayoutWidget_3)
+        self.label_27.setObjectName(u"label_27")
+
+        self.verticalLayout_23.addWidget(self.label_27)
 
         self.verticalSpacer_9 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
@@ -391,6 +440,14 @@ class Ui_Widget(object):
         self.label_7.setObjectName(u"label_7")
 
         self.verticalLayout_17.addWidget(self.label_7)
+
+        self.textBrowser_12 = QTextBrowser(self.verticalLayoutWidget_9)
+        self.textBrowser_12.setObjectName(u"textBrowser_12")
+        self.textBrowser_12.setStyleSheet(u"border: none;\n"
+"border-top: 1px dotted;\n"
+"padding-top: 10px;")
+
+        self.verticalLayout_17.addWidget(self.textBrowser_12)
 
         self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
@@ -878,8 +935,11 @@ class Ui_Widget(object):
         self.oneFourButton_1.setMinimumSize(QSize(120, 0))
         self.oneFourButton_1.setMaximumSize(QSize(16777215, 40))
         self.oneFourButton_1.setStyleSheet(u"border: 1px solid gray;\n"
+"padding-right: 5px;\n"
+"padding-left: 5px;\n"
 "border-radius: 5px;\n"
-"background-color: rgb(176, 194, 221);")
+"background-color: rgb(176, 194, 221);\n"
+"color: rgb(0, 0, 0);")
 
         self.horizontalLayout_16.addWidget(self.oneFourButton_1)
 
@@ -922,8 +982,11 @@ class Ui_Widget(object):
         self.oneFourButton_2.setMinimumSize(QSize(120, 0))
         self.oneFourButton_2.setMaximumSize(QSize(16777215, 40))
         self.oneFourButton_2.setStyleSheet(u"border: 1px solid gray;\n"
+"padding-right: 5px;\n"
+"padding-left: 5px;\n"
 "border-radius: 5px;\n"
-"background-color: rgb(176, 194, 221);")
+"color: rgb(197, 197, 197);\n"
+"background-color: rgb(144, 144, 144);")
 
         self.horizontalLayout_28.addWidget(self.oneFourButton_2)
 
@@ -1016,6 +1079,14 @@ class Ui_Widget(object):
         self.label_10.setObjectName(u"label_10")
 
         self.verticalLayout_18.addWidget(self.label_10)
+
+        self.textBrowser_14 = QTextBrowser(self.verticalLayoutWidget_11)
+        self.textBrowser_14.setObjectName(u"textBrowser_14")
+        self.textBrowser_14.setStyleSheet(u"border: none;\n"
+"border-top: 1px dotted;\n"
+"padding-top: 10px;")
+
+        self.verticalLayout_18.addWidget(self.textBrowser_14)
 
         self.verticalSpacer_5 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
@@ -1603,10 +1674,11 @@ class Ui_Widget(object):
         self.twoFourButton_1.setMinimumSize(QSize(120, 0))
         self.twoFourButton_1.setMaximumSize(QSize(16777215, 50))
         self.twoFourButton_1.setStyleSheet(u"border: 1px solid gray;\n"
+"padding-right: 5px;\n"
+"padding-left: 5px;\n"
 "border-radius: 5px;\n"
-"padding-top: 15px;\n"
-"padding-bottom: 15px;\n"
-"background-color: rgb(176, 194, 221);")
+"background-color: rgb(176, 194, 221);\n"
+"color: rgb(0, 0, 0);")
 
         self.horizontalLayout_32.addWidget(self.twoFourButton_1)
 
@@ -1649,10 +1721,11 @@ class Ui_Widget(object):
         self.twoFourButton_2.setMinimumSize(QSize(120, 0))
         self.twoFourButton_2.setMaximumSize(QSize(16777215, 50))
         self.twoFourButton_2.setStyleSheet(u"border: 1px solid gray;\n"
+"padding-right: 5px;\n"
+"padding-left: 5px;\n"
 "border-radius: 5px;\n"
-"padding-top: 15px;\n"
-"padding-bottom: 15px;\n"
-"background-color: rgb(176, 194, 221);")
+"color: rgb(197, 197, 197);\n"
+"background-color: rgb(144, 144, 144);")
 
         self.horizontalLayout_33.addWidget(self.twoFourButton_2)
 
@@ -1772,6 +1845,29 @@ class Ui_Widget(object):
 
 
         self.verticalLayout_11.addLayout(self.horizontalLayout_36)
+
+        self.label_25 = QLabel(self.verticalLayoutWidget_5)
+        self.label_25.setObjectName(u"label_25")
+
+        self.verticalLayout_11.addWidget(self.label_25)
+
+        self.verticalSpacer_12 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_11.addItem(self.verticalSpacer_12)
+
+        self.label_24 = QLabel(self.verticalLayoutWidget_5)
+        self.label_24.setObjectName(u"label_24")
+        self.label_24.setStyleSheet(u"border: 1px dotted;\n"
+"padding:5px;")
+
+        self.verticalLayout_11.addWidget(self.label_24)
+
+        self.achievements = QTextBrowser(self.verticalLayoutWidget_5)
+        self.achievements.setObjectName(u"achievements")
+        self.achievements.setMinimumSize(QSize(0, 400))
+        self.achievements.setStyleSheet(u"border: 1px dotted;")
+
+        self.verticalLayout_11.addWidget(self.achievements)
 
         self.verticalSpacer_7 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
@@ -2045,11 +2141,58 @@ class Ui_Widget(object):
         self.loginButton.setText(QCoreApplication.translate("Widget", u"Kirjaudu", None))
         self.loginWarning.setText("")
         self.label.setText(QCoreApplication.translate("Widget", u"K\u00e4ytt\u00e4j\u00e4n nimi:", None))
-        self.title.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:24pt; font-weight:700;\">Kubernetes Oppimisty\u00f6kalu</span></p></body></html>", None))
+        self.title.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:24pt; font-weight:700;\">Interaktiivinen Kubernetes Oppimisty\u00f6kalu</span></p></body></html>", None))
         self.subMain.setText(QCoreApplication.translate("Widget", u"Hei ", None))
-        self.desc.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p>Tervetuloa interaktiiviseen Kubernetes oppimisty\u00f6kaluun!</p></body></html>", None))
+        self.desc.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-weight:700;\">Tervetuloa interaktiiviseen Kubernetes oppimisty\u00f6kaluun!</span></p></body></html>", None))
         self.labelMinikube.setText(QCoreApplication.translate("Widget", u"K\u00e4yt\u00f6ss\u00e4 oleva Minikube versio: ", None))
         self.labelKubectl.setText(QCoreApplication.translate("Widget", u"K\u00e4yt\u00f6ss\u00e4 oleva Kubectl Client versio: ", None))
+        self.textBrowser_27.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#000000;\">T\u00e4m\u00e4n ty\u00f6kalun tarkoituksena on olla tukena avustamassa k\u00e4ytt\u00e4j\u00e4\u00e4 ymm\u00e4rt\u00e4m\u00e4\u00e4n ja k\u00e4ytt\u00e4m\u00e4\u00e4n Kubernetest\u00e4. Ty\u00f6kalu tarjoaa informaatiota Kubernetekseen liittyvist\u00e4 aihealueista ja teht\u00e4vien muodossa tukee k\u00e4ytt\u00e4j\u00e4\u00e4 l\u00e4hestym\u00e4\u00e4n n\u00e4it\u00e4"
+                        " aiheita. Ty\u00f6kalun teht\u00e4vien tavoitteena on opettaa Kuberneteksen klustereihin liittyv\u00e4t perustoiminnallisuudet sek\u00e4 niiden ymm\u00e4rt\u00e4miseen tarvittava teoria. N\u00e4ihin perustoiminnallisuuksiin kuuluu mm. klustereiden luonti, laajentaminen, muokkaaminen ja poistaminen sek\u00e4 sovelluksien k\u00e4ytt\u00f6\u00f6notto ja hallinta klustereiden sis\u00e4ll\u00e4.</span></p></body></html>", None))
+        self.textBrowser_28.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:700; color:#000000;\">ESITIEDOT</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#000000;\">Ennen ty\u00f6kalun k\u00e4ytt\u00f6\u00e4 on hyv\u00e4 ymm\u00e4rt\u00e4\u00e4 perusasiat konteista (engl. container). Moni konttien parissa t\u00f6it\u00e4 tekev\u00e4 yritys"
+                        " on n\u00e4it\u00e4 kuvaillut sivuillansa, kuten mm.:</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#000000;\">	- Google Cloud: </span><a href=\"https://cloud.google.com/learn/what-are-containers\"><span style=\" text-decoration: underline; color:#007af4;\">https://cloud.google.com/learn/what-are-containers</span></a></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#000000;\">	- Microsoft Azure: </span><a href=\"https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-a-container\"><span style=\" text-decoration: underline; color:#007af4;\">https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-a-container</span></a></p></body></html>", None))
+        self.textBrowser_29.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:700; color:#000000;\">TARVITTAVAT TEKNOLOGIAT</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#000000;\">Jotta teht\u00e4vi\u00e4 voidaan suorittaa niin kuten ty\u00f6kalussa ne ollaan suunniteltu suoritettavaksi, ty\u00f6kalua ajavalle koneelle tulee asentaa seuraav"
+                        "at teknologiat:</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#000000;\">	- </span><span style=\" font-weight:700; color:#000000;\">Minikube</span><span style=\" color:#000000;\">: </span><a href=\"https://minikube.sigs.k8s.io/docs/start/\"><span style=\" text-decoration: underline; color:#007af4;\">https://minikube.sigs.k8s.io/docs/start/</span></a></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#000000;\">	- </span><span style=\" font-weight:700; color:#000000;\">Kubectl</span><span style=\" color:#000000;\">: </span><a href=\"https://kubernetes.io/docs/tasks/tools/#kubectl\"><span style=\" text-decoration: underline; color:#007af4;\">https://kubernetes.io/docs/tasks/tools/#kubectl</span></a></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:"
+                        "0; text-indent:0px;\"><span style=\" color:#000000;\">Jos koneellasi on n\u00e4m\u00e4 teknologiat asennettu onnistuneesti, t\u00e4lle sivulle tulostuu teknologioiden asennetut versiot kohtiin </span><span style=\" font-style:italic; color:#000000;\">K\u00e4yt\u00f6ss\u00e4 oleva Minikube versio</span><span style=\" color:#000000;\"> ja </span><span style=\" font-style:italic; color:#000000;\">K\u00e4yt\u00f6ss\u00e4 oleva Kubectl Client versio</span><span style=\" color:#000000;\">.</span></p></body></html>", None))
+        self.textBrowser_25.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-style:italic; color:#7e7e7e;\">Huom! T\u00e4m\u00e4 versio sovelluksesta ei ole viel\u00e4 valmis toteutus. Jos j\u00e4it kaipaamaan lis\u00e4\u00e4 ymm\u00e4rryst\u00e4 Kuberneteksesta ja klusterin mahdollisista toiminnallisuuksista, voit tutustua aiheeseen enemm\u00e4n Kuberneteksen sivuilla:</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-r"
+                        "ight:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-style:italic; color:#535353;\">	- </span><a href=\"https://kubernetes.io/docs/home/\"><span style=\" text-decoration: underline; color:#57a8ff;\">https://kubernetes.io/docs/home/</span></a></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-style:italic; color:#535353;\">	- </span><a href=\"https://kubernetes.io/docs/tasks/\"><span style=\" text-decoration: underline; color:#57a8ff;\">https://kubernetes.io/docs/tasks/</span></a></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-style:italic; color:#535353;\">	- </span><a href=\"https://kubernetes.io/docs/tutorials/\"><span style=\" text-decoration: underline; color:#57a8ff;\">https://kubernetes.io/docs/tutorials/</span></a></p></body></html>", None))
         self.title_9.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:24pt; font-weight:700;\">Komentokehote</span></p></body></html>", None))
         self.label_32.setText(QCoreApplication.translate("Widget", u"Voit testata komentojen ajamista t\u00e4ss\u00e4 komentokehotteessa. Komentokehote toimii kuten lokaali komentokehotteesi ja on", None))
         self.label_33.setText(QCoreApplication.translate("Widget", u"yhteydess\u00e4 koneeseesi.", None))
@@ -2059,15 +2202,33 @@ class Ui_Widget(object):
         self.desc_4.setText("")
         self.exOneImage.setText("")
         self.exerciseOneButton.setText(QCoreApplication.translate("Widget", u"1. Klusterit", None))
+        self.label_26.setText(QCoreApplication.translate("Widget", u"Oppimistavoitteet: Kubernetes ja sen klusteri, Minikube, Minikuben k\u00e4ytt\u00f6", None))
         self.exTwoImage.setText("")
         self.exerciseTwoButton.setText(QCoreApplication.translate("Widget", u"2. Sovellus klusterissa", None))
+        self.label_27.setText(QCoreApplication.translate("Widget", u"Oppimistavoitteet: Sovelluksen k\u00e4ytt\u00f6\u00f6notto klusterissa, Kubectl, Kubectl:n k\u00e4ytt\u00f6", None))
         self.title_7.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:24pt; font-weight:700;\">1. Klusterit</span></p></body></html>", None))
         self.sub_6.setText("")
-        self.exerciseOneOneButton.setText(QCoreApplication.translate("Widget", u"1.1. Kubernetes klusterin perusteet", None))
+        self.exerciseOneOneButton.setText(QCoreApplication.translate("Widget", u"1.1. Kubernetes-klusterin perusteet", None))
         self.exerciseOneTwoButton.setText(QCoreApplication.translate("Widget", u"1.2. Minikube", None))
         self.exerciseOneThreeButton.setText(QCoreApplication.translate("Widget", u"1.3. Klusterin rakenne", None))
         self.exerciseOneFourButton.setText(QCoreApplication.translate("Widget", u"1.4. Klusterin luonti", None))
         self.label_7.setText("")
+        self.textBrowser_12.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Teht\u00e4v\u00e4kokonaisuus koostuu kahdesta teoriaosuudesta ja kahdesta teht\u00e4v\u00e4osuudesta:</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">	1.1. Teoriaosuus k\u00e4sittelee Kubernetest\u00e4 ja sen klusteria</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-ind"
+                        "ent:0; text-indent:0px;\">	1.2. Teoriaosuus k\u00e4sittelee Minikubea ja sen komentoja</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">	1.3. Teht\u00e4v\u00e4 k\u00e4sittelee klusterin rakennetta eli sen komponentteja</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">	1.4. Teht\u00e4v\u00e4 k\u00e4sittele Minikuben k\u00e4ytt\u00f6\u00e4 klusterin luomiseen</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Teht\u00e4v\u00e4n toteuttamiseen riitt\u00e4\u00e4, ett\u00e4 <span style=\" font-weight:700;\">ymm\u00e4rt\u00e4\u00e4 perustiedot konteista</span> ja <span style=\" font-weight:700;\">Minikube on asennettuna kone"
+                        "elle</span>.</p></body></html>", None))
         self.prevOneOne.setText(QCoreApplication.translate("Widget", u"Palaa teht\u00e4v\u00e4sivulle", None))
         self.label_2.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:14pt;\">1.1. Kubernetes-klusteri</span></p></body></html>", None))
         self.nextOneOne.setText(QCoreApplication.translate("Widget", u"Seuraava", None))
@@ -2330,6 +2491,22 @@ class Ui_Widget(object):
         self.exerciseTwoThreeButton.setText(QCoreApplication.translate("Widget", u"2.3. Kubectl-komennot", None))
         self.exerciseTwoFourButton.setText(QCoreApplication.translate("Widget", u"2.4. K\u00e4ytt\u00f6\u00f6noton luonti", None))
         self.label_10.setText("")
+        self.textBrowser_14.setHtml(QCoreApplication.translate("Widget", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Teht\u00e4v\u00e4kokonaisuus koostuu kahdesta teoriaosuudesta ja kahdesta teht\u00e4v\u00e4osuudesta:</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">	2.1. Teoriaosuus k\u00e4sittelee Kuberneteksen k\u00e4ytt\u00f6\u00f6nottoja</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-"
+                        "block-indent:0; text-indent:0px;\">	2.2. Teoriaosuus k\u00e4sittelee Kubectl:l\u00e4\u00e4 ja sen komentoja</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">	2.3. Teht\u00e4v\u00e4 k\u00e4sittelee Kubectl:n komentoja ja niihin sis\u00e4ltyvi\u00e4 resursseja</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">	2.4. Teht\u00e4v\u00e4 k\u00e4sittele k\u00e4ytt\u00f6\u00f6noton luontia Kubectl:ll\u00e4</p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Teht\u00e4v\u00e4n toteuttamiseksi <span style=\" font-weight:700;\">t\u00e4ytyy ymm\u00e4rt\u00e4\u00e4 perustiedot konteista,</span> <span style=\" font-weight:700;\">Miniku"
+                        "be ja Kubectl tulee olla asennettuna koneelle </span>sek\u00e4<span style=\" font-weight:700;\"> tulee olla ymm\u00e4rrys Kuberneteksen klusterista ja sen luonnista. </span>Teht\u00e4v\u00e4 2.4. my\u00f6s odottaa, ett\u00e4 <span style=\" font-weight:700;\">k\u00e4yt\u00f6ss\u00e4 olevan koneen Minikubella on klusteri olemassa ja k\u00e4ynniss\u00e4</span>.</p></body></html>", None))
         self.prevTwoOne.setText(QCoreApplication.translate("Widget", u"Palaa teht\u00e4v\u00e4sivulle", None))
         self.label_15.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:14pt;\">2.1. K\u00e4ytt\u00f6\u00f6notto</span></p></body></html>", None))
         self.nextTwoOne.setText(QCoreApplication.translate("Widget", u"Seuraava", None))
@@ -2599,13 +2776,16 @@ class Ui_Widget(object):
         self.twoFourButton_2.setText(QCoreApplication.translate("Widget", u"Aja komento", None))
         self.label_31.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:12pt;\">Tuloste:</span></p></body></html>", None))
         self.title_3.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:24pt; font-weight:700;\">Tietoja</span></p></body></html>", None))
-        self.desc_3.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p>Kubernetes Oppimisty\u00f6kalu </p><p>Versio: v0.1</p><p>Kehitt\u00e4j\u00e4: Hanna Kortetj\u00e4rvi</p><p>Sovellus on kehitetty Qt Creatorilla<br/>Application has been developed with Qt Creator</p><p>L\u00e4hteet: <br/>- Kubernetes, https://kubernetes.io/<br/>- minikube, https://minikube.sigs.k8s.io/docs/start/</p></body></html>", None))
+        self.desc_3.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p>Interaktiivinen Kubernetes Oppimisty\u00f6kalu </p><p>Versio: v0.1<br/>Version julkaisup\u00e4iv\u00e4: 9.5.2024.</p><p>Kehitt\u00e4j\u00e4: Hanna Kortetj\u00e4rvi</p><p>Sovellus on kehitetty Qt Creatorilla<br/>Application has been developed with Qt Creator</p><p>L\u00e4hteet: <br/>- Kubernetes, <a href=\"https://kubernetes.io/\"><span style=\" text-decoration: underline; color:#007af4;\">https://kubernetes.io/</span></a><br/>- minikube, <a href=\"https://minikube.sigs.k8s.io/docs/start/\"><span style=\" text-decoration: underline; color:#007af4;\">https://minikube.sigs.k8s.io/docs/start/</span></a><br/>- kubectl, <a href=\"https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#plugin\"><span style=\" text-decoration: underline; color:#007af4;\">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#plugin</span></a><br/>- Qt, <a href=\"https://www.qt.io/product/development-tools\"><span style=\" text-decoration: underline; color:#007af4;\">https://www.qt"
+                        ".io/product/development-tools</span></a><br/></p><p><br/></p></body></html>", None))
         self.title_5.setText(QCoreApplication.translate("Widget", u"<html><head/><body><p><span style=\" font-size:24pt; font-weight:700;\">Asetukset</span></p></body></html>", None))
         self.sub_5.setText("")
         self.subUserInfo.setText(QCoreApplication.translate("Widget", u"K\u00e4ytt\u00e4j\u00e4n nimi: ", None))
         self.label_21.setText(QCoreApplication.translate("Widget", u"Palautteen m\u00e4\u00e4r\u00e4:", None))
         self.label_23.setText(QCoreApplication.translate("Widget", u"Minimoi palaute", None))
         self.label_22.setText(QCoreApplication.translate("Widget", u"Maksimoi palaute", None))
+        self.label_25.setText(QCoreApplication.translate("Widget", u"Palautteen m\u00e4\u00e4r\u00e4\u00e4 muokkaamalla voit m\u00e4\u00e4ritt\u00e4\u00e4, kuinka paljon palautetta haluat ty\u00f6kalun tulostavan virhetilanteessa.", None))
+        self.label_24.setText(QCoreApplication.translate("Widget", u"Suoritukset:", None))
         self.mainButton.setText(QCoreApplication.translate("Widget", u"Etusivu", None))
         self.commandButton.setText(QCoreApplication.translate("Widget", u"Komentokehote", None))
         self.exercisesButton.setText(QCoreApplication.translate("Widget", u"Teht\u00e4v\u00e4t", None))

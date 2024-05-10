@@ -14,7 +14,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string notr="true">Kubernetes Learning Tool</string>
+   <string notr="true">Interaktiivinen Kubernetes Oppimistyökalu</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(240, 255, 254);
@@ -125,7 +125,7 @@ padding-bottom: 15px;</string>
          <x>10</x>
          <y>10</y>
          <width>1211</width>
-         <height>801</height>
+         <height>791</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -146,7 +146,7 @@ padding-bottom: 15px;</string>
            </font>
           </property>
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; font-weight:700;&quot;&gt;Kubernetes Oppimistyökalu&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; font-weight:700;&quot;&gt;Interaktiivinen Kubernetes Oppimistyökalu&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
@@ -166,7 +166,7 @@ padding-bottom: 15px;</string>
         <item>
          <widget class="QLabel" name="desc">
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tervetuloa interaktiiviseen Kubernetes oppimistyökaluun!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Tervetuloa interaktiiviseen Kubernetes oppimistyökaluun!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -182,13 +182,163 @@ padding-bottom: 15px;</string>
         </item>
         <item>
          <widget class="QLabel" name="labelKubectl">
+          <property name="styleSheet">
+           <string notr="true">border-bottom: 1px dotted;
+padding-bottom: 15px;</string>
+          </property>
           <property name="text">
            <string>Käytössä oleva Kubectl Client versio: </string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QTextBrowser" name="textBrowser_7"/>
+         <widget class="QTextBrowser" name="textBrowser_27">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>130</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: none;
+padding-top: 5px;</string>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Tämän työkalun tarkoituksena on olla tukena avustamassa käyttäjää ymmärtämään ja käyttämään Kubernetestä. Työkalu tarjoaa informaatiota Kubernetekseen liittyvistä aihealueista ja tehtävien muodossa tukee käyttäjää lähestymään näitä aiheita. Työkalun tehtävien tavoitteena on opettaa Kuberneteksen klustereihin liittyvät perustoiminnallisuudet sekä niiden ymmärtämiseen tarvittava teoria. Näihin perustoiminnallisuuksiin kuuluu mm. klustereiden luonti, laajentaminen, muokkaaminen ja poistaminen sekä sovelluksien käyttöönotto ja hallinta klustereiden sisällä.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextBrowser" name="textBrowser_28">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: none;
+padding-top: 5px;</string>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:700; color:#000000;&quot;&gt;ESITIEDOT&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Ennen työkalun käyttöä on hyvä ymmärtää perusasiat konteista (engl. container). Moni konttien parissa töitä tekevä yritys on näitä kuvaillut sivuillansa, kuten mm.:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#000000;&quot;&gt;	- Google Cloud: &lt;/span&gt;&lt;a href=&quot;https://cloud.google.com/learn/what-are-containers&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://cloud.google.com/learn/what-are-containers&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#000000;&quot;&gt;	- Microsoft Azure: &lt;/span&gt;&lt;a href=&quot;https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-a-container&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-a-container&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextBrowser" name="textBrowser_29">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>200</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: none;
+padding-top: 5px;</string>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:700; color:#000000;&quot;&gt;TARVITTAVAT TEKNOLOGIAT&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Jotta tehtäviä voidaan suorittaa niin kuten työkalussa ne ollaan suunniteltu suoritettavaksi, työkalua ajavalle koneelle tulee asentaa seuraavat teknologiat:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#000000;&quot;&gt;	- &lt;/span&gt;&lt;span style=&quot; font-weight:700; color:#000000;&quot;&gt;Minikube&lt;/span&gt;&lt;span style=&quot; color:#000000;&quot;&gt;: &lt;/span&gt;&lt;a href=&quot;https://minikube.sigs.k8s.io/docs/start/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://minikube.sigs.k8s.io/docs/start/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#000000;&quot;&gt;	- &lt;/span&gt;&lt;span style=&quot; font-weight:700; color:#000000;&quot;&gt;Kubectl&lt;/span&gt;&lt;span style=&quot; color:#000000;&quot;&gt;: &lt;/span&gt;&lt;a href=&quot;https://kubernetes.io/docs/tasks/tools/#kubectl&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://kubernetes.io/docs/tasks/tools/#kubectl&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Jos koneellasi on nämä teknologiat asennettu onnistuneesti, tälle sivulle tulostuu teknologioiden asennetut versiot kohtiin &lt;/span&gt;&lt;span style=&quot; font-style:italic; color:#000000;&quot;&gt;Käytössä oleva Minikube versio&lt;/span&gt;&lt;span style=&quot; color:#000000;&quot;&gt; ja &lt;/span&gt;&lt;span style=&quot; font-style:italic; color:#000000;&quot;&gt;Käytössä oleva Kubectl Client versio&lt;/span&gt;&lt;span style=&quot; color:#000000;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_13">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QTextBrowser" name="textBrowser_25">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: none;
+padding-top: 5px;</string>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic; color:#7e7e7e;&quot;&gt;Huom! Tämä versio sovelluksesta ei ole vielä valmis toteutus. Jos jäit kaipaamaan lisää ymmärrystä Kuberneteksesta ja klusterin mahdollisista toiminnallisuuksista, voit tutustua aiheeseen enemmän Kuberneteksen sivuilla:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic; color:#535353;&quot;&gt;	- &lt;/span&gt;&lt;a href=&quot;https://kubernetes.io/docs/home/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#57a8ff;&quot;&gt;https://kubernetes.io/docs/home/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic; color:#535353;&quot;&gt;	- &lt;/span&gt;&lt;a href=&quot;https://kubernetes.io/docs/tasks/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#57a8ff;&quot;&gt;https://kubernetes.io/docs/tasks/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic; color:#535353;&quot;&gt;	- &lt;/span&gt;&lt;a href=&quot;https://kubernetes.io/docs/tutorials/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#57a8ff;&quot;&gt;https://kubernetes.io/docs/tutorials/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -464,6 +614,13 @@ margin-top: 8px;</string>
                       </widget>
                      </item>
                      <item>
+                      <widget class="QLabel" name="label_26">
+                       <property name="text">
+                        <string>Oppimistavoitteet: Kubernetes ja sen klusteri, Minikube, Minikuben käyttö</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
                       <spacer name="verticalSpacer_10">
                        <property name="orientation">
                         <enum>Qt::Vertical</enum>
@@ -575,6 +732,13 @@ margin-top: 8px;</string>
                        </property>
                        <property name="text">
                         <string>2. Sovellus klusterissa</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_27">
+                       <property name="text">
+                        <string>Oppimistavoitteet: Sovelluksen käyttöönotto klusterissa, Kubectl, Kubectl:n käyttö</string>
                        </property>
                       </widget>
                      </item>
@@ -704,7 +868,7 @@ margin-top: 8px;</string>
                <item>
                 <widget class="QPushButton" name="exerciseOneOneButton">
                  <property name="text">
-                  <string>1.1. Kubernetes klusterin perusteet</string>
+                  <string>1.1. Kubernetes-klusterin perusteet</string>
                  </property>
                 </widget>
                </item>
@@ -733,6 +897,31 @@ margin-top: 8px;</string>
                 <widget class="QLabel" name="label_7">
                  <property name="text">
                   <string/>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTextBrowser" name="textBrowser_12">
+                 <property name="styleSheet">
+                  <string notr="true">border: none;
+border-top: 1px dotted;
+padding-top: 10px;</string>
+                 </property>
+                 <property name="html">
+                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Tehtäväkokonaisuus koostuu kahdesta teoriaosuudesta ja kahdesta tehtäväosuudesta:&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;	1.1. Teoriaosuus käsittelee Kubernetestä ja sen klusteria&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;	1.2. Teoriaosuus käsittelee Minikubea ja sen komentoja&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;	1.3. Tehtävä käsittelee klusterin rakennetta eli sen komponentteja&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;	1.4. Tehtävä käsittele Minikuben käyttöä klusterin luomiseen&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Tehtävän toteuttamiseen riittää, että &lt;span style=&quot; font-weight:700;&quot;&gt;ymmärtää perustiedot konteista&lt;/span&gt; ja &lt;span style=&quot; font-weight:700;&quot;&gt;Minikube on asennettuna koneelle&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                 </widget>
                </item>
@@ -1927,8 +2116,11 @@ border-radius: 5px;</string>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">border: 1px solid gray;
+padding-right: 5px;
+padding-left: 5px;
 border-radius: 5px;
-background-color: rgb(176, 194, 221);</string>
+background-color: rgb(176, 194, 221);
+color: rgb(0, 0, 0);</string>
                    </property>
                    <property name="text">
                     <string> Aja komento</string>
@@ -2021,8 +2213,11 @@ border-radius: 5px;</string>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">border: 1px solid gray;
+padding-right: 5px;
+padding-left: 5px;
 border-radius: 5px;
-background-color: rgb(176, 194, 221);</string>
+color: rgb(197, 197, 197);
+background-color: rgb(144, 144, 144);</string>
                    </property>
                    <property name="text">
                     <string>Aja komento</string>
@@ -2167,6 +2362,31 @@ border-radius: 5px;</string>
                 <widget class="QLabel" name="label_10">
                  <property name="text">
                   <string/>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTextBrowser" name="textBrowser_14">
+                 <property name="styleSheet">
+                  <string notr="true">border: none;
+border-top: 1px dotted;
+padding-top: 10px;</string>
+                 </property>
+                 <property name="html">
+                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Consolas'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Tehtäväkokonaisuus koostuu kahdesta teoriaosuudesta ja kahdesta tehtäväosuudesta:&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;	2.1. Teoriaosuus käsittelee Kuberneteksen käyttöönottoja&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;	2.2. Teoriaosuus käsittelee Kubectl:lää ja sen komentoja&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;	2.3. Tehtävä käsittelee Kubectl:n komentoja ja niihin sisältyviä resursseja&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;	2.4. Tehtävä käsittele käyttöönoton luontia Kubectl:llä&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Tehtävän toteuttamiseksi &lt;span style=&quot; font-weight:700;&quot;&gt;täytyy ymmärtää perustiedot konteista,&lt;/span&gt; &lt;span style=&quot; font-weight:700;&quot;&gt;Minikube ja Kubectl tulee olla asennettuna koneelle &lt;/span&gt;sekä&lt;span style=&quot; font-weight:700;&quot;&gt; tulee olla ymmärrys Kuberneteksen klusterista ja sen luonnista. &lt;/span&gt;Tehtävä 2.4. myös odottaa, että &lt;span style=&quot; font-weight:700;&quot;&gt;käytössä olevan koneen Minikubella on klusteri olemassa ja käynnissä&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                 </widget>
                </item>
@@ -3429,10 +3649,11 @@ border-radius: 5px;</string>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">border: 1px solid gray;
+padding-right: 5px;
+padding-left: 5px;
 border-radius: 5px;
-padding-top: 15px;
-padding-bottom: 15px;
-background-color: rgb(176, 194, 221);</string>
+background-color: rgb(176, 194, 221);
+color: rgb(0, 0, 0);</string>
                    </property>
                    <property name="text">
                     <string> Aja komento</string>
@@ -3525,10 +3746,11 @@ border-radius: 5px;</string>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">border: 1px solid gray;
+padding-right: 5px;
+padding-left: 5px;
 border-radius: 5px;
-padding-top: 15px;
-padding-bottom: 15px;
-background-color: rgb(176, 194, 221);</string>
+color: rgb(197, 197, 197);
+background-color: rgb(144, 144, 144);</string>
                    </property>
                    <property name="text">
                     <string>Aja komento</string>
@@ -3620,7 +3842,7 @@ border-radius: 5px;</string>
         <item>
          <widget class="QLabel" name="desc_3">
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kubernetes Oppimistyökalu &lt;/p&gt;&lt;p&gt;Versio: v0.1&lt;/p&gt;&lt;p&gt;Kehittäjä: Hanna Kortetjärvi&lt;/p&gt;&lt;p&gt;Sovellus on kehitetty Qt Creatorilla&lt;br/&gt;Application has been developed with Qt Creator&lt;/p&gt;&lt;p&gt;Lähteet: &lt;br/&gt;- Kubernetes, https://kubernetes.io/&lt;br/&gt;- minikube, https://minikube.sigs.k8s.io/docs/start/&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Interaktiivinen Kubernetes Oppimistyökalu &lt;/p&gt;&lt;p&gt;Versio: v0.1&lt;br/&gt;Version julkaisupäivä: 9.5.2024.&lt;/p&gt;&lt;p&gt;Kehittäjä: Hanna Kortetjärvi&lt;/p&gt;&lt;p&gt;Sovellus on kehitetty Qt Creatorilla&lt;br/&gt;Application has been developed with Qt Creator&lt;/p&gt;&lt;p&gt;Lähteet: &lt;br/&gt;- Kubernetes, &lt;a href=&quot;https://kubernetes.io/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://kubernetes.io/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;- minikube, &lt;a href=&quot;https://minikube.sigs.k8s.io/docs/start/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://minikube.sigs.k8s.io/docs/start/&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;- kubectl, &lt;a href=&quot;https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#plugin&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#plugin&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;- Qt, &lt;a href=&quot;https://www.qt.io/product/development-tools&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://www.qt.io/product/development-tools&lt;/span&gt;&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="scaledContents">
            <bool>false</bool>
@@ -3746,6 +3968,50 @@ border-radius: 5px;</string>
            </widget>
           </item>
          </layout>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_25">
+          <property name="text">
+           <string>Palautteen määrää muokkaamalla voit määrittää, kuinka paljon palautetta haluat työkalun tulostavan virhetilanteessa.</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_12">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_24">
+          <property name="styleSheet">
+           <string notr="true">border: 1px dotted;
+padding:5px;</string>
+          </property>
+          <property name="text">
+           <string>Suoritukset:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextBrowser" name="achievements">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>400</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: 1px dotted;</string>
+          </property>
+         </widget>
         </item>
         <item>
          <spacer name="verticalSpacer_7">
