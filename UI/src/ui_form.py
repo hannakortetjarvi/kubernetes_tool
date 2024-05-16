@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'form.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.2.4
+## Created by: Qt User Interface Compiler version 6.6.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -110,7 +110,7 @@ class Ui_Widget(object):
 
         self.textBrowser_27 = QTextBrowser(self.verticalLayoutWidget_2)
         self.textBrowser_27.setObjectName(u"textBrowser_27")
-        sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
+        sizePolicy = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.textBrowser_27.sizePolicy().hasHeightForWidth())
@@ -140,7 +140,7 @@ class Ui_Widget(object):
 
         self.verticalLayout_7.addWidget(self.textBrowser_29)
 
-        self.verticalSpacer_13 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_13 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_7.addItem(self.verticalSpacer_13)
 
@@ -278,7 +278,7 @@ class Ui_Widget(object):
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
         self.exerciseOneButton = QPushButton(self.horizontalLayoutWidget)
         self.exerciseOneButton.setObjectName(u"exerciseOneButton")
-        sizePolicy1 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
+        sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
         sizePolicy1.setHeightForWidth(self.exerciseOneButton.sizePolicy().hasHeightForWidth())
@@ -295,13 +295,13 @@ class Ui_Widget(object):
 
         self.verticalLayout_5.addWidget(self.label_26)
 
-        self.verticalSpacer_10 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_10 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_5.addItem(self.verticalSpacer_10)
 
         self.progressBarOneGlobal = QProgressBar(self.horizontalLayoutWidget)
         self.progressBarOneGlobal.setObjectName(u"progressBarOneGlobal")
-        sizePolicy2 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
+        sizePolicy2 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Fixed)
         sizePolicy2.setHorizontalStretch(0)
         sizePolicy2.setVerticalStretch(0)
         sizePolicy2.setHeightForWidth(self.progressBarOneGlobal.sizePolicy().hasHeightForWidth())
@@ -355,7 +355,7 @@ class Ui_Widget(object):
 
         self.verticalLayout_23.addWidget(self.label_27)
 
-        self.verticalSpacer_9 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_9 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_23.addItem(self.verticalSpacer_9)
 
@@ -375,7 +375,7 @@ class Ui_Widget(object):
 
         self.verticalLayout_2.addWidget(self.widget_3)
 
-        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_2.addItem(self.verticalSpacer_2)
 
@@ -449,7 +449,7 @@ class Ui_Widget(object):
 
         self.verticalLayout_17.addWidget(self.textBrowser_12)
 
-        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_17.addItem(self.verticalSpacer_3)
 
@@ -858,7 +858,7 @@ class Ui_Widget(object):
 
         self.horizontalLayout_22 = QHBoxLayout()
         self.horizontalLayout_22.setObjectName(u"horizontalLayout_22")
-        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout_22.addItem(self.horizontalSpacer_2)
 
@@ -1006,7 +1006,7 @@ class Ui_Widget(object):
 
         self.verticalLayout_16.addWidget(self.oneFourResult_2)
 
-        self.verticalSpacer_4 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_4 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_16.addItem(self.verticalSpacer_4)
 
@@ -1088,7 +1088,7 @@ class Ui_Widget(object):
 
         self.verticalLayout_18.addWidget(self.textBrowser_14)
 
-        self.verticalSpacer_5 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_5 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_18.addItem(self.verticalSpacer_5)
 
@@ -1249,7 +1249,7 @@ class Ui_Widget(object):
 
         self.verticalLayout_19.addWidget(self.textBrowser_24)
 
-        self.verticalSpacer_11 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_11 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_19.addItem(self.verticalSpacer_11)
 
@@ -1336,7 +1336,7 @@ class Ui_Widget(object):
         __qtablewidgetitem21 = QTableWidgetItem()
         self.tableWidget.setItem(9, 1, __qtablewidgetitem21)
         self.tableWidget.setObjectName(u"tableWidget")
-        sizePolicy3 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        sizePolicy3 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         sizePolicy3.setHorizontalStretch(0)
         sizePolicy3.setVerticalStretch(0)
         sizePolicy3.setHeightForWidth(self.tableWidget.sizePolicy().hasHeightForWidth())
@@ -1447,7 +1447,7 @@ class Ui_Widget(object):
         self.horizontalLayout_29.setObjectName(u"horizontalLayout_29")
         self.labelTwoThree_1 = QLabel(self.layoutWidget_8)
         self.labelTwoThree_1.setObjectName(u"labelTwoThree_1")
-        sizePolicy4 = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Preferred)
+        sizePolicy4 = QSizePolicy(QSizePolicy.Policy.MinimumExpanding, QSizePolicy.Policy.Preferred)
         sizePolicy4.setHorizontalStretch(0)
         sizePolicy4.setVerticalStretch(0)
         sizePolicy4.setHeightForWidth(self.labelTwoThree_1.sizePolicy().hasHeightForWidth())
@@ -1590,7 +1590,7 @@ class Ui_Widget(object):
 
         self.horizontalLayout_30 = QHBoxLayout()
         self.horizontalLayout_30.setObjectName(u"horizontalLayout_30")
-        self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout_30.addItem(self.horizontalSpacer_3)
 
@@ -1610,7 +1610,7 @@ class Ui_Widget(object):
 
         self.verticalLayout_20.addWidget(self.infoTwoThree)
 
-        self.verticalSpacer_8 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_8 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_20.addItem(self.verticalSpacer_8)
 
@@ -1666,7 +1666,7 @@ class Ui_Widget(object):
 
         self.twoFourButton_1 = QPushButton(self.layoutWidget_9)
         self.twoFourButton_1.setObjectName(u"twoFourButton_1")
-        sizePolicy5 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Preferred)
+        sizePolicy5 = QSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Preferred)
         sizePolicy5.setHorizontalStretch(0)
         sizePolicy5.setVerticalStretch(0)
         sizePolicy5.setHeightForWidth(self.twoFourButton_1.sizePolicy().hasHeightForWidth())
@@ -1745,7 +1745,7 @@ class Ui_Widget(object):
 
         self.verticalLayout_21.addWidget(self.twoFourResult_2)
 
-        self.verticalSpacer_6 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_6 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_21.addItem(self.verticalSpacer_6)
 
@@ -1851,7 +1851,7 @@ class Ui_Widget(object):
 
         self.verticalLayout_11.addWidget(self.label_25)
 
-        self.verticalSpacer_12 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_12 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_11.addItem(self.verticalSpacer_12)
 
@@ -1869,7 +1869,7 @@ class Ui_Widget(object):
 
         self.verticalLayout_11.addWidget(self.achievements)
 
-        self.verticalSpacer_7 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_7 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_11.addItem(self.verticalSpacer_7)
 
@@ -2122,7 +2122,7 @@ class Ui_Widget(object):
 
         self.verticalLayout.addWidget(self.logoutButton)
 
-        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout.addItem(self.verticalSpacer)
 
